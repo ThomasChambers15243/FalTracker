@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import aiohttp
 import asyncio
-
+import bs4
 
 
 client = commands.Bot(command_prefix = '?')
@@ -52,6 +52,9 @@ async def stannary(msg):
 
 ##this is how you get a command, the fucntion name
 ##is what needs to come after the command_prefix
+
+
+
 @client.command()
 async def gym(msg):
     url = falmouthURLs["sports_facilities"]
@@ -63,7 +66,16 @@ async def gym(msg):
                 print("Status:", response.status)
                 print("Content-type:", response.headers['content-type'])
 
+                #TODO abstract away into a fucntion
+
                 html = await response.text()
+                soup = bs4.BeautifulSoup(html, 'html.parser')
+                table = soup.find(name="table", attrs={'id':'tablepress-2'})
+                f = open("temptest.txt", "w")
+                f.write(table.prettify())
+                f.close()
+
+
 
                 if "We're currently open." in html:
                     print("Is open")
