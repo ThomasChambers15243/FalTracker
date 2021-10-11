@@ -3,6 +3,8 @@ from discord.ext import commands
 import aiohttp
 import asyncio
 
+
+
 client = commands.Bot(command_prefix = '?')
 
 async def getWebReqIsOpen(url):
@@ -19,21 +21,17 @@ async def getWebReqIsOpen(url):
             else:
                 print("Is Closed")
                 return False
-            #if html[i:i+] 
-
-            
 
 
-# async def isOpenMsg(msg, name):
-#     await msg.send("The " + name + " is open at the moment!!!")
-
-# async def isClosedMsg(msg, name):
-#     await msg.send("The " + name + " is closed at the moment")
+falmouthURLs = {
+    "the_stannary" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
+    "sports_facilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/"
+}
 
 
 @client.command()
 async def stannary(msg):
-    url = "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/"
+    url = falmouthURLs["the_stannary"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 print("Status:", response.status)
@@ -56,7 +54,7 @@ async def stannary(msg):
 ##is what needs to come after the command_prefix
 @client.command()
 async def gym(msg):
-    url = "https://fxplus.ac.uk/facilities-shops/sports-facilities/"
+    url = falmouthURLs["sports_facilities"]
     #loop = asyncio.get_event_loop()
     #loop.run_until_complete(getWebReqIsOpen(url))
 
