@@ -4,6 +4,7 @@ import aiohttp
 import asyncio
 import bs4
 import data
+from unitl import writeRelevantServiceDataIntoFile
 
 #how to dump dict to json file
 #import json
@@ -15,7 +16,8 @@ import data
 client = commands.Bot(command_prefix = '?')
 
 ##TODO
-##not in use atm, would like to put webcalls in a function but not sure how since its async and not just a standard response
+##not in use atm, would like to put webcalls in a function but not 
+# sure how since its async and not just a standard response
 
 # async def getWebReqIsOpen(url):
 #     async with aiohttp.ClientSession() as session:
@@ -35,6 +37,9 @@ client = commands.Bot(command_prefix = '?')
 
 ## Url's for use in getting html data from the falmouth web pages
 falmouthURLs = {    
+    # Im going to keep these os if service status every break, i have these to come back too, 
+    # maybe I could add in checks to make sure it works, and if not use these, but hold shit 
+    # that sounds like so much fucking effor
     "SportsFacilities" : {
         "SportsFacilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
         "FitnessCentre" : "https://fitnesscentre.fxplus.ac.uk/"
@@ -68,23 +73,59 @@ def getTable(html, tableID):
     table = soup.find(name="table", attrs={'id':tableID})
     tableBody = table.find('tbody')
     rows = tableBody.find_all('tr')
+    #Write html data into readable array
     for row in rows:
         cols = row.find_all('td')
         cols = [ele.text.strip() for ele in cols]
         data.append([ele for ele in cols if ele])
-
-    f = open("serviceInfo.txt","w")
-    for i in range(0,len(data)):
-        f.write(str(i) + ": ")
-        f.write(str(data[i]))
-        f.write("\n")
-    f.close()
-
+    #Write array into even more readable txt file
+    with open("serviceInfo.txt","w") as f:
+        for i in range(0,len(data)):
+            f.write(str(i) + ": ")
+            f.write(str(data[i]))
+            f.write("\n")
+    writeRelevantServiceDataIntoFile()
+    #List to hold new, indexable service data
     cleanData = []
-    start = 97
-    end = 122
-    lineData = []
+    #appends service data to cleanData
+    with open("smallerServiceFile.txt", "r") as f:
+        lineData = []
+        for line in f:
+            lineData.append(line)
+        for i in range(0,len(data)):
+            for j in range(0,len(lineData)):
+                if str(data[i]) in lineData[j]:
+                    cleanData.append(data[i])
+                    break
+    
+    #Enter clean data into a dict
 
+    services = {}
+
+    for i in cleanData:
+        #print(i)
+        #print("   ")
+        match i[0]:
+            case "Shop":
+                pass
+            case "Service":
+                pass
+            case "Libary":
+                pass
+            case "Catering":
+                pass
+            case "Phone Line":
+                pass
+            case "Student Services":
+                pass
+            case "IT Service Desk":
+                pass
+            case _:
+                #Thise leaves the exceptions
+                print("This was an exception")
+                pass
+
+        
     ##WHATS GOING ON
     #opens up smallerServiceFile.txt, that file comes from unitil, and has 28 lines
     #all the relivant lines that i need from the file serviceInfo.txt
@@ -95,38 +136,8 @@ def getTable(html, tableID):
     #You end up with some a cleanData array which has all the needed infomation, id indexable and cant be transfered to a json file (with effort)
 
 
-    #TODO   Turn unitl into a reusable function
     #TODO   Turn cleanData into a dictionary/JSON file
     #TODO   Clean and optimise everything that happened here today mygod
-
-    with open("smallerServiceFile.txt", "r") as f:
-        for line in f:
-            lineData.append(line)
-        for i in range(0,len(data)):
-            for j in range(0,len(lineData)):
-                if str(data[i]) in lineData[j]:
-                    print(data[i])
-                    cleanData.append(data[i])
-                    break
-    print("\nclean data is: \n")
-    print(len(cleanData))
-    for i in cleanData:
-        print(i)
-        # if i[0] == "Catering" or i[0] == "Library" or i[0] == "Service":
-        #     print(i[1])
-        # else:
-        #     print(i[0])
-        print("   ")
-
-
-    #print(lineData[25])
-    #print("this is data data\n\n" + str(data[56]))
-
-    # if str(data[56]) in str(lineData[25]):
-    #     print("is equal")
-    # else:
-    #     print("fuck of")
-
 
     return data
 
