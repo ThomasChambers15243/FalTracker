@@ -7,7 +7,7 @@ import data
 from unitl import writeRelevantServiceDataIntoFile
 
 #how to dump dict to json file
-#import json
+import json
 # with open('result.json', 'w') as fp:
 #     json.dump(data, fp)
 
@@ -73,6 +73,8 @@ def getTable(html, tableID):
     table = soup.find(name="table", attrs={'id':tableID})
     tableBody = table.find('tbody')
     rows = tableBody.find_all('tr')
+    with open("htmlHorror.txt","w") as f:
+        f.write(str(html))
     #Write html data into readable array
     for row in rows:
         cols = row.find_all('td')
@@ -98,33 +100,67 @@ def getTable(html, tableID):
                     cleanData.append(data[i])
                     break
     
-    #Enter clean data into a dict
-
-    services = {}
-
+    #Dictionary that holds service data
+    services = {
+        "Shop": [],
+        "Service" : [],
+        "Library" : [],
+        "Catering" : [],
+        "Student Services" : [],
+    }
+    #Loads cleanData into services
     for i in cleanData:
-        #print(i)
-        #print("   ")
         match i[0]:
             case "Shop":
-                pass
+                services["Shop"].append({
+                    "Name" : i[1],
+                    "OpenState" : i[2],
+                    "Hours" : i[3]
+                })
             case "Service":
-                pass
-            case "Libary":
-                pass
+                services["Service"].append({
+                    "Name" : i[1],
+                    "OpenState" : i[2],
+                    "Hours" : i[3]
+                })
+            case "Library":
+                services["Library"].append({
+                    "Name" : i[1],
+                    "OpenState" : i[2],
+                    "Hours" : i[3]
+                })
             case "Catering":
-                pass
-            case "Phone Line":
-                pass
-            case "Student Services":
-                pass
-            case "IT Service Desk":
-                pass
+                if len(i) > 3:
+                    print("\nI is\n")
+                    print(i)
+                    print("\n")
+                    services["Catering"].append({
+                        "Name" : i[1],
+                        "OpenState" : i[2],
+                        "Hours" : i[3]                  
+                    })
+                else:
+                    services["Catering"].append({
+                        "Name" : i[1],
+                        "OpenState" : i[2],
+                        "Hours" : None                  
+                    })                    
             case _:
                 #Thise leaves the exceptions
                 print("This was an exception")
+                print(i[0])
                 pass
-
+    #print(services)
+    with open('result.json', 'w') as fp:
+        json.dump(services, fp, indent=4)
+    
+    # with open("result.json") as jf:
+    #     jsonObj = json.load(jf)
+    # print("DIC TESTS")
+    # print(services["Shop"])#[0][0]["Name"])
+    # print("\n")
+    # print(services["Shop"][0]["Name"])
+    # print(services["Shop"][1]["OpenState"])
         
     ##WHATS GOING ON
     #opens up smallerServiceFile.txt, that file comes from unitil, and has 28 lines
@@ -138,8 +174,8 @@ def getTable(html, tableID):
 
     #TODO   Turn cleanData into a dictionary/JSON file
     #TODO   Clean and optimise everything that happened here today mygod
-
-    return data
+    #TODO   Create function to parse opening time (Regex???)
+    return services
 
 
 ##########                 ##########
@@ -242,9 +278,10 @@ async def koofi(msg):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             html = await response.text()
-            table = getTable(html, data.data["webInfo"]["tableCol"])
-            koofi = parseKoofiCafeTable(table)
-            if koofi["Koofi Cafe"]:
+            services = getTable(html, data.data["webInfo"]["tableCol"])
+            #koofi = parseKoofiCafeTable(table)
+            print(services["Catering"][5]["OpenState"])
+            if services["Catering"][5]["OpenState"] != "We're currently closed.":
                 await msg.send("Koofi Cafe is open at the moment!!!")
             else:
                 await msg.send("Koofi Cafe is closed at the moment :(")
