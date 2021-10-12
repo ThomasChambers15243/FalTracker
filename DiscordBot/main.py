@@ -29,7 +29,10 @@ client = commands.Bot(command_prefix = '?')
 
 ## Url's for use in getting html data from the falmouth web pages
 falmouthURLs = {    
-    "sports_facilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
+    "SportsFacilities" : {
+        "SportsFacilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
+        "FitnessCentre" : "https://fitnesscentre.fxplus.ac.uk/"
+    },
     "TheStannary" : {
         "StannaryBar" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
         "StannaryKitchen" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-lower-stannary-restaurant/"
@@ -142,7 +145,7 @@ async def stannary(msg):
 ###Sends channel msg when procedure name 'gym' is called as a command
 @client.command()
 async def gym(msg):
-    url = falmouthURLs["sports_facilities"]
+    url = falmouthURLs["SportsFacilities"]["SportsFacilities"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
@@ -158,8 +161,8 @@ async def gym(msg):
 
 ###Sends channel msg when procedure name 'GamesArea' is called as a command
 @client.command()
-async def GamesArea(msg):
-    url = falmouthURLs["sports_facilities"]
+async def gamesArea(msg):
+    url = falmouthURLs["SportsFacilities"]["SportsFacilities"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
@@ -175,8 +178,8 @@ async def GamesArea(msg):
 
 ###Sends channel msg when procedure name 'SportCentre' is called as a command
 @client.command()
-async def SportsCentre(msg):
-    url = falmouthURLs["sports_facilities"]
+async def sportsCentre(msg):
+    url = falmouthURLs["SportsFacilities"]["SportsFacilities"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
