@@ -24,10 +24,20 @@ client = commands.Bot(command_prefix = '?')
 #                 return False
 
 
-falmouthURLs = {
-    "the_stannary" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
+falmouthURLs = {    
     "sports_facilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
-    "Koofi" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/koofi/"
+    "TheStannary" : {
+        "StannaryBar" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
+        "StannaryKitchen" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-lower-stannary-restaurant/"
+    },
+    "cafe" : {
+        "AMATA" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/amata-cafe/",
+        "ESI" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/esi-cafe/",
+        "Koofi" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/koofi/",
+        "Sustainability" : "https://fxplus.ac.uk/facilities-shops/catering/penryn/the-sustainability-cafe/",               
+        "Fox" : "https://fxplus.ac.uk/facilities-shops/food-drink/falmouth/fox-cafe/"
+    }
+
 }
 
 
@@ -45,11 +55,18 @@ def getTable(html):
     return data
 
 #Returns dict of boolean vals for whether the area is open or not
-def parseStannaryBarOpen(table):
+def parseStannaryBarTable(table):
     stannaryBar = {
         "StannaryBar" : True if "open" in table[0][2] else False
     }
     return stannaryBar
+
+##Returns dict of boolean vals for Koofi Cafe
+def parseKoofiCafeTable(table):
+    koofi = {
+        "Koofi Cafe" : True if "open" in table[0][2] else False
+    }
+    return koofi
 
 #Returns dict of boolean vals for whether the area is open or not 
 def parseSportCentreTable(table):
@@ -60,23 +77,40 @@ def parseSportCentreTable(table):
     }
     return falcilities
 
-##Says if the Stannary Bar is open or closed
+###Sends channel msg when procedure name 'koofi' is called as a command
+@client.command()
+async def koofi(msg):
+    url = falmouthURLs["cafe"]["Koofi"]
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            html = await response.text()
+            table = getTable(html)
+            koofi = parseKoofiCafeTable(table)
+            if koofi["Koofi Cafe"]:
+                print("is open")
+                await msg.send("Koofi Cafe is open at the moment!!!")
+            else:
+                print("is closed")
+                await msg.send("Koofi Cafe is closed at the moment :(")
+
+
+###Sends channel msg when procedure name 'stannary' is called as a command
 @client.command()
 async def stannary(msg):
-    url = falmouthURLs["the_stannary"]
+    url = falmouthURLs["TheStannary"]["StannaryBar"]
     async with aiohttp.ClientSession() as session:
-            async with session.get(url) as response:                    
-                html = await response.text()
-                table = getTable(html)
-                bar = parseStannaryBarOpen(table)
-                if bar["StannaryBar"]:
-                    print("Is open")
-                    await msg.send("The Stannary Bar is open at the moment!!!")
-                else:
-                    print("Is Closed")
-                    await msg.send("The Stannary Bar is closed at the moment :(")
+        async with session.get(url) as response:                    
+            html = await response.text()
+            table = getTable(html)
+            bar = parseStannaryBarTable(table)
+            if bar["StannaryBar"]:
+                print("Is open")
+                await msg.send("The Stannary Bar is open at the moment!!!")
+            else:
+                print("Is Closed")
+                await msg.send("The Stannary Bar is closed at the moment :(")
 
-#Says is the gym is open or closed
+###Sends channel msg when procedure name 'gym' is called as a command
 @client.command()
 async def gym(msg):
     url = falmouthURLs["sports_facilities"]
@@ -96,6 +130,12 @@ async def gym(msg):
                     print("Is Closed")
                     await msg.send("The Penryn Campus Gym is closed at the moment :(")
 
+###Sends channel msg when procedure name 'GamesArea' is called as a command
+
+
+
+
+###Sends channel msg when procedure name 'SportCentre' is called as a command
 
 @client.event
 async def on_ready():
