@@ -7,7 +7,10 @@ import data
 
 #command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
-##not in use atm
+
+##TODO
+##not in use atm, would like to put webcalls in a function but not sure how since its async and not just a standard response
+
 # async def getWebReqIsOpen(url):
 #     async with aiohttp.ClientSession() as session:
 #         async with session.get(url) as response:                    
@@ -24,6 +27,7 @@ client = commands.Bot(command_prefix = '?')
 #                 return False
 
 
+## Url's for use in getting html data from the falmouth web pages
 falmouthURLs = {    
     "sports_facilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
     "TheStannary" : {
@@ -41,7 +45,8 @@ falmouthURLs = {
 }
 
 
-#Gets the table from a html string
+#Gets the table which tells you wether its open from a html string
+#Returns the table as a list called data
 def getTable(html):
     data = []
     soup = bs4.BeautifulSoup(html, 'html.parser')
@@ -54,7 +59,15 @@ def getTable(html):
         data.append([ele for ele in cols if ele])
     return data
 
-#Returns dict of boolean vals for whether the area is open or not
+##########                 ##########
+##########  TABLE PARSING  ##########
+##########                 ##########
+
+##Returns a dict, even if theres just one value, for
+# A. Consitancy
+# B. Maintainabliltiy, if anymore are added it makes my life easier
+
+#Returns dict of boolean vals for whether the Bar is open or not
 def parseStannaryBarTable(table):
     stannaryBar = {
         "StannaryBar" : True if "open" in table[0][2] else False
@@ -76,6 +89,18 @@ def parseSportCentreTable(table):
         "Penryn Sports Centre" : True if "open" in table[5][2] else False
     }
     return falcilities
+
+
+
+#########################################################################################
+##################################### COMMAND CALLS #####################################
+#########################################################################################
+
+
+
+##########                 ##########
+########## PENRYN CATERING ##########
+##########                 ##########
 
 ###Sends channel msg when procedure name 'koofi' is called as a command
 @client.command()
@@ -109,6 +134,10 @@ async def stannary(msg):
             else:
                 print("Is Closed")
                 await msg.send("The Stannary Bar is closed at the moment :(")
+
+##########                   ##########
+########## SPORTS FACILITIES ##########
+##########                   ##########
 
 ###Sends channel msg when procedure name 'gym' is called as a command
 @client.command()
@@ -161,7 +190,7 @@ async def SportsCentre(msg):
                     print("Is Closed")
                     await msg.send("The Penryn Campus Sports Centre is closed at the moment :(")
 
-
+#Lets you know if the bot is up and running
 @client.event
 async def on_ready():
     print("bot is ready!")    
