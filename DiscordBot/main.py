@@ -3,6 +3,7 @@ from discord.ext import commands
 import aiohttp
 import asyncio
 import bs4
+import data
 
 #command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
@@ -90,15 +91,15 @@ async def gym(msg):
             
                 if falcilities["Penryn Campus Gym"]:
                     print("Is open")
-                    await msg.send("The Sports facilities are open at the moment!!!")
+                    await msg.send("The Penryn Campus Gym is open at the moment!!!")
                 else:
                     print("Is Closed")
-                    await msg.send("The sports facilities are closed at the moment :(")
+                    await msg.send("The Penryn Campus Gym is closed at the moment :(")
 
 
 @client.event
 async def on_ready():
     print("bot is ready!")    
 
-
-client.run('ODk3MTk4MDg3NDE0NjIwMTcy.YWSK1Q.1JUA2_tjXY2-bPp7yGT0bsK29sg')    
+#Token
+client.run(data.data["keys"]["token"])    
