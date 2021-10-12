@@ -58,7 +58,54 @@ falmouthURLs = {
     #Holy fucking shit why didnt i know this existed
     #now i need to refactor everything and just use this one link, fuck me
     "ServiceStatus" : "https://fxplus.ac.uk/service-status/"
+}
 
+sName = {
+    "Falmouth Campus Shop" : "Shop",
+    "Penryn Campus Shop" : "Shop",
+    "AV" : "Service",
+    "Little Wonders Nurseries" : "Service",
+    "Multi Use Games Area" : "Service",
+    "Penryn Campus Gym" : "Service",
+    "Penryn Sports Centre" : "Service",
+    "The Compass" : "Service",
+    "Falmouth Campus Library" : "Library",
+    "Falmouth Campus Library Helpdesk" : "Library",
+    "Penryn Campus Library" : "Library",
+    "Penryn Campus Library Helpdesk" : "Library",
+    "Virtual Helpdes" : "Library",
+    "AMATA Cafe" : "Catering",
+    "ESI Cafe" : "Catering",
+    "Fox Cafe" : "Catering",
+    "Lower Stannary" : "Catering",
+    "Stannary Deli Bar" : "Catering",
+    "Koofi" : "Catering",
+    "The Stannary Bar" : "Catering",
+    "The Sustainability Cafe" : "Catering"
+}
+
+sIndex = {
+    "Falmouth Campus Shop" : 0,
+    "Penryn Campus Shop" : 1,
+    "AV" : 0,
+    "Little Wonders Nurseries" : 1,
+    "Multi Use Games Area" : 2,
+    "Penryn Campus Gym" : 3,
+    "Penryn Sports Centre" : 4,
+    "The Compass" : 5,
+    "Falmouth Campus Library" : 0,
+    "Falmouth Campus Library Helpdesk" : 1,
+    "Penryn Campus Library" : 2,
+    "Penryn Campus Library Helpdesk" : 3,
+    "Virtual Helpdes" : 4,
+    "AMATA Cafe" : 0,
+    "ESI Cafe" : 1,
+    "Fox Cafe" : 2,
+    "Lower Stannary" : 3,
+    "Stannary Deli Bar" : 4,
+    "Koofi" : 5,
+    "The Stannary Bar" : 6,
+    "The Sustainability Cafe" : 7
 }
 
 
@@ -177,6 +224,16 @@ def getTable(html, tableID):
     #TODO   Create function to parse opening time (Regex???)
     return services
 
+def isOpen(services):
+    print("CALLED WAS")
+    print(services["OpenState"])
+    print(services["Name"])
+    if services["OpenState"] == "We're currently open.":
+        return True
+    else:
+        return False
+
+
 
 ##########                 ##########
 ##########  TABLE PARSING  ##########
@@ -243,13 +300,12 @@ def parseSportCentreTable(table):
 ###Sends channel msg when procedure name 'amata' is called as a command
 @client.command()
 async def amata(msg):
-    url = falmouthURLs["cafe"]["AMATA"]
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             html = await response.text()
-            table = getTable(html, data.data["webInfo"]["tableCol"])
-            amata = parseAMATAcafeTable(table)
-            if amata["AMATA Cafe"]:
+            services = getTable(html, data.data["webInfo"]["tableCol"])            
+            if isOpen(services[sName["AMATA Cafe"]][sIndex["AMATA Cafe"]]):
                 await msg.send("AMATA Cafe is open at the moment!!!")
             else:
                 await msg.send("AMATA Cafe is closed at the moment :(")
@@ -257,17 +313,16 @@ async def amata(msg):
 ###Sends channel msg when procedure name 'esi' is called as a command
 @client.command()
 async def esi(msg):
-    url = falmouthURLs["cafe"]["ESI"]
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             html = await response.text()
-            table = getTable(html, data.data["webInfo"]["tableCol"])
-            ESI = parseESIcafeTable(table)
-            if ESI["ESI Cafe"]:
+            services = getTable(html, data.data["webInfo"]["tableCol"])
+            if isOpen(services[sName["ESI Cafe"]][sIndex["ESI Cafe"]]):
                 await msg.send("ESI Cafe is open at the moment!!!")
             else:
                 await msg.send("ESI Cafe is closed at the moment :(")
-
+    
 
 ###Sends channel msg when procedure name 'koofi' is called as a command
 @client.command()
@@ -279,9 +334,7 @@ async def koofi(msg):
         async with session.get(url) as response:
             html = await response.text()
             services = getTable(html, data.data["webInfo"]["tableCol"])
-            #koofi = parseKoofiCafeTable(table)
-            print(services["Catering"][5]["OpenState"])
-            if services["Catering"][5]["OpenState"] != "We're currently closed.":
+            if isOpen(services[sName["Koofi"]][sIndex["Koofi"]]):#services["Catering"][5]):
                 await msg.send("Koofi Cafe is open at the moment!!!")
             else:
                 await msg.send("Koofi Cafe is closed at the moment :(")
@@ -290,7 +343,7 @@ async def koofi(msg):
 ###Sends channel msg when procedure name 'stannaryB' is called as a command
 @client.command()
 async def stannaryB(msg):
-    url = falmouthURLs["TheStannary"]["StannaryBar"]
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:                    
             html = await response.text()
@@ -308,14 +361,12 @@ async def stannaryB(msg):
 ###Sends channel msg when procedure name 'gym' is called as a command
 @client.command()
 async def gym(msg):
-    url = falmouthURLs["SportsFacilities"]["SportsFacilities"]
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
-                table = getTable(html, data.data["webInfo"]["tableCol"])
-                falcilities = parseSportCentreTable(table)
-            
-                if falcilities["Penryn Campus Gym"]:
+                services = getTable(html, data.data["webInfo"]["tableCol"])            
+                if isOpen(services[sName["Penryn Campus Gym"]][sIndex["Penryn Campus Gym"]]):
                     await msg.send("The Penryn Campus Gym is open at the moment!!!")
                 else:
                     await msg.send("The Penryn Campus Gym is closed at the moment :(")
@@ -323,7 +374,7 @@ async def gym(msg):
 ###Sends channel msg when procedure name 'GamesArea' is called as a command
 @client.command()
 async def gamesArea(msg):
-    url = falmouthURLs["SportsFacilities"]["SportsFacilities"]
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
@@ -338,7 +389,7 @@ async def gamesArea(msg):
 ###Sends channel msg when procedure name 'SportCentre' is called as a command
 @client.command()
 async def sportsCentre(msg):
-    url = falmouthURLs["SportsFacilities"]["SportsFacilities"]
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
