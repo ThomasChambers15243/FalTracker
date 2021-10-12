@@ -5,6 +5,12 @@ import asyncio
 import bs4
 import data
 
+#how to dump dict to json file
+#import json
+# with open('result.json', 'w') as fp:
+#     json.dump(data, fp)
+
+
 #command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
 
@@ -46,7 +52,7 @@ falmouthURLs = {
     },
     #Holy fucking shit why didnt i know this existed
     #now i need to refactor everything and just use this one link, fuck me
-    "Service Status" : "https://fxplus.ac.uk/service-status/"
+    "ServiceStatus" : "https://fxplus.ac.uk/service-status/"
 
 }
 
@@ -66,6 +72,62 @@ def getTable(html, tableID):
         cols = row.find_all('td')
         cols = [ele.text.strip() for ele in cols]
         data.append([ele for ele in cols if ele])
+
+    f = open("serviceInfo.txt","w")
+    for i in range(0,len(data)):
+        f.write(str(i) + ": ")
+        f.write(str(data[i]))
+        f.write("\n")
+    f.close()
+
+    cleanData = []
+    start = 97
+    end = 122
+    lineData = []
+
+    ##WHATS GOING ON
+    #opens up smallerServiceFile.txt, that file comes from unitil, and has 28 lines
+    #all the relivant lines that i need from the file serviceInfo.txt
+    #ServiceInfo.txt is the data array, that was scarpped form falmouth service website,
+    #written neatly so its readable, i even added line numbers - each line represents an elemeant.
+    #here, i compare each element in data, to every element in lineData (a list where each ele is a line from smallerServiceFile.txt)
+    #and if the ele from data is in (not equal), I add it to list cleanData.
+    #You end up with some a cleanData array which has all the needed infomation, id indexable and cant be transfered to a json file (with effort)
+
+
+    #TODO   Turn unitl into a reusable function
+    #TODO   Turn cleanData into a dictionary/JSON file
+    #TODO   Clean and optimise everything that happened here today mygod
+
+    with open("smallerServiceFile.txt", "r") as f:
+        for line in f:
+            lineData.append(line)
+        for i in range(0,len(data)):
+            for j in range(0,len(lineData)):
+                if str(data[i]) in lineData[j]:
+                    print(data[i])
+                    cleanData.append(data[i])
+                    break
+    print("\nclean data is: \n")
+    print(len(cleanData))
+    for i in cleanData:
+        print(i)
+        # if i[0] == "Catering" or i[0] == "Library" or i[0] == "Service":
+        #     print(i[1])
+        # else:
+        #     print(i[0])
+        print("   ")
+
+
+    #print(lineData[25])
+    #print("this is data data\n\n" + str(data[56]))
+
+    # if str(data[56]) in str(lineData[25]):
+    #     print("is equal")
+    # else:
+    #     print("fuck of")
+
+
     return data
 
 
@@ -101,7 +163,7 @@ def parseESIcafeTable(table):
 ##Returns dict of boolean vals for Koofi Cafe
 def parseKoofiCafeTable(table):
     koofi = {
-        "Koofi Cafe" : True if "open" in table[0][2] else False
+        "Koofi Cafe" : True if "open" in table[56][2] else False#table[0][2] else False
     }
     return koofi
 
@@ -122,11 +184,9 @@ def parseSportCentreTable(table):
     return falcilities
 
 
-
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
-
 
 
 ##########                 ##########
@@ -165,7 +225,9 @@ async def esi(msg):
 ###Sends channel msg when procedure name 'koofi' is called as a command
 @client.command()
 async def koofi(msg):
-    url = falmouthURLs["cafe"]["Koofi"]
+    #url = falmouthURLs["cafe"]["Koofi"]
+    #testing link
+    url = falmouthURLs["ServiceStatus"]
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             html = await response.text()
