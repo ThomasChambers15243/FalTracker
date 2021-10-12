@@ -53,6 +53,9 @@ falmouthURLs = {
 def getTable(html):
     data = []
     soup = bs4.BeautifulSoup(html, 'html.parser')
+    #Table id for the main table in the page which shows relevant data
+    #Praying this is the same for all pages, seems to be since
+    #all these pages seem to use the same template, THANK GOD
     table = soup.find(name="table", attrs={'id':'tablepress-2'})
     tableBody = table.find('tbody')
     rows = tableBody.find_all('tr')
@@ -69,7 +72,6 @@ def getTable(html):
 ##Returns a dict, even if theres just one value, for
 # A. Consitancy
 # B. Maintainabliltiy, if anymore are added it makes my life easier
-
 #Returns dict of boolean vals for whether the Bar is open or not
 def parseStannaryBarTable(table):
     stannaryBar = {
