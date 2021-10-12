@@ -114,9 +114,6 @@ async def stannary(msg):
 @client.command()
 async def gym(msg):
     url = falmouthURLs["sports_facilities"]
-    #loop = asyncio.get_event_loop()
-    #loop.run_until_complete(getWebReqIsOpen(url))
-
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
                 html = await response.text()
@@ -131,11 +128,39 @@ async def gym(msg):
                     await msg.send("The Penryn Campus Gym is closed at the moment :(")
 
 ###Sends channel msg when procedure name 'GamesArea' is called as a command
-
-
-
+@client.command()
+async def GamesArea(msg):
+    url = falmouthURLs["sports_facilities"]
+    async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:                    
+                html = await response.text()
+                table = getTable(html)
+                falcilities = parseSportCentreTable(table)
+            
+                if falcilities["Mult Use Games Area"]:
+                    print("Is open")
+                    await msg.send("The Penryn Campus Games Area is open at the moment!!!")
+                else:
+                    print("Is Closed")
+                    await msg.send("The Penryn Campus Games Area is closed at the moment :(")
 
 ###Sends channel msg when procedure name 'SportCentre' is called as a command
+@client.command()
+async def SportsCentre(msg):
+    url = falmouthURLs["sports_facilities"]
+    async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:                    
+                html = await response.text()
+                table = getTable(html)
+                falcilities = parseSportCentreTable(table)
+            
+                if falcilities["Penryn Sports Centre"]:
+                    print("Is open")
+                    await msg.send("The Penryn Campus Sports Centre is open at the moment!!!")
+                else:
+                    print("Is Closed")
+                    await msg.send("The Penryn Campus Sports Centre is closed at the moment :(")
+
 
 @client.event
 async def on_ready():
