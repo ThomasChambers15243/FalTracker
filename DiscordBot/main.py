@@ -4,57 +4,78 @@ import aiohttp
 import asyncio
 import bs4
 
-
+#command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
+##not in use atm
+# async def getWebReqIsOpen(url):
+#     async with aiohttp.ClientSession() as session:
+#         async with session.get(url) as response:                    
+#             print("Status:", response.status)
+#             print("Content-type:", response.headers['content-type'])
 
-async def getWebReqIsOpen(url):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:                    
-            print("Status:", response.status)
-            print("Content-type:", response.headers['content-type'])
+#             html = await response.text()
 
-            html = await response.text()
-
-            if "We're currently open." in html:
-                print("Is open")
-                return True
-            else:
-                print("Is Closed")
-                return False
+#             if "We're currently open." in html:
+#                 print("Is open")
+#                 return True
+#             else:
+#                 print("Is Closed")
+#                 return False
 
 
 falmouthURLs = {
     "the_stannary" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
-    "sports_facilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/"
+    "sports_facilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
+    "Koofi" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/koofi/"
 }
 
 
+#Gets the table from a html string
+def getTable(html):
+    data = []
+    soup = bs4.BeautifulSoup(html, 'html.parser')
+    table = soup.find(name="table", attrs={'id':'tablepress-2'})
+    tableBody = table.find('tbody')
+    rows = tableBody.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele])
+    return data
+
+#Returns dict of boolean vals for whether the area is open or not
+def parseStannaryBarOpen(table):
+    stannaryBar = {
+        "StannaryBar" : True if "open" in table[0][2] else False
+    }
+    return stannaryBar
+
+#Returns dict of boolean vals for whether the area is open or not 
+def parseSportCentreTable(table):
+    falcilities = {
+        "Mult Use Games Area" : True if "open" in table[0][2] else False,
+        "Penryn Campus Gym" : True if "open" in table[2][2] else False,
+        "Penryn Sports Centre" : True if "open" in table[5][2] else False
+    }
+    return falcilities
+
+##Says if the Stannary Bar is open or closed
 @client.command()
 async def stannary(msg):
     url = falmouthURLs["the_stannary"]
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
-                print("Status:", response.status)
-                print("Content-type:", response.headers['content-type'])
-
                 html = await response.text()
-
-                if "We're currently open." in html:
+                table = getTable(html)
+                bar = parseStannaryBarOpen(table)
+                if bar["StannaryBar"]:
                     print("Is open")
                     await msg.send("The Stannary Bar is open at the moment!!!")
                 else:
                     print("Is Closed")
                     await msg.send("The Stannary Bar is closed at the moment :(")
 
-
-
-
-
-##this is how you get a command, the fucntion name
-##is what needs to come after the command_prefix
-
-
-
+#Says is the gym is open or closed
 @client.command()
 async def gym(msg):
     url = falmouthURLs["sports_facilities"]
@@ -63,21 +84,11 @@ async def gym(msg):
 
     async with aiohttp.ClientSession() as session:
             async with session.get(url) as response:                    
-                print("Status:", response.status)
-                print("Content-type:", response.headers['content-type'])
-
-                #TODO abstract away into a fucntion
-
                 html = await response.text()
-                soup = bs4.BeautifulSoup(html, 'html.parser')
-                table = soup.find(name="table", attrs={'id':'tablepress-2'})
-                f = open("temptest.txt", "w")
-                f.write(table.prettify())
-                f.close()
-
-
-
-                if "We're currently open." in html:
+                table = getTable(html)
+                falcilities = parseSportCentreTable(table)
+            
+                if falcilities["Penryn Campus Gym"]:
                     print("Is open")
                     await msg.send("The Sports facilities are open at the moment!!!")
                 else:
