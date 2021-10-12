@@ -115,10 +115,8 @@ async def koofi(msg):
             table = getTable(html)
             koofi = parseKoofiCafeTable(table)
             if koofi["Koofi Cafe"]:
-                print("is open")
                 await msg.send("Koofi Cafe is open at the moment!!!")
             else:
-                print("is closed")
                 await msg.send("Koofi Cafe is closed at the moment :(")
 
 
@@ -132,10 +130,8 @@ async def stannary(msg):
             table = getTable(html)
             bar = parseStannaryBarTable(table)
             if bar["StannaryBar"]:
-                print("Is open")
                 await msg.send("The Stannary Bar is open at the moment!!!")
             else:
-                print("Is Closed")
                 await msg.send("The Stannary Bar is closed at the moment :(")
 
 ##########                   ##########
@@ -153,10 +149,8 @@ async def gym(msg):
                 falcilities = parseSportCentreTable(table)
             
                 if falcilities["Penryn Campus Gym"]:
-                    print("Is open")
                     await msg.send("The Penryn Campus Gym is open at the moment!!!")
                 else:
-                    print("Is Closed")
                     await msg.send("The Penryn Campus Gym is closed at the moment :(")
 
 ###Sends channel msg when procedure name 'GamesArea' is called as a command
@@ -170,10 +164,8 @@ async def gamesArea(msg):
                 falcilities = parseSportCentreTable(table)
             
                 if falcilities["Mult Use Games Area"]:
-                    print("Is open")
                     await msg.send("The Penryn Campus Games Area is open at the moment!!!")
                 else:
-                    print("Is Closed")
                     await msg.send("The Penryn Campus Games Area is closed at the moment :(")
 
 ###Sends channel msg when procedure name 'SportCentre' is called as a command
@@ -187,10 +179,8 @@ async def sportsCentre(msg):
                 falcilities = parseSportCentreTable(table)
             
                 if falcilities["Penryn Sports Centre"]:
-                    print("Is open")
                     await msg.send("The Penryn Campus Sports Centre is open at the moment!!!")
                 else:
-                    print("Is Closed")
                     await msg.send("The Penryn Campus Sports Centre is closed at the moment :(")
 
 #Lets you know if the bot is up and running
