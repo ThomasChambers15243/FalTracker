@@ -5,7 +5,7 @@ import asyncio
 import bs4
 import data
 import json
-from unitl import writeRelevantServiceDataIntoFile
+#from unitl import writeRelevantServiceDataIntoFile
 
 
 
@@ -86,23 +86,38 @@ sIndex = {
 
 #Gets the table which tells you wether its open from a html string
 #Returns the table as a list called data
-def getTable(html, tableID):
+
+def parseTable(html,tableID):
     data = []
     soup = bs4.BeautifulSoup(html, 'html.parser')
-    #Table id for the main table in the page which shows relevant data
-    #Praying this is the same for all pages, seems to be since
-    #all these pages seem to use the same template, THANK GOD
     table = soup.find(name="table", attrs={'id':tableID})
     tableBody = table.find('tbody')
     rows = tableBody.find_all('tr')
-    with open("htmlHorror.txt","w") as f:
-        f.write(str(html))
     #Write html data into readable array
     for row in rows:
         cols = row.find_all('td')
         cols = [ele.text.strip() for ele in cols]
         data.append([ele for ele in cols if ele])
+    return data
+    
+def writeRelevantServiceDataIntoFile():
+    start = 97
+    end = 122
+    lines = []
+    with open("serviceInfo.txt") as f:
+        for line in f:
+            for i in range(0,7):
+                #print("i is: " + line[i].lower())
+                if ord(line[i].lower()) >= start and ord(line[i].lower()) <= end:
+                    lines.append(line)
+                    break
+    with open("smallerServiceFile.txt","w") as f:
+        for i in lines:
+            f.write(i)
+
+def getService(html, tableID):
     #Write array into even more readable txt file
+    data = parseTable(html, tableID)
     with open("serviceInfo.txt","w") as f:
         for i in range(0,len(data)):
             f.write(str(i) + ": ")
@@ -121,7 +136,6 @@ def getTable(html, tableID):
                 if str(data[i]) in lineData[j]:
                     cleanData.append(data[i])
                     break
-    
     #Dictionary that holds service data
     services = {
         "Shop": [],
@@ -169,10 +183,9 @@ def getTable(html, tableID):
                 print("This was an exception")
                 print(i[0])
                 pass
-    #print(services)
+
     with open('result.json', 'w') as fp:
         json.dump(services, fp, indent=4)
-
     return services
 
 def isOpen(services):
@@ -188,7 +201,7 @@ async def printIsOpenOrClosed(msg,name):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             html = await response.text()
-            services = getTable(html, data.data["webInfo"]["tableCol"])
+            services = getService(html, data.data["webInfo"]["tableCol"])
             if isOpen(services[sName[name]][sIndex[name]]):#services["Catering"][5]):
                 await msg.send(name +  " is open at the moment!!!")
             else:
