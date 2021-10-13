@@ -4,12 +4,9 @@ import aiohttp
 import asyncio
 import bs4
 import data
+import json
 from unitl import writeRelevantServiceDataIntoFile
 
-#how to dump dict to json file
-import json
-# with open('result.json', 'w') as fp:
-#     json.dump(data, fp)
 
 
 #command prefix which us used for every bot command
@@ -36,29 +33,7 @@ client = commands.Bot(command_prefix = '?')
 
 
 ## Url's for use in getting html data from the falmouth web pages
-falmouthURLs = {    
-    # Im going to keep these os if service status every break, i have these to come back too, 
-    # maybe I could add in checks to make sure it works, and if not use these, but hold shit 
-    # that sounds like so much fucking effor
-    "SportsFacilities" : {
-        "SportsFacilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
-        "FitnessCentre" : "https://fitnesscentre.fxplus.ac.uk/"
-    },
-    "TheStannary" : {
-        "StannaryBar" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
-        "StannaryKitchen" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-lower-stannary-restaurant/"
-    },
-    "cafe" : {
-        "AMATA" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/amata-cafe/",
-        "ESI" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/esi-cafe/",
-        "Koofi" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/koofi/",
-        "Sustainability" : "https://fxplus.ac.uk/facilities-shops/catering/penryn/the-sustainability-cafe/",               
-        "Fox" : "https://fxplus.ac.uk/facilities-shops/food-drink/falmouth/fox-cafe/"
-    },
-    #Holy fucking shit why didnt i know this existed
-    #now i need to refactor everything and just use this one link, fuck me
-    "ServiceStatus" : "https://fxplus.ac.uk/service-status/"
-}
+falmouthServiceURL = "https://fxplus.ac.uk/service-status/"
 
 sName = {
     "Falmouth Campus Shop" : "Shop",
@@ -73,7 +48,7 @@ sName = {
     "Falmouth Campus Library Helpdesk" : "Library",
     "Penryn Campus Library" : "Library",
     "Penryn Campus Library Helpdesk" : "Library",
-    "Virtual Helpdes" : "Library",
+    "Virtual Helpdesk" : "Library",
     "AMATA Cafe" : "Catering",
     "ESI Cafe" : "Catering",
     "Fox Cafe" : "Catering",
@@ -97,7 +72,7 @@ sIndex = {
     "Falmouth Campus Library Helpdesk" : 1,
     "Penryn Campus Library" : 2,
     "Penryn Campus Library Helpdesk" : 3,
-    "Virtual Helpdes" : 4,
+    "Virtual Helpdesk" : 4,
     "AMATA Cafe" : 0,
     "ESI Cafe" : 1,
     "Fox Cafe" : 2,
@@ -197,28 +172,7 @@ def getTable(html, tableID):
     #print(services)
     with open('result.json', 'w') as fp:
         json.dump(services, fp, indent=4)
-    
-    # with open("result.json") as jf:
-    #     jsonObj = json.load(jf)
-    # print("DIC TESTS")
-    # print(services["Shop"])#[0][0]["Name"])
-    # print("\n")
-    # print(services["Shop"][0]["Name"])
-    # print(services["Shop"][1]["OpenState"])
-        
-    ##WHATS GOING ON
-    #opens up smallerServiceFile.txt, that file comes from unitil, and has 28 lines
-    #all the relivant lines that i need from the file serviceInfo.txt
-    #ServiceInfo.txt is the data array, that was scarpped form falmouth service website,
-    #written neatly so its readable, i even added line numbers - each line represents an elemeant.
-    #here, i compare each element in data, to every element in lineData (a list where each ele is a line from smallerServiceFile.txt)
-    #and if the ele from data is in (not equal), I add it to list cleanData.
-    #You end up with some a cleanData array which has all the needed infomation, id indexable and cant be transfered to a json file (with effort)
 
-
-    #TODO   Turn cleanData into a dictionary/JSON file
-    #TODO   Clean and optimise everything that happened here today mygod
-    #TODO   Create function to parse opening time (Regex???)
     return services
 
 def isOpen(services):
@@ -227,67 +181,10 @@ def isOpen(services):
     else:
         return False
 
-
-
-##########                 ##########
-##########  TABLE PARSING  ##########
-##########                 ##########
-
-##Returns a dict, even if theres just one value, for
-# A. Consitancy
-# B. Maintainabliltiy, if anymore are added it makes my life easier
-
-#Returns dict of boolean vals for whether the Bar is open or not
-def parseStannaryBarTable(table):
-    stannaryBar = {
-        "StannaryBar" : True if "open" in table[0][2] else False
-    }
-    return stannaryBar
-
-#Returns dict of bloolean vals for AMATA Cafe
-def parseAMATAcafeTable(table):
-    AMATA = {
-        "AMATA Cafe" : True if "open" in table[0][2] else False
-    }
-    return AMATA
-
-##Returns dict of boolean vals for ESI Cafe
-def parseESIcafeTable(table):
-    ESI = {
-        "ESI Cafe" : True if "open" in table[0][2] else False
-    }
-    return ESI
-
-##Returns dict of boolean vals for Koofi Cafe
-def parseKoofiCafeTable(table):
-    koofi = {
-        "Koofi Cafe" : True if "open" in table[56][2] else False#table[0][2] else False
-    }
-    return koofi
-
-##Returns dict of boolean vals for Fox Cafe
-def parseFoxCafeTable(table):
-    fox = {
-        "Fox Cafe" : True if "open" in table[0][2] else False
-    }
-    return fox
-
-##Returns dict of boolean vals for the Sports Centre
-def parseSportCentreTable(table):
-    falcilities = {
-        "Mult Use Games Area" : True if "open" in table[0][2] else False,
-        "Penryn Campus Gym" : True if "open" in table[2][2] else False,
-        "Penryn Sports Centre" : True if "open" in table[5][2] else False
-    }
-    return falcilities
-
-
-#########################################################################################
-##################################### COMMAND CALLS #####################################
-#########################################################################################
-
+# Scrapes and parses html data from falmouth uni's websites
+# and prints wether or not a request service (name) is open
 async def printIsOpenOrClosed(msg,name):
-    url = falmouthURLs["ServiceStatus"]
+    url = falmouthServiceURL
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             html = await response.text()
@@ -298,8 +195,13 @@ async def printIsOpenOrClosed(msg,name):
                 print("Name is: " + name)
                 await msg.send(name +  " is closed at the moment :(")
 
+#########################################################################################
+##################################### COMMAND CALLS #####################################
+#########################################################################################
+
+
 ##########                 ##########
-########## PENRYN CATERING ##########
+##########     CATERING    ##########
 ##########                 ##########
 
 ###Sends channel msg when procedure name 'amata' is called as a command
@@ -307,124 +209,22 @@ async def printIsOpenOrClosed(msg,name):
 async def amata(msg):
     print("amata was called")
     await printIsOpenOrClosed(msg,"AMATA Cafe")
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #     async with session.get(url) as response:
-    #         html = await response.text()
-    #         services = getTable(html, data.data["webInfo"]["tableCol"])            
-    #         if isOpen(services[sName["AMATA Cafe"]][sIndex["AMATA Cafe"]]):
-    #             await msg.send("AMATA Cafe is open at the moment!!!")
-    #         else:
-    #             await msg.send("AMATA Cafe is closed at the moment :(")
 
-###Sends channel msg when procedure name 'esi' is called as a command
 @client.command()
 async def esi(msg):
     await printIsOpenOrClosed(msg,"ESI Cafe")
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #     async with session.get(url) as response:
-    #         html = await response.text()
-    #         services = getTable(html, data.data["webInfo"]["tableCol"])
-    #         if isOpen(services[sName["ESI Cafe"]][sIndex["ESI Cafe"]]):
-    #             await msg.send("ESI Cafe is open at the moment!!!")
-    #         else:
-    #             await msg.send("ESI Cafe is closed at the moment :(")
-    
-
-###Sends channel msg when procedure name 'koofi' is called as a command
 
 @client.command()
 async def koofi(msg):
     await printIsOpenOrClosed(msg,"Koofi")
-    # #url = falmouthURLs["cafe"]["Koofi"]
-    # #testing link
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #     async with session.get(url) as response:
-    #         html = await response.text()
-    #         services = getTable(html, data.data["webInfo"]["tableCol"])
-    #         if isOpen(services[sName["Koofi"]][sIndex["Koofi"]]):#services["Catering"][5]):
-    #             await msg.send("Koofi Cafe is open at the moment!!!")
-    #         else:
-    #             await msg.send("Koofi Cafe is closed at the moment :(")
 
-# TODO
-
-###Sends channel msg when procedure name 'stannaryB' is called as a command
 @client.command()
 async def stannaryB(msg):
     await printIsOpenOrClosed(msg,"The Stannary Bar")
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #     async with session.get(url) as response:                    
-    #         html = await response.text()
-    #         services = getTable(html, data.data["webInfo"]["tableCol"])
-    #         if isOpen(services[sName["The Stannary Bar"]][sIndex["The Stannary Bar"]]):
-    #             await msg.send("The Stannary Bar is open at the moment!!!")
-    #         else:
-    #             await msg.send("The Stannary Bar is closed at the moment :(")
-
-
 
 @client.command()
 async def fox(msg):
     await printIsOpenOrClosed(msg,"Fox Cafe")
-    # #url = falmouthURLs["cafe"]["Koofi"]
-    # #testing link
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #     async with session.get(url) as response:
-    #         html = await response.text()
-    #         services = getTable(html, data.data["webInfo"]["tableCol"])
-    #         if isOpen(services[sName[""]][sIndex[""]]):
-    #             await msg.send(" is open at the moment!!!")
-    #         else:
-    #             await msg.send(" is closed at the moment :(")
-
-##########                   ##########
-########## SPORTS FACILITIES ##########
-##########                   ##########
-
-###Sends channel msg when procedure name 'gym' is called as a command
-
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #         async with session.get(url) as response:                    
-    #             html = await response.text()
-    #             services = getTable(html, data.data["webInfo"]["tableCol"])            
-    #             if isOpen(services[sName["Penryn Campus Gym"]][sIndex["Penryn Campus Gym"]]):
-    #                 await msg.send("The Penryn Campus Gym is open at the moment!!!")
-    #             else:
-    #                 await msg.send("The Penryn Campus Gym is closed at the moment :(")
-#TODO
-###Sends channel msg when procedure name 'GamesArea' is called as a command
-
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #         async with session.get(url) as response:                    
-    #             html = await response.text()
-    #             table = getTable(html, data.data["webInfo"]["tableCol"])
-    #             falcilities = parseSportCentreTable(table)
-            
-    #             if falcilities["Multi Use Games Area"]:
-    #                 await msg.send("The Penryn Campus Games Area is open at the moment!!!")
-    #             else:
-    #                 await msg.send("The Penryn Campus Games Area is closed at the moment :(")
-#TODO
-###Sends channel msg when procedure name 'SportCentre' is called as a command
-
-    # url = falmouthURLs["ServiceStatus"]
-    # async with aiohttp.ClientSession() as session:
-    #         async with session.get(url) as response:                    
-    #             html = await response.text()
-    #             table = getTable(html, data.data["webInfo"]["tableCol"])
-    #             falcilities = parseSportCentreTable(table)
-            
-    #             if falcilities["Penryn Sports Centre"]:
-    #                 await msg.send("The Penryn Campus Sports Centre is open at the moment!!!")
-    #             else:
-    #                 await msg.send("The Penryn Campus Sports Centre is closed at the moment :(")
 
 @client.command()
 async def lStannary(msg):
@@ -438,7 +238,9 @@ async def stannaryDeli(msg):
 async def susCafe(msg):
     await printIsOpenOrClosed(msg,"The Sustainability Cafe")
 
-##Service
+##########                 ##########
+##########     SERVICE     ##########
+##########                 ##########
 
 @client.command()
 async def gym(msg):
@@ -464,7 +266,9 @@ async def lilWonders(msg):
 async def compass(msg):
     await printIsOpenOrClosed(msg,"The Compass")
 
-## Library
+##########                 ##########
+##########     LIBRARY     ##########
+##########                 ##########
 
 @client.command()
 async def fLibrary(msg):
@@ -487,10 +291,6 @@ async def vHelpdesk(msg):
     await printIsOpenOrClosed(msg,"Virtual Helpdesk")
 
 
-
-# @client.command()
-# async def (msg):
-#     await printIsOpenOrClosed(msg,"")
 
 
 #Lets you know if the bot is up and running

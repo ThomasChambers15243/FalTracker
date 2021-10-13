@@ -13,6 +13,33 @@ data = {
         "Client ID" : "897198087414620172"
     },
     "webInfo" : {
+        "falmouthServiceURL" : "https://fxplus.ac.uk/service-status/",
         "tableCol" : "tablepress-2"
     }
+}
+
+archivedData = {
+    "falmouthURLs" : {    
+    # Im going to keep these os if service status every break, i have these to come back too, 
+    # maybe I could add in checks to make sure it works, and if not use these, but hold shit 
+    # that sounds like so much fucking effor
+    "SportsFacilities" : {
+        "SportsFacilities" : "https://fxplus.ac.uk/facilities-shops/sports-facilities/",
+        "FitnessCentre" : "https://fitnesscentre.fxplus.ac.uk/"
+    },
+    "TheStannary" : {
+        "StannaryBar" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-stannary-bar/",
+        "StannaryKitchen" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/the-lower-stannary-restaurant/"
+    },
+    "cafe" : {
+        "AMATA" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/amata-cafe/",
+        "ESI" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/esi-cafe/",
+        "Koofi" : "https://fxplus.ac.uk/facilities-shops/food-drink/penryn/koofi/",
+        "Sustainability" : "https://fxplus.ac.uk/facilities-shops/catering/penryn/the-sustainability-cafe/",               
+        "Fox" : "https://fxplus.ac.uk/facilities-shops/food-drink/falmouth/fox-cafe/"
+    },
+    #Holy fucking shit why didnt i know this existed
+    #now i need to refactor everything and just use this one link, fuck me
+    "ServiceStatus" : "https://fxplus.ac.uk/service-status/"
+}
 }
