@@ -178,9 +178,6 @@ def getTable(html, tableID):
                 })
             case "Catering":
                 if len(i) > 3:
-                    print("\nI is\n")
-                    print(i)
-                    print("\n")
                     services["Catering"].append({
                         "Name" : i[1],
                         "OpenState" : i[2],
@@ -225,9 +222,6 @@ def getTable(html, tableID):
     return services
 
 def isOpen(services):
-    print("CALLED WAS")
-    print(services["OpenState"])
-    print(services["Name"])
     if services["OpenState"] == "We're currently open.":
         return True
     else:
@@ -292,6 +286,17 @@ def parseSportCentreTable(table):
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
 
+async def printIsOpenOrClosed(msg,name):
+    url = falmouthURLs["ServiceStatus"]
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            html = await response.text()
+            services = getTable(html, data.data["webInfo"]["tableCol"])
+            if isOpen(services[sName[name]][sIndex[name]]):#services["Catering"][5]):
+                await msg.send(name +  " is open at the moment!!!")
+            else:
+                print("Name is: " + name)
+                await msg.send(name +  " is closed at the moment :(")
 
 ##########                 ##########
 ########## PENRYN CATERING ##########
@@ -300,106 +305,193 @@ def parseSportCentreTable(table):
 ###Sends channel msg when procedure name 'amata' is called as a command
 @client.command()
 async def amata(msg):
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            html = await response.text()
-            services = getTable(html, data.data["webInfo"]["tableCol"])            
-            if isOpen(services[sName["AMATA Cafe"]][sIndex["AMATA Cafe"]]):
-                await msg.send("AMATA Cafe is open at the moment!!!")
-            else:
-                await msg.send("AMATA Cafe is closed at the moment :(")
+    print("amata was called")
+    await printIsOpenOrClosed(msg,"AMATA Cafe")
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #     async with session.get(url) as response:
+    #         html = await response.text()
+    #         services = getTable(html, data.data["webInfo"]["tableCol"])            
+    #         if isOpen(services[sName["AMATA Cafe"]][sIndex["AMATA Cafe"]]):
+    #             await msg.send("AMATA Cafe is open at the moment!!!")
+    #         else:
+    #             await msg.send("AMATA Cafe is closed at the moment :(")
 
 ###Sends channel msg when procedure name 'esi' is called as a command
 @client.command()
 async def esi(msg):
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            html = await response.text()
-            services = getTable(html, data.data["webInfo"]["tableCol"])
-            if isOpen(services[sName["ESI Cafe"]][sIndex["ESI Cafe"]]):
-                await msg.send("ESI Cafe is open at the moment!!!")
-            else:
-                await msg.send("ESI Cafe is closed at the moment :(")
+    await printIsOpenOrClosed(msg,"ESI Cafe")
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #     async with session.get(url) as response:
+    #         html = await response.text()
+    #         services = getTable(html, data.data["webInfo"]["tableCol"])
+    #         if isOpen(services[sName["ESI Cafe"]][sIndex["ESI Cafe"]]):
+    #             await msg.send("ESI Cafe is open at the moment!!!")
+    #         else:
+    #             await msg.send("ESI Cafe is closed at the moment :(")
     
 
 ###Sends channel msg when procedure name 'koofi' is called as a command
+
 @client.command()
 async def koofi(msg):
-    #url = falmouthURLs["cafe"]["Koofi"]
-    #testing link
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            html = await response.text()
-            services = getTable(html, data.data["webInfo"]["tableCol"])
-            if isOpen(services[sName["Koofi"]][sIndex["Koofi"]]):#services["Catering"][5]):
-                await msg.send("Koofi Cafe is open at the moment!!!")
-            else:
-                await msg.send("Koofi Cafe is closed at the moment :(")
+    await printIsOpenOrClosed(msg,"Koofi")
+    # #url = falmouthURLs["cafe"]["Koofi"]
+    # #testing link
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #     async with session.get(url) as response:
+    #         html = await response.text()
+    #         services = getTable(html, data.data["webInfo"]["tableCol"])
+    #         if isOpen(services[sName["Koofi"]][sIndex["Koofi"]]):#services["Catering"][5]):
+    #             await msg.send("Koofi Cafe is open at the moment!!!")
+    #         else:
+    #             await msg.send("Koofi Cafe is closed at the moment :(")
 
+# TODO
 
 ###Sends channel msg when procedure name 'stannaryB' is called as a command
 @client.command()
 async def stannaryB(msg):
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:                    
-            html = await response.text()
-            table = getTable(html, data.data["webInfo"]["tableCol"])
-            bar = parseStannaryBarTable(table)
-            if bar["StannaryBar"]:
-                await msg.send("The Stannary Bar is open at the moment!!!")
-            else:
-                await msg.send("The Stannary Bar is closed at the moment :(")
+    await printIsOpenOrClosed(msg,"The Stannary Bar")
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #     async with session.get(url) as response:                    
+    #         html = await response.text()
+    #         services = getTable(html, data.data["webInfo"]["tableCol"])
+    #         if isOpen(services[sName["The Stannary Bar"]][sIndex["The Stannary Bar"]]):
+    #             await msg.send("The Stannary Bar is open at the moment!!!")
+    #         else:
+    #             await msg.send("The Stannary Bar is closed at the moment :(")
+
+
+
+@client.command()
+async def fox(msg):
+    await printIsOpenOrClosed(msg,"Fox Cafe")
+    # #url = falmouthURLs["cafe"]["Koofi"]
+    # #testing link
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #     async with session.get(url) as response:
+    #         html = await response.text()
+    #         services = getTable(html, data.data["webInfo"]["tableCol"])
+    #         if isOpen(services[sName[""]][sIndex[""]]):
+    #             await msg.send(" is open at the moment!!!")
+    #         else:
+    #             await msg.send(" is closed at the moment :(")
 
 ##########                   ##########
 ########## SPORTS FACILITIES ##########
 ##########                   ##########
 
 ###Sends channel msg when procedure name 'gym' is called as a command
+
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #         async with session.get(url) as response:                    
+    #             html = await response.text()
+    #             services = getTable(html, data.data["webInfo"]["tableCol"])            
+    #             if isOpen(services[sName["Penryn Campus Gym"]][sIndex["Penryn Campus Gym"]]):
+    #                 await msg.send("The Penryn Campus Gym is open at the moment!!!")
+    #             else:
+    #                 await msg.send("The Penryn Campus Gym is closed at the moment :(")
+#TODO
+###Sends channel msg when procedure name 'GamesArea' is called as a command
+
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #         async with session.get(url) as response:                    
+    #             html = await response.text()
+    #             table = getTable(html, data.data["webInfo"]["tableCol"])
+    #             falcilities = parseSportCentreTable(table)
+            
+    #             if falcilities["Multi Use Games Area"]:
+    #                 await msg.send("The Penryn Campus Games Area is open at the moment!!!")
+    #             else:
+    #                 await msg.send("The Penryn Campus Games Area is closed at the moment :(")
+#TODO
+###Sends channel msg when procedure name 'SportCentre' is called as a command
+
+    # url = falmouthURLs["ServiceStatus"]
+    # async with aiohttp.ClientSession() as session:
+    #         async with session.get(url) as response:                    
+    #             html = await response.text()
+    #             table = getTable(html, data.data["webInfo"]["tableCol"])
+    #             falcilities = parseSportCentreTable(table)
+            
+    #             if falcilities["Penryn Sports Centre"]:
+    #                 await msg.send("The Penryn Campus Sports Centre is open at the moment!!!")
+    #             else:
+    #                 await msg.send("The Penryn Campus Sports Centre is closed at the moment :(")
+
+@client.command()
+async def lStannary(msg):
+    await printIsOpenOrClosed(msg,"Lower Stannary")
+
+@client.command()
+async def stannaryDeli(msg):
+    await printIsOpenOrClosed(msg,"Stannary Deli Bar")    
+
+@client.command()
+async def susCafe(msg):
+    await printIsOpenOrClosed(msg,"The Sustainability Cafe")
+
+##Service
+
 @client.command()
 async def gym(msg):
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-            async with session.get(url) as response:                    
-                html = await response.text()
-                services = getTable(html, data.data["webInfo"]["tableCol"])            
-                if isOpen(services[sName["Penryn Campus Gym"]][sIndex["Penryn Campus Gym"]]):
-                    await msg.send("The Penryn Campus Gym is open at the moment!!!")
-                else:
-                    await msg.send("The Penryn Campus Gym is closed at the moment :(")
+    await printIsOpenOrClosed(msg,"Penryn Campus Gym")
 
-###Sends channel msg when procedure name 'GamesArea' is called as a command
 @client.command()
 async def gamesArea(msg):
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-            async with session.get(url) as response:                    
-                html = await response.text()
-                table = getTable(html, data.data["webInfo"]["tableCol"])
-                falcilities = parseSportCentreTable(table)
-            
-                if falcilities["Mult Use Games Area"]:
-                    await msg.send("The Penryn Campus Games Area is open at the moment!!!")
-                else:
-                    await msg.send("The Penryn Campus Games Area is closed at the moment :(")
+    await printIsOpenOrClosed(msg,"Multi Use Games Area")
 
-###Sends channel msg when procedure name 'SportCentre' is called as a command
 @client.command()
 async def sportsCentre(msg):
-    url = falmouthURLs["ServiceStatus"]
-    async with aiohttp.ClientSession() as session:
-            async with session.get(url) as response:                    
-                html = await response.text()
-                table = getTable(html, data.data["webInfo"]["tableCol"])
-                falcilities = parseSportCentreTable(table)
-            
-                if falcilities["Penryn Sports Centre"]:
-                    await msg.send("The Penryn Campus Sports Centre is open at the moment!!!")
-                else:
-                    await msg.send("The Penryn Campus Sports Centre is closed at the moment :(")
+    await printIsOpenOrClosed(msg,"Penryn Sports Centre")
+
+@client.command()
+async def av(msg):
+    await printIsOpenOrClosed(msg,"AV")
+
+@client.command()
+async def lilWonders(msg):
+    await printIsOpenOrClosed(msg,"Little Wonders Nurseries")
+
+@client.command()
+async def compass(msg):
+    await printIsOpenOrClosed(msg,"The Compass")
+
+## Library
+
+@client.command()
+async def fLibrary(msg):
+    await printIsOpenOrClosed(msg,"Falmouth Campus Library")
+
+@client.command()
+async def fHelpdesk(msg):
+    await printIsOpenOrClosed(msg,"Falmouth Campus Library Helpdesk")
+
+@client.command()
+async def pLibrary(msg):
+    await printIsOpenOrClosed(msg,"Penryn Campus Library")
+
+@client.command()
+async def pHelpdesk(msg):
+    await printIsOpenOrClosed(msg,"Penryn Campus Library Helpdesk")
+
+@client.command()
+async def vHelpdesk(msg):
+    await printIsOpenOrClosed(msg,"Virtual Helpdesk")
+
+
+
+# @client.command()
+# async def (msg):
+#     await printIsOpenOrClosed(msg,"")
+
 
 #Lets you know if the bot is up and running
 @client.event
