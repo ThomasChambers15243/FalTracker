@@ -131,6 +131,7 @@ def getService(html, tableID):
                 if str(data[i]) in lineData[j]:
                     cleanData.append(data[i])
                     break
+
     # Dictionary that holds service data
     services = {
         "Shop": [],
@@ -139,6 +140,7 @@ def getService(html, tableID):
         "Catering" : [],
         "Student Services" : [],
     }
+
     # Loads cleanData into services
     for i in cleanData:
         match i[0]:
@@ -189,16 +191,26 @@ def isOpen(services):
     else:
         return False
 
+#Return the hours for a service
+def getHours(services, name):
+    hoursString = "Opening Hours:\n" + str(services[sName[name]][sIndex[name]]["Hours"])
+    return hoursString
+
 # Scrapes and parses html data from falmouth uni's websites
 # and prints wether or not a request service (name) is open
-async def printIsOpenOrClosed(msg,name):
-    
+async def getHtml():
     url = falmouthServiceURL
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
 
-            html = await response.text()
+            html = await response.text()   
+            
+            return html
+
+async def printIsOpenOrClosed(msg,name):
+    
+            html = await getHtml()
             services = getService(html, data.data["webInfo"]["tableCol"])
 
             if isOpen(services[sName[name]][sIndex[name]]):
@@ -211,7 +223,6 @@ async def printIsOpenOrClosed(msg,name):
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
 
-
 ##########                 ##########
 ##########     CATERING    ##########
 ##########                 ##########
@@ -220,7 +231,10 @@ async def printIsOpenOrClosed(msg,name):
 @client.command()
 async def amata(msg):
     print("amata was called")
-    await printIsOpenOrClosed(msg,"AMATA Cafe")
+    #await printIsOpenOrClosed(msg,"AMATA Cafe")
+    html = await getHtml()
+    message = getHours(getService(html,data.data["webInfo"]["tableCol"]),"AMATA Cafe")
+    await msg.send(message)
 
 @client.command()
 async def esi(msg):
