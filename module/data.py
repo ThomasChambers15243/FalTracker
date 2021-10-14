@@ -38,8 +38,8 @@ archivedData = {
         "Sustainability" : "https://fxplus.ac.uk/facilities-shops/catering/penryn/the-sustainability-cafe/",               
         "Fox" : "https://fxplus.ac.uk/facilities-shops/food-drink/falmouth/fox-cafe/"
     },
-    #Holy fucking shit why didnt i know this existed
-    #now i need to refactor everything and just use this one link, fuck me
+    # Holy fucking shit why didnt i know this existed
+    # now i need to refactor everything and just use this one link, fuck me
     "ServiceStatus" : "https://fxplus.ac.uk/service-status/"
 }
 }

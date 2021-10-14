@@ -5,19 +5,20 @@ import asyncio
 import bs4
 import data
 import json
-#from unitl import writeRelevantServiceDataIntoFile
+import re
 
 
 
-#command prefix which us used for every bot command
+
+# command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
 
-##TODO
-##not in use atm, would like to put webcalls in a function but not 
+# TODO
+# not in use atm, would like to put webcalls in a function but not 
 # sure how since its async and not just a standard response
 
 
-## Url's for use in getting html data from the falmouth web pages
+# Url's for use in getting html data from the falmouth web pages
 falmouthServiceURL = "https://fxplus.ac.uk/service-status/"
 
 sName = {
@@ -68,10 +69,17 @@ sIndex = {
     "The Sustainability Cafe" : 7
 }
 
+# Takes the hourse from the service string and returns a human
+# readable string
+def parseOpenHoursFormatting(hours):
+    # LEARN REGEX
+    hours = re.sub("\u2013", "-", hours)
+    # hours = re.sub("[\n]", "..", hours)
+    # hours = re.sub("[\n\n\n]", "\n", hours)
+    return hours
 
-#Gets the table which tells you wether its open from a html string
-#Returns the table as a list called data
-
+# Gets the table which tells you wether its open from a html string
+# Returns the table as a list called data
 def parseTable(html,tableID):
     data = []
     soup = bs4.BeautifulSoup(html, 'html.parser')
@@ -84,7 +92,8 @@ def parseTable(html,tableID):
         cols = [ele.text.strip() for ele in cols]
         data.append([ele for ele in cols if ele])
     return data
-    
+
+# Take a file all service info and cleans it
 def writeRelevantServiceDataIntoFile():
     start = 97
     end = 122
@@ -100,8 +109,9 @@ def writeRelevantServiceDataIntoFile():
         for i in lines:
             f.write(i)
 
+# returns a dictionary of all the falmouth services
 def getService(html, tableID):
-    #Write array into even more readable txt file
+    # Write array into even more readable txt file
     data = parseTable(html, tableID)
     with open("serviceInfo.txt","w") as f:
         for i in range(0,len(data)):
@@ -109,9 +119,9 @@ def getService(html, tableID):
             f.write(str(data[i]))
             f.write("\n")
     writeRelevantServiceDataIntoFile()
-    #List to hold new, indexable service data
+    # List to hold new, indexable service data
     cleanData = []
-    #appends service data to cleanData
+    # appends service data to cleanData
     with open("smallerServiceFile.txt", "r") as f:
         lineData = []
         for line in f:
@@ -121,7 +131,7 @@ def getService(html, tableID):
                 if str(data[i]) in lineData[j]:
                     cleanData.append(data[i])
                     break
-    #Dictionary that holds service data
+    # Dictionary that holds service data
     services = {
         "Shop": [],
         "Service" : [],
@@ -129,33 +139,33 @@ def getService(html, tableID):
         "Catering" : [],
         "Student Services" : [],
     }
-    #Loads cleanData into services
+    # Loads cleanData into services
     for i in cleanData:
         match i[0]:
             case "Shop":
                 services["Shop"].append({
                     "Name" : i[1],
                     "OpenState" : i[2],
-                    "Hours" : i[3]
+                    "Hours" : parseOpenHoursFormatting(i[3])
                 })
             case "Service":
                 services["Service"].append({
                     "Name" : i[1],
                     "OpenState" : i[2],
-                    "Hours" : i[3]
+                    "Hours" : parseOpenHoursFormatting(i[3])
                 })
             case "Library":
                 services["Library"].append({
                     "Name" : i[1],
                     "OpenState" : i[2],
-                    "Hours" : i[3]
+                    "Hours" : parseOpenHoursFormatting(i[3])
                 })
             case "Catering":
                 if len(i) > 3:
                     services["Catering"].append({
                         "Name" : i[1],
                         "OpenState" : i[2],
-                        "Hours" : i[3]                  
+                        "Hours" : parseOpenHoursFormatting(i[3])
                     })
                 else:
                     services["Catering"].append({
@@ -164,7 +174,7 @@ def getService(html, tableID):
                         "Hours" : None                  
                     })                    
             case _:
-                #Thise leaves the exceptions
+                # Thise leaves the exceptions
                 print("This was an exception")
                 print(i[0])
                 pass
@@ -206,7 +216,7 @@ async def printIsOpenOrClosed(msg,name):
 ##########     CATERING    ##########
 ##########                 ##########
 
-###Sends channel msg when procedure the name is called as a command
+# Sends channel msg when procedure the name is called as a command
 @client.command()
 async def amata(msg):
     print("amata was called")
@@ -243,6 +253,14 @@ async def susCafe(msg):
 ##########                 ##########
 ##########     SERVICE     ##########
 ##########                 ##########
+
+@client.command()
+async def pshop(msg):
+    await printIsOpenOrClosed(msg, "Penryn Campus Shop")
+
+@client.command()
+async def fshop(msg):
+    await printIsOpenOrClosed(msg, "Falmouth Campus Shop")
 
 @client.command()
 async def gym(msg):
@@ -295,10 +313,10 @@ async def vHelpdesk(msg):
 
 
 
-#Lets you know if the bot is up and running
+# Lets you know if the bot is up and running
 @client.event
 async def on_ready():
-    print("bot is ready!")    
+    print("bot is ready!")  
 
-#Token
+# Token
 client.run(data.data["keys"]["token"])    
