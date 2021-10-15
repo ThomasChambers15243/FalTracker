@@ -1,6 +1,7 @@
 from asyncio.windows_events import NULL
 import discord
 from discord import message
+from discord.client import Client
 from discord.ext import commands
 import aiohttp
 import asyncio
@@ -16,8 +17,10 @@ import re
 client = commands.Bot(command_prefix = '?')
 
 # TODO
-# not in use atm, would like to put webcalls in a function but not 
-# sure how since its async and not just a standard response
+# Implement a spam logger
+# https://stackoverflow.com/questions/64865728/how-to-keep-track-of-messages-sent-in-discord-py
+
+
 
 
 # Url's for use in getting html data from the falmouth web pages
@@ -228,9 +231,30 @@ async def printIsOpenOrClosed(msg,name):
                 print("Name is: " + name)
                 await msg.send(name +  " is closed at the moment :(")
 
+
+#########################################################################################
+#####################################     EVENTS     ####################################
+#########################################################################################
+
+# @client.event
+# async def onMessage(msg):
+#     if message.author == client.user:
+#         return
+#     elif message.content.startswith("?"):
+#         cmd = message.content.split()[0].replace("_","")
+#         if len(message.content.split()) > 1:
+#             parameters = message.content.split()[1:]        
+
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
+
+
+# Test on how to call commands from other functions
+@client.command()
+async def test(ctx):
+    command = client.get_command("koofi")
+    await ctx.invoke(command)
 
 ##########                 ##########
 ##########     CATERING    ##########
@@ -241,6 +265,7 @@ async def printIsOpenOrClosed(msg,name):
 async def amata(msg):
     print("amata was called")
     await printIsOpenOrClosed(msg,"AMATA Cafe")
+
 
 @client.command()
 async def amataOt(msg):
@@ -483,6 +508,7 @@ async def vHelpdeskOt(msg):
 @client.event
 async def on_ready():
     print("bot is ready!")  
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Dreamy Night"))
 
 
 # Token
