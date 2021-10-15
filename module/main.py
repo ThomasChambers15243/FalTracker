@@ -11,8 +11,6 @@ import json
 import re
 
 
-
-
 # command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
 
@@ -21,71 +19,23 @@ client = commands.Bot(command_prefix = '?')
 # https://stackoverflow.com/questions/64865728/how-to-keep-track-of-messages-sent-in-discord-py
 
 
-
-
-# Url's for use in getting html data from the falmouth web pages
-falmouthServiceURL = "https://fxplus.ac.uk/service-status/"
+# Data for getting html data
+falmouthServiceURL = data.data["webInfo"]["falmouthServiceURL"]
 tableCol = data.data["webInfo"]["tableCol"]
+# ShortHand sogetting service information is more maintainable
+sName = data.data["sName"]
+sIndex = data.data["sIndex"]
 
-
-sName = {
-    "Falmouth Campus Shop" : "Shop",
-    "Penryn Campus Shop" : "Shop",
-    "AV" : "Service",
-    "Little Wonders Nurseries" : "Service",
-    "Multi Use Games Area" : "Service",
-    "Penryn Campus Gym" : "Service",
-    "Penryn Sports Centre" : "Service",
-    "The Compass" : "Service",
-    "Falmouth Campus Library" : "Library",
-    "Falmouth Campus Library Helpdesk" : "Library",
-    "Penryn Campus Library" : "Library",
-    "Penryn Campus Library Helpdesk" : "Library",
-    "Virtual Helpdesk" : "Library",
-    "AMATA Cafe" : "Catering",
-    "ESI Cafe" : "Catering",
-    "Fox Cafe" : "Catering",
-    "Lower Stannary" : "Catering",
-    "Stannary Deli Bar" : "Catering",
-    "Koofi" : "Catering",
-    "The Stannary Bar" : "Catering",
-    "The Sustainability Cafe" : "Catering"
-}
-
-sIndex = {
-    "Falmouth Campus Shop" : 0,
-    "Penryn Campus Shop" : 1,
-    "AV" : 0,
-    "Little Wonders Nurseries" : 1,
-    "Multi Use Games Area" : 2,
-    "Penryn Campus Gym" : 3,
-    "Penryn Sports Centre" : 4,
-    "The Compass" : 5,
-    "Falmouth Campus Library" : 0,
-    "Falmouth Campus Library Helpdesk" : 1,
-    "Penryn Campus Library" : 2,
-    "Penryn Campus Library Helpdesk" : 3,
-    "Virtual Helpdesk" : 4,
-    "AMATA Cafe" : 0,
-    "ESI Cafe" : 1,
-    "Fox Cafe" : 2,
-    "Lower Stannary" : 3,
-    "Stannary Deli Bar" : 4,
-    "Koofi" : 5,
-    "The Stannary Bar" : 6,
-    "The Sustainability Cafe" : 7
-}
-
-# Takes the hourse from the service string and returns a human
+# Takes the hour's from the service string and returns a human
 # readable string
 def parseOpenHoursFormatting(hours):
-    # LEARN REGEX
+    # TODO LEARN REGEX
     hours = re.sub("\u2013", "-", hours)
     # hours = re.sub("[\n]", "..", hours)
     # hours = re.sub("[\n\n\n]", "\n", hours)
     return hours
 
-# Gets the table which tells you wether its open from a html string
+# Gets the table with tableID from a html string
 # Returns the table as a list called data
 def parseTable(html,tableID):
     data = []
@@ -100,7 +50,9 @@ def parseTable(html,tableID):
         data.append([ele for ele in cols if ele])
     return data
 
-# Take a file all service info and cleans it
+# Take a file called "serviceInfo" and cleans it,
+# removing useless data and writing the clean day
+# to a file
 def writeRelevantServiceDataIntoFile():
     start = 97
     end = 122
@@ -108,7 +60,6 @@ def writeRelevantServiceDataIntoFile():
     with open("serviceInfo.txt") as f:
         for line in f:
             for i in range(0,7):
-                #print("i is: " + line[i].lower())
                 if ord(line[i].lower()) >= start and ord(line[i].lower()) <= end:
                     lines.append(line)
                     break
@@ -116,7 +67,9 @@ def writeRelevantServiceDataIntoFile():
         for i in lines:
             f.write(i)
 
-# returns a dictionary of all the falmouth services
+# returns a dictionary called "services" of all the falmouth services
+# Currently writes to a json file for development purposes, 
+# I dont see a need to keep the json files in the final build
 def getService(html, tableID):
     # Write array into even more readable txt file
     data = parseTable(html, tableID)
@@ -190,6 +143,7 @@ def getService(html, tableID):
 
     with open('result.json', 'w') as fp:
         json.dump(services, fp, indent=4)
+
     return services
 
 def isOpen(services):

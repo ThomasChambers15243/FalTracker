@@ -15,6 +15,52 @@ data = {
     "webInfo" : {
         "falmouthServiceURL" : "https://fxplus.ac.uk/service-status/",
         "tableCol" : "tablepress-2"
+    },
+    "sName" : {
+    "Falmouth Campus Shop" : "Shop",
+    "Penryn Campus Shop" : "Shop",
+    "AV" : "Service",
+    "Little Wonders Nurseries" : "Service",
+    "Multi Use Games Area" : "Service",
+    "Penryn Campus Gym" : "Service",
+    "Penryn Sports Centre" : "Service",
+    "The Compass" : "Service",
+    "Falmouth Campus Library" : "Library",
+    "Falmouth Campus Library Helpdesk" : "Library",
+    "Penryn Campus Library" : "Library",
+    "Penryn Campus Library Helpdesk" : "Library",
+    "Virtual Helpdesk" : "Library",
+    "AMATA Cafe" : "Catering",
+    "ESI Cafe" : "Catering",
+    "Fox Cafe" : "Catering",
+    "Lower Stannary" : "Catering",
+    "Stannary Deli Bar" : "Catering",
+    "Koofi" : "Catering",
+    "The Stannary Bar" : "Catering",
+    "The Sustainability Cafe" : "Catering"
+    },
+    "sIndex" : {
+    "Falmouth Campus Shop" : 0,
+    "Penryn Campus Shop" : 1,
+    "AV" : 0,
+    "Little Wonders Nurseries" : 1,
+    "Multi Use Games Area" : 2,
+    "Penryn Campus Gym" : 3,
+    "Penryn Sports Centre" : 4,
+    "The Compass" : 5,
+    "Falmouth Campus Library" : 0,
+    "Falmouth Campus Library Helpdesk" : 1,
+    "Penryn Campus Library" : 2,
+    "Penryn Campus Library Helpdesk" : 3,
+    "Virtual Helpdesk" : 4,
+    "AMATA Cafe" : 0,
+    "ESI Cafe" : 1,
+    "Fox Cafe" : 2,
+    "Lower Stannary" : 3,
+    "Stannary Deli Bar" : 4,
+    "Koofi" : 5,
+    "The Stannary Bar" : 6,
+    "The Sustainability Cafe" : 7
     }
 }
 
