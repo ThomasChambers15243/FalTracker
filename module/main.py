@@ -1,4 +1,6 @@
+from asyncio.windows_events import NULL
 import discord
+from discord import message
 from discord.ext import commands
 import aiohttp
 import asyncio
@@ -20,6 +22,8 @@ client = commands.Bot(command_prefix = '?')
 
 # Url's for use in getting html data from the falmouth web pages
 falmouthServiceURL = "https://fxplus.ac.uk/service-status/"
+tableCol = data.data["webInfo"]["tableCol"]
+
 
 sName = {
     "Falmouth Campus Shop" : "Shop",
@@ -193,7 +197,13 @@ def isOpen(services):
 
 #Return the hours for a service
 def getHours(services, name):
-    hoursString = "Opening Hours:\n" + str(services[sName[name]][sIndex[name]]["Hours"])
+    hours = str(services[sName[name]][sIndex[name]]["Hours"])
+
+    if hours != None:
+        hoursString = "Opening Hours:\n" + str(services[sName[name]][sIndex[name]]["Hours"])
+    else:
+        hoursString = "Opening Hours Unkown"
+
     return hoursString
 
 # Scrapes and parses html data from falmouth uni's websites
@@ -209,9 +219,8 @@ async def getHtml():
             return html
 
 async def printIsOpenOrClosed(msg,name):
-    
             html = await getHtml()
-            services = getService(html, data.data["webInfo"]["tableCol"])
+            services = getService(html, tableCol)
 
             if isOpen(services[sName[name]][sIndex[name]]):
                 await msg.send(name +  " is open at the moment!!!")
@@ -231,38 +240,91 @@ async def printIsOpenOrClosed(msg,name):
 @client.command()
 async def amata(msg):
     print("amata was called")
-    #await printIsOpenOrClosed(msg,"AMATA Cafe")
+    await printIsOpenOrClosed(msg,"AMATA Cafe")
+
+@client.command()
+async def amataOt(msg):
+    print("AmataOt was called")
     html = await getHtml()
-    message = getHours(getService(html,data.data["webInfo"]["tableCol"]),"AMATA Cafe")
+    message = getHours(getService(html,tableCol),"AMATA Cafe")
     await msg.send(message)
+
 
 @client.command()
 async def esi(msg):
     await printIsOpenOrClosed(msg,"ESI Cafe")
 
 @client.command()
+async def ESIOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"ESI Cafe")
+    await msg.send(message)
+
+@client.command()
 async def koofi(msg):
     await printIsOpenOrClosed(msg,"Koofi")
+
+@client.command()
+async def koofiOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Koofi")
+    await msg.send(message)
+
 
 @client.command()
 async def stannaryB(msg):
     await printIsOpenOrClosed(msg,"The Stannary Bar")
 
 @client.command()
+async def stannaryBOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"The Stannary Bar")
+    await msg.send(message)
+
+
+@client.command()
 async def fox(msg):
     await printIsOpenOrClosed(msg,"Fox Cafe")
+
+@client.command()
+async def foxOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Fox Cafe")
+    await msg.send(message)
+
 
 @client.command()
 async def lStannary(msg):
     await printIsOpenOrClosed(msg,"Lower Stannary")
 
 @client.command()
+async def lStannaryOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Lower Stannary")
+    await msg.send(message)
+
+
+@client.command()
 async def stannaryDeli(msg):
     await printIsOpenOrClosed(msg,"Stannary Deli Bar")    
 
 @client.command()
+async def stannaryDeliOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Stannary Deli Bar")
+    await msg.send(message)
+
+
+@client.command()
 async def susCafe(msg):
     await printIsOpenOrClosed(msg,"The Sustainability Cafe")
+
+@client.command()
+async def susCafeOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"The Sustainability Cafe")
+    await msg.send(message)
+
 
 ##########                 ##########
 ##########     SERVICE     ##########
@@ -273,32 +335,88 @@ async def pshop(msg):
     await printIsOpenOrClosed(msg, "Penryn Campus Shop")
 
 @client.command()
+async def pshopOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Penryn Campus Shop")
+    await msg.send(message)
+
+
+@client.command()
 async def fshop(msg):
     await printIsOpenOrClosed(msg, "Falmouth Campus Shop")
+
+@client.command()
+async def fshopOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Falmouth Campus Shop")
+    await msg.send(message)
+
 
 @client.command()
 async def gym(msg):
     await printIsOpenOrClosed(msg,"Penryn Campus Gym")
 
 @client.command()
+async def gymOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Penryn Campus Gym")
+    await msg.send(message)
+
+
+@client.command()
 async def gamesArea(msg):
     await printIsOpenOrClosed(msg,"Multi Use Games Area")
+
+@client.command()
+async def gamesAreaOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Multi Use Games Area")
+    await msg.send(message)
+
 
 @client.command()
 async def sportsCentre(msg):
     await printIsOpenOrClosed(msg,"Penryn Sports Centre")
 
 @client.command()
+async def sportsCentreOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"penryn Sports Centre")
+    await msg.send(message)
+
+
+@client.command()
 async def av(msg):
     await printIsOpenOrClosed(msg,"AV")
+
+@client.command()
+async def avOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"AV")
+    await msg.send(message)
+
 
 @client.command()
 async def lilWonders(msg):
     await printIsOpenOrClosed(msg,"Little Wonders Nurseries")
 
 @client.command()
+async def lilWondersOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Little Wonders Nurseries")
+    await msg.send(message)
+
+
+@client.command()
 async def compass(msg):
     await printIsOpenOrClosed(msg,"The Compass")
+
+@client.command()
+async def compassOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"The Compass")
+    await msg.send(message)
+
 
 ##########                 ##########
 ##########     LIBRARY     ##########
@@ -309,20 +427,54 @@ async def fLibrary(msg):
     await printIsOpenOrClosed(msg,"Falmouth Campus Library")
 
 @client.command()
+async def fLibraryOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Falmouth Campus Library")
+    await msg.send(message)
+
+
+@client.command()
 async def fHelpdesk(msg):
     await printIsOpenOrClosed(msg,"Falmouth Campus Library Helpdesk")
+
+@client.command()
+async def fHelpdeskOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Falmouth Campus Library Helpdesk")
+    await msg.send(message)
+
 
 @client.command()
 async def pLibrary(msg):
     await printIsOpenOrClosed(msg,"Penryn Campus Library")
 
 @client.command()
+async def plibraryOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Penryn Campus Library")
+    await msg.send(message)
+
+
+@client.command()
 async def pHelpdesk(msg):
     await printIsOpenOrClosed(msg,"Penryn Campus Library Helpdesk")
 
 @client.command()
+async def pHelpdeskOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Penryn Campus Library helpdesk")
+    await msg.send(message)
+
+
+@client.command()
 async def vHelpdesk(msg):
     await printIsOpenOrClosed(msg,"Virtual Helpdesk")
+
+@client.command()
+async def vHelpdeskOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Virtual Helpdesk")
+    await msg.send(message)
 
 
 
@@ -331,6 +483,7 @@ async def vHelpdesk(msg):
 @client.event
 async def on_ready():
     print("bot is ready!")  
+
 
 # Token
 client.run(data.data["keys"]["token"])    
