@@ -146,13 +146,14 @@ def getService(html, tableID):
 
     return services
 
+# Passes through services[category][name] and returns whether the open state is true or false
 def isOpen(services):
     if services["OpenState"] == "We're currently open.":
         return True
     else:
         return False
 
-#Return the hours for a service
+# Return the hours for a service
 def getHours(services, name):
     hours = str(services[sName[name]][sIndex[name]]["Hours"])
 
@@ -175,6 +176,7 @@ async def getHtml():
             
             return html
 
+# procedure to print whether or not "name" is open or closed
 async def printIsOpenOrClosed(msg,name):
             html = await getHtml()
             services = getService(html, tableCol)
@@ -189,6 +191,8 @@ async def printIsOpenOrClosed(msg,name):
 #########################################################################################
 #####################################     EVENTS     ####################################
 #########################################################################################
+
+# roof of concept for listening to commands as another way for working with user msg's
 
 # @client.event
 # async def onMessage(msg):
