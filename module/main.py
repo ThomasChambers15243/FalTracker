@@ -125,7 +125,7 @@ async def isOpen(url):
     if html == None:
         return None
 
-    if data.newData["Util"]["TargetOpen"] in html:
+    if data.data["Util"]["TargetOpen"] in html:
         return True
 
     return False
@@ -150,7 +150,7 @@ async def isOpen(url):
 #########################################################################################
 @client.command()
 async def koofi(msg):
-    url = data.newData["FoodAndDrink"]["Koofi"]
+    url = data.data["FoodAndDrink"]["Koofi"]
     if await isOpen(url):
         await msg.send("Koofi" +  " is open at the moment :)")
     else:
@@ -159,7 +159,7 @@ async def koofi(msg):
 
 @client.command()
 async def koofiOt(msg):
-    url = data.newData["FoodAndDrink"]["Koofi"]
+    url = data.data["FoodAndDrink"]["Koofi"]
     message = await showOpeningTimes("Koofi", url)
     await msg.send(message)
 
@@ -347,4 +347,4 @@ async def on_ready():
 
 '''
 # Token
-client.run(data.newData["keys"]["token"])
+client.run(data.data["keys"]["token"])
