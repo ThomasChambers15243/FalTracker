@@ -27,9 +27,9 @@ class ServiceData:
         None
     '''
     async def SetData(self):
-        self.openingTimes = await self.findOpeningTimes()
-        self.openingTimesFormatted = await self.showOpeningTimes()
-        self.isServiceOpen = await self.isOpen()
+        self.openingTimes = await self.FindOpeningTimes()
+        self.openingTimesFormatted = await self.ShowOpeningTimes()
+        self.isServiceOpen = await self.IsOpen()
     '''
     Gets raw HTML data in string format from given html
     Args:
@@ -38,7 +38,7 @@ class ServiceData:
         String html 
         None if error occoured 
     '''
-    async def getHtml(self):
+    async def GetHtml(self):
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.get(self.url) as response:
@@ -55,8 +55,8 @@ class ServiceData:
         False if closed
         None if error occoured 
     '''
-    async def isOpen(self):
-        html = await self.getHtml()
+    async def IsOpen(self):
+        html = await self.GetHtml()
         if html == None:
             return None
         # If the target string is found, then the service must be open, else closed
@@ -71,8 +71,8 @@ class ServiceData:
     Returns:
         List containing string data of opening days and times for the service 
     '''
-    async def findOpeningTimes(self):
-        html = await self.getHtml()
+    async def FindOpeningTimes(self):
+        html = await self.GetHtml()
 
         # Stores times and days
         openingTimesList = []
@@ -97,8 +97,8 @@ class ServiceData:
                     openingTimesList.append(line.strip())
 
         # Cleans List
-        openingTimesList = self.cleanOpeningsList(openingTimesList)
-        openingTimesList = self.reorderOpeningsList(openingTimesList)
+        openingTimesList = self.CleanOpeningsList(openingTimesList)
+        openingTimesList = self.ReorderOpeningsList(openingTimesList)
 
         return openingTimesList
 
@@ -109,7 +109,7 @@ class ServiceData:
     Returns:
         Formatted string message containing opening days and times 
     '''
-    async def showOpeningTimes(self):
+    async def ShowOpeningTimes(self):
         msg = self.name + " Opening Times are:\n"
         for i in range(0, len(self.openingTimes)):
             if ':' in self.openingTimes[i]:
@@ -125,7 +125,7 @@ class ServiceData:
     Returns:
         List containing strings of days and opening times
     '''
-    def cleanOpeningsList(self, list):
+    def CleanOpeningsList(self, list):
         for i in range(0, len(list)):
             # Clean day
             if "dayOfWeek" in list[i]:
@@ -145,7 +145,7 @@ class ServiceData:
     Returns:
         List containing strings of days and opening times
     '''
-    def reorderOpeningsList(self,list):
+    def ReorderOpeningsList(self,list):
         for i in range(0, len(list)):
             # Only start swaps on days, not times
             if not ':' in list[i]:
