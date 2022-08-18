@@ -18,6 +18,14 @@ class ServiceData:
         self.name = name
         self.openingTimes = []
         self.isServiceOpen = False
+
+    '''
+    Sets up service data so that they can be quiclk called. Should be called after init.
+    Args:
+        None
+    Returns:
+        None
+    '''
     async def SetData(self):
         self.openingTimes = await self.findOpeningTimes()
         self.openingTimesFormatted = await self.showOpeningTimes()
@@ -151,7 +159,18 @@ class ServiceData:
                 list[i] = temp
         return list
 
-
+    '''
+    Formats a sendable message saying whether the service is open or not
+    Args:
+        None
+    Returns:
+        Formatted string message indicating the service is open or closed
+    '''
+    def FormatOpenMsg(self):
+        if self.isServiceOpen:
+            return self.name + " is open at the moment :)"
+        else:
+            return self.name + " is closed at the moment :("
 
 
 #########################################################################################
@@ -174,13 +193,9 @@ class ServiceData:
 #########################################################################################
 @client.command()
 async def koofi(msg):
-
     koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofiData.SetData()
-    if koofiData.isServiceOpen:
-        await msg.send("Koofi" + " is open at the moment :)")
-    else:
-        await msg.send("Koofi" + " is closed at the moment :(")
+    await msg.send(koofiData.FormatOpenMsg())
 
 @client.command()
 async def koofiOt(msg):
