@@ -258,8 +258,7 @@ async def returnOpen(url):
 #########################################################################################
 @client.command()
 async def koofi(msg):
-    url = "https://fxplus.ac.uk/food-drink/stannary-bar/"
-    #url = data.newData["FoodAndDrink"]["Koofi"]
+    url = data.newData["FoodAndDrink"]["Koofi"]
     if await returnOpen(url):
         await msg.send("Koofi" +  " is open at the moment :)")
     else:
@@ -525,4 +524,4 @@ async def on_ready():
 
 
 # Token
-client.run(data.data["keys"]["token"])    
+client.run(data.newData["keys"]["token"])

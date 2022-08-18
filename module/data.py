@@ -99,7 +99,7 @@ newData = {
             "Python Version" : "Python 3.10.0"
     },
     "keys" : {
-            "token" : "ODk3MTk4MDg3NDE0NjIwMTcy.GUKQnt.vN5mb7ngLbmDd9CQGWvhqq2L5jsgIGSQX5jg4w",
+            "token" : "ODk3MTk4MDg3NDE0NjIwMTcy.GDbPFL.z0vXvKQ0isR1dLk005znVTQdjw3FArFZMtyReA",
             "Applicatoin ID" : "897198087414620172",
             "Public Key" : "930a7810e8a7c75155438cf0d54276b9de7d8cc8bf32263c11ee2363dba65fe1",
             "Client ID" : "897198087414620172"
