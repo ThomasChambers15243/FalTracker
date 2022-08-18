@@ -275,7 +275,7 @@ async def isOpen(url):
 @client.command()
 async def koofi(msg):
     url = data.newData["FoodAndDrink"]["Koofi"]
-    if await returnOpen(url):
+    if await isOpen(url):
         await msg.send("Koofi" +  " is open at the moment :)")
     else:
         await msg.send("Koofi" + " is closed at the moment :(")
