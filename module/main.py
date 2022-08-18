@@ -186,7 +186,7 @@ def getService(html, tableID):
 '''
 
 # Passes through services[category][name] and returns whether the open state is true or false
-def isOpen(services):
+def OldIsOpen(services):
     if services["OpenState"] == "We're currently open.":
         return True
     else:
@@ -204,39 +204,43 @@ def getHours(services, name):
     return hoursString
 
 # procedure to print whether or not "name" is open or closed
-async def printIsOpenOrClosed(msg,name):
+async def printOldIsOpenOrClosed(msg,name):
             html = await getHtml()
             services = getService(html, tableCol)
 
-            if isOpen(services[sName[name]][sIndex[name]]):
+            if OldIsOpen(services[sName[name]][sIndex[name]]):
                 await msg.send(name +  " is open at the moment!!!")
             else:
                 print("Name is: " + name)
                 await msg.send(name +  " is closed at the moment :(")
 
-# Scrapes and parses html data from falmouth uni's websites
-# and prints whether or not a request service (name) is open
+'''
+Gets raw HTML data ins tring format from given html
+Args:
+    String url for website to scrape
+    
+Returns:
+    String html 
+    None if error occoured 
+'''
 async def getHtml(url):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                html = await response.text()
+                return html
+    except Exception:
+        return None
+'''
 
-            html = await response.text()
-            #with open("testfile.txt", "w") as f:  # TEST
-            #    f.write(html)
-            return html
-
-def isOpenTxt(html):
-    if "currently open" in html:
-        return True
-    return False
-
+'''
 async def returnOpen(url):
     html = await getHtml(url)
-    return isOpenTxt(html)
-
-
-
-
+    print(data.newData["Util"]["TargetOpen"])
+    if data.newData["Util"]["TargetOpen"] in html:
+        print("yes")
+        return True
+    return False
 
 #########################################################################################
 #####################################     EVENTS     ####################################
@@ -284,7 +288,7 @@ async def test(ctx):
 @client.command()
 async def amata(msg):
     print("amata was called")
-    await printIsOpenOrClosed(msg,"AMATA Cafe")
+    await printOldIsOpenOrClosed(msg,"AMATA Cafe")
 
 
 @client.command()
@@ -297,7 +301,7 @@ async def amataOt(msg):
 
 @client.command()
 async def esi(msg):
-    await printIsOpenOrClosed(msg,"ESI Cafe")
+    await printOldIsOpenOrClosed(msg,"ESI Cafe")
 
 @client.command()
 async def ESIOt(msg):
@@ -310,7 +314,7 @@ async def ESIOt(msg):
 
 @client.command()
 async def stannaryB(msg):
-    await printIsOpenOrClosed(msg,"The Stannary Bar")
+    await printOldIsOpenOrClosed(msg,"The Stannary Bar")
 
 @client.command()
 async def stannaryBOt(msg):
@@ -321,7 +325,7 @@ async def stannaryBOt(msg):
 
 @client.command()
 async def fox(msg):
-    await printIsOpenOrClosed(msg,"Fox Cafe")
+    await printOldIsOpenOrClosed(msg,"Fox Cafe")
 
 @client.command()
 async def foxOt(msg):
@@ -332,7 +336,7 @@ async def foxOt(msg):
 
 @client.command()
 async def lStannary(msg):
-    await printIsOpenOrClosed(msg,"Lower Stannary")
+    await printOldIsOpenOrClosed(msg,"Lower Stannary")
 
 @client.command()
 async def lStannaryOt(msg):
@@ -343,7 +347,7 @@ async def lStannaryOt(msg):
 
 @client.command()
 async def stannaryDeli(msg):
-    await printIsOpenOrClosed(msg,"Stannary Deli Bar")    
+    await printOldIsOpenOrClosed(msg,"Stannary Deli Bar")
 
 @client.command()
 async def stannaryDeliOt(msg):
@@ -354,7 +358,7 @@ async def stannaryDeliOt(msg):
 
 @client.command()
 async def susCafe(msg):
-    await printIsOpenOrClosed(msg,"The Sustainability Cafe")
+    await printOldIsOpenOrClosed(msg,"The Sustainability Cafe")
 
 @client.command()
 async def susCafeOt(msg):
@@ -369,7 +373,7 @@ async def susCafeOt(msg):
 
 @client.command()
 async def pshop(msg):
-    await printIsOpenOrClosed(msg, "Penryn Campus Shop")
+    await printOldIsOpenOrClosed(msg, "Penryn Campus Shop")
 
 @client.command()
 async def pshopOt(msg):
@@ -380,7 +384,7 @@ async def pshopOt(msg):
 
 @client.command()
 async def fshop(msg):
-    await printIsOpenOrClosed(msg, "Falmouth Campus Shop")
+    await printOldIsOpenOrClosed(msg, "Falmouth Campus Shop")
 
 @client.command()
 async def fshopOt(msg):
@@ -391,7 +395,7 @@ async def fshopOt(msg):
 
 @client.command()
 async def gym(msg):
-    await printIsOpenOrClosed(msg,"Penryn Campus Gym")
+    await printOldIsOpenOrClosed(msg,"Penryn Campus Gym")
 
 @client.command()
 async def gymOt(msg):
@@ -402,7 +406,7 @@ async def gymOt(msg):
 
 @client.command()
 async def gamesArea(msg):
-    await printIsOpenOrClosed(msg,"Multi Use Games Area")
+    await printOldIsOpenOrClosed(msg,"Multi Use Games Area")
 
 @client.command()
 async def gamesAreaOt(msg):
@@ -413,7 +417,7 @@ async def gamesAreaOt(msg):
 
 @client.command()
 async def sportsCentre(msg):
-    await printIsOpenOrClosed(msg,"Penryn Sports Centre")
+    await printOldIsOpenOrClosed(msg,"Penryn Sports Centre")
 
 @client.command()
 async def sportsCentreOt(msg):
@@ -424,7 +428,7 @@ async def sportsCentreOt(msg):
 
 @client.command()
 async def av(msg):
-    await printIsOpenOrClosed(msg,"AV")
+    await printOldIsOpenOrClosed(msg,"AV")
 
 @client.command()
 async def avOt(msg):
@@ -435,7 +439,7 @@ async def avOt(msg):
 
 @client.command()
 async def lilWonders(msg):
-    await printIsOpenOrClosed(msg,"Little Wonders Nurseries")
+    await printOldIsOpenOrClosed(msg,"Little Wonders Nurseries")
 
 @client.command()
 async def lilWondersOt(msg):
@@ -446,7 +450,7 @@ async def lilWondersOt(msg):
 
 @client.command()
 async def compass(msg):
-    await printIsOpenOrClosed(msg,"The Compass")
+    await printOldIsOpenOrClosed(msg,"The Compass")
 
 @client.command()
 async def compassOt(msg):
@@ -461,7 +465,7 @@ async def compassOt(msg):
 
 @client.command()
 async def fLibrary(msg):
-    await printIsOpenOrClosed(msg,"Falmouth Campus Library")
+    await printOldIsOpenOrClosed(msg,"Falmouth Campus Library")
 
 @client.command()
 async def fLibraryOt(msg):
@@ -472,7 +476,7 @@ async def fLibraryOt(msg):
 
 @client.command()
 async def fHelpdesk(msg):
-    await printIsOpenOrClosed(msg,"Falmouth Campus Library Helpdesk")
+    await printOldIsOpenOrClosed(msg,"Falmouth Campus Library Helpdesk")
 
 @client.command()
 async def fHelpdeskOt(msg):
@@ -483,7 +487,7 @@ async def fHelpdeskOt(msg):
 
 @client.command()
 async def pLibrary(msg):
-    await printIsOpenOrClosed(msg,"Penryn Campus Library")
+    await printOldIsOpenOrClosed(msg,"Penryn Campus Library")
 
 @client.command()
 async def plibraryOt(msg):
@@ -494,7 +498,7 @@ async def plibraryOt(msg):
 
 @client.command()
 async def pHelpdesk(msg):
-    await printIsOpenOrClosed(msg,"Penryn Campus Library Helpdesk")
+    await printOldIsOpenOrClosed(msg,"Penryn Campus Library Helpdesk")
 
 @client.command()
 async def pHelpdeskOt(msg):
@@ -505,7 +509,7 @@ async def pHelpdeskOt(msg):
 
 @client.command()
 async def vHelpdesk(msg):
-    await printIsOpenOrClosed(msg,"Virtual Helpdesk")
+    await printOldIsOpenOrClosed(msg,"Virtual Helpdesk")
 
 @client.command()
 async def vHelpdeskOt(msg):

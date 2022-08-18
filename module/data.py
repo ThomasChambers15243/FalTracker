@@ -108,6 +108,10 @@ newData = {
             "falmouthServiceURL" : "https://fxplus.ac.uk/service-status/",
             "tableCol" : "tablepress-2"
     },
+    "Util" : {
+        "TargetOpen" : "currently open",
+        "TargetClosed" : "currently closed"
+    },
     "FoodAndDrink" : {
         "Amata" : "https://fxplus.ac.uk/food-drink/amata-cafe/",
         "ESI" : "https://fxplus.ac.uk/food-drink/esi-cafe/",
@@ -121,5 +125,5 @@ newData = {
     "Facilities and Services" : {
         "Falmouth Art Shop" : "https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/",
         "Flexsi Sports Centre" : "https://fxplus.ac.uk/facilities-services/flexsi-sports-centre/"
-    }
+    },
 }
