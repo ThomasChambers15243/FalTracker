@@ -882,7 +882,7 @@ jQuery(document).mouseup(function(e) {
         }
     ]
 }</script>
-<ul><li><strong>Monday</strong> 08:30 &#8211; 18:00</li><li><strong>Tuesday</strong> 08:30 &#8211; 18:00</li><li><strong>Wednesday</strong> 08:30 &#8211; 18:00</li><li><strong>Thursday</strong> 08:30 &#8211; 18:00</li><li><strong>Friday</strong> 08:30 &#8211; 18:00</li><li><strong>Saturday</strong> 10:00 &#8211; 18:00</li><li><strong>Sunday</strong> 11:00 &#8211; 17:30</li><li><div class="op-is-open-shortcode"><span class="op-open">We&#8217;re currently open.</span></div></li></ul>    </div>
+<ul><li><strong>Monday</strong> 08:30 &#8211; 18:00</li><li><strong>Tuesday</strong> 08:30 &#8211; 18:00</li><li><strong>Wednesday</strong> 08:30 &#8211; 18:00</li><li><strong>Thursday</strong> 08:30 &#8211; 18:00</li><li><strong>Friday</strong> 08:30 &#8211; 18:00</li><li><strong>Saturday</strong> 10:00 &#8211; 18:00</li><li><strong>Sunday</strong> 11:00 &#8211; 17:30</li><li><div class="op-is-open-shortcode"><span class="op-closed">We&#8217;re currently closed.</span></div></li></ul>    </div>
 </blockquote>
 
 
