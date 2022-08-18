@@ -215,7 +215,8 @@ async def printOldIsOpenOrClosed(msg,name):
                 await msg.send(name +  " is closed at the moment :(")
 
 '''
-Gets raw HTML data ins tring format from given html
+Gets raw HTML data in string format from given html
+
 Args:
     String url for website to scrape
     
@@ -232,14 +233,25 @@ async def getHtml(url):
     except Exception:
         return None
 '''
+Checks if service is open or closed
 
+Args:
+    String url for website service
+    
+Returns:
+    True if open
+    False if closed
+    None if error occoured 
 '''
-async def returnOpen(url):
+async def isOpen(url):
     html = await getHtml(url)
-    print(data.newData["Util"]["TargetOpen"])
+
+    if html == None:
+        return None
+
     if data.newData["Util"]["TargetOpen"] in html:
-        print("yes")
         return True
+
     return False
 
 #########################################################################################
