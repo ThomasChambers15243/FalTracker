@@ -232,6 +232,79 @@ async def getHtml(url):
                 return html
     except Exception:
         return None
+
+
+# Remove " and extra text from days
+def cleanOpeningsList(list):
+    for i in range(0, len(list)):
+        # Clean day
+        if "dayOfWeek" in list[i]:
+            list[i] = list[i][32:-1]
+        else:
+            # Remove " from times and add a space before :
+            list[i] = list[i].replace('"','')
+            list[i] = list[i].replace(":", " : ")
+            list[i] = list[i].title()
+    return list
+
+# Reorders the list so that days are shown before times
+def reorderOpeningsList(list):
+    for i in range(0, len(list)):
+        # Only start swaps on days, not times
+        if not ':' in list[i]:
+            # swap date and open time
+            temp = list[i-2]
+            list[i-2] = list[i]
+            list[i] = temp
+            # swamp open and close time
+            temp = list[i-1]
+            list[i-1] = list[i]
+            list[i] = temp
+    return list
+
+async def findOpeningTimes(url):
+    html = await getHtml(url)
+    # Stores times and days
+    openingTimes = []
+    with open("htmlDetail.txt","w") as f:
+        for line in html:
+            f.writelines(line)
+    with open("htmlDetail.txt", "r") as f:
+        # Get line up to the start of opening times
+        for line in f:
+            if "openingHoursSpecification" in line:
+                break
+        # Load opeing times into list
+        for line in f:
+            # If at the end of the opening section, shown by ']', then break, else append
+            if line.strip() == "]":
+                break
+            # Filter out not needed lines
+            if not ( "@" in line.strip() or '}' in line.strip() or '{' in line.strip()):
+                openingTimes.append(line.strip())
+
+        # Cleans List
+        openingTimes = cleanOpeningsList(openingTimes)
+        openingTimes = reorderOpeningsList(openingTimes)
+        return openingTimes
+
+async def showOpeningTimes(name, url):
+    openingTimes = await findOpeningTimes(url)
+    for i in openingTimes:
+        print(i)
+    msg = name + " Opening Times are:\n"
+    for i in range(0, len(openingTimes)):
+        if ':' in openingTimes[i]:
+            msg = msg + "    "
+        msg = msg + openingTimes[i]
+        msg = msg + "\n"
+    print("Msg is " + msg)
+    return msg
+
+
+
+
+
 '''
 Checks if service is open or closed
 
@@ -279,12 +352,14 @@ async def koofi(msg):
         await msg.send("Koofi" +  " is open at the moment :)")
     else:
         await msg.send("Koofi" + " is closed at the moment :(")
+    await findOpeningTimes(url)
 
 @client.command()
 async def koofiOt(msg):
-    html = await getHtml()
-    message = message = getHours(getService(html,tableCol),"Koofi")
+    url = data.newData["FoodAndDrink"]["Koofi"]
+    message = await showOpeningTimes("Koofi", url)
     await msg.send(message)
+
 
 # Test on how to call commands from other functions
 @client.command()
