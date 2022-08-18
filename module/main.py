@@ -16,18 +16,16 @@ class ServiceData:
     def __init__(self, name, url):
         self.url = url
         self.name = name
-        self.openingTimes = [] #await findOpeningTimes()
-        self.isServiceOpen = False # await isOpen()
+        self.openingTimes = []
+        self.isServiceOpen = False
     async def SetData(self):
         self.openingTimes = await self.findOpeningTimes()
         self.openingTimesFormatted = await self.showOpeningTimes()
         self.isServiceOpen = await self.isOpen()
     '''
     Gets raw HTML data in string format from given html
-    
     Args:
         String url for website to scrape
-        
     Returns:
         String html 
         None if error occoured 
@@ -40,14 +38,42 @@ class ServiceData:
                     return html
         except Exception:
             return None
+    '''
+    Checks if service is open or closed
+    Args:
+        String url for website service
+    Returns:
+        True if open
+        False if closed
+        None if error occoured 
+    '''
+    async def isOpen(self):
+        html = await self.getHtml()
+        if html == None:
+            return None
+        # If the target string is found, then the service must be open, else closed
+        if data.data["Util"]["TargetOpen"] in html:
+            return True
+        return False
 
+    '''
+    Finds opening times of the objects services
+    Args: 
+        None
+    Returns:
+        List containing string data of opening days and times for the service 
+    '''
     async def findOpeningTimes(self):
         html = await self.getHtml()
+
         # Stores times and days
         openingTimesList = []
+        # Write html data to a .txt file so its easier to read
         with open("htmlDetail.txt","w") as f:
             for line in html:
                 f.writelines(line)
+
+        # Goes through .txt file as loads opening data into a list
         with open("htmlDetail.txt", "r") as f:
             # Get line up to the start of opening times
             for line in f:
@@ -65,10 +91,32 @@ class ServiceData:
         # Cleans List
         openingTimesList = self.cleanOpeningsList(openingTimesList)
         openingTimesList = self.reorderOpeningsList(openingTimesList)
-        print(openingTimesList)
+
         return openingTimesList
 
-    # Remove " and extra text from days
+    '''
+    Formats a message to be sent showing opeing times
+    Args:
+        None
+    Returns:
+        Formatted string message containing opening days and times 
+    '''
+    async def showOpeningTimes(self):
+        msg = self.name + " Opening Times are:\n"
+        for i in range(0, len(self.openingTimes)):
+            if ':' in self.openingTimes[i]:
+                msg = msg + "    "
+            msg = msg + self.openingTimes[i]
+            msg = msg + "\n"
+        return msg
+
+    '''
+    Takes a list with expected data and formats the elemeants
+    Args:
+        List containing strings of days and opening times
+    Returns:
+        List containing strings of days and opening times
+    '''
     def cleanOpeningsList(self, list):
         for i in range(0, len(list)):
             # Clean day
@@ -80,7 +128,15 @@ class ServiceData:
                 list[i] = list[i].replace(":", " : ")
                 list[i] = list[i].title()
         return list
+
     # Reorders the list so that days are shown before times
+    '''
+    Puts days above opening times in a expected list
+    Args:
+        List containing strings of days and opening times
+    Returns:
+        List containing strings of days and opening times
+    '''
     def reorderOpeningsList(self,list):
         for i in range(0, len(list)):
             # Only start swaps on days, not times
@@ -94,37 +150,9 @@ class ServiceData:
                 list[i-1] = list[i]
                 list[i] = temp
         return list
-    async def showOpeningTimes(self):
-        msg = self.name + " Opening Times are:\n"
-        for i in range(0, len(self.openingTimes)):
-            if ':' in self.openingTimes[i]:
-                msg = msg + "    "
-            msg = msg + self.openingTimes[i]
-            msg = msg + "\n"
-        return msg
 
 
-    '''
-    Checks if service is open or closed
-    
-    Args:
-        String url for website service
-        
-    Returns:
-        True if open
-        False if closed
-        None if error occoured 
-    '''
-    async def isOpen(self):
-        html = await self.getHtml()
 
-        if html == None:
-            return None
-
-        if data.data["Util"]["TargetOpen"] in html:
-            return True
-
-        return False
 
 #########################################################################################
 #####################################     EVENTS     ####################################
@@ -149,27 +177,16 @@ async def koofi(msg):
 
     koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofiData.SetData()
-
     if koofiData.isServiceOpen:
         await msg.send("Koofi" + " is open at the moment :)")
     else:
         await msg.send("Koofi" + " is closed at the moment :(")
-    '''
-    if await isOpen(url):
-        await msg.send("Koofi" +  " is open at the moment :)")
-    else:
-        await msg.send("Koofi" + " is closed at the moment :(")
-    await findOpeningTimes(url)
-    '''
 
 @client.command()
 async def koofiOt(msg):
-    url = data.data["FoodAndDrink"]["Koofi"]
     koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofiData.SetData()
-    mes = await koofiData.showOpeningTimes()
-    print(mes)
-    await msg.send(mes)
+    await msg.send(koofiData.openingTimesFormatted)
 
 
 
