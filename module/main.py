@@ -20,8 +20,8 @@ client = commands.Bot(command_prefix = '?')
 
 
 # Data for getting html data
-falmouthServiceURL = data.data["webInfo"]["falmouthServiceURL"]
-tableCol = data.data["webInfo"]["tableCol"]
+falmouthServiceURL = data.newData["webInfo"]["falmouthServiceURL"]
+tableCol = data.newData["webInfo"]["tableCol"]
 # ShortHand sogetting service information is more maintainable
 sName = data.data["sName"]
 sIndex = data.data["sIndex"]
@@ -100,9 +100,46 @@ def getService(html, tableID):
         "Catering" : [],
         "Student Services" : [],
     }
-
+    print(cleanData)
     # Loads cleanData into services
     for i in cleanData:
+        if i[0] == "Shop":
+            services["Shop"].append({
+            "Name": i[1],
+            "OpenState": i[2],
+            "Hours": parseOpenHoursFormatting(i[3])
+            })
+        elif i[0] == "Service":
+            services["Service"].append({
+            "Name": i[1],
+            "OpenState": i[2],
+            "Hours": parseOpenHoursFormatting(i[3])
+            })
+        elif i[0] == "Library":
+            services["Library"].append({
+            "Name": i[1],
+            "OpenState": i[2],
+            "Hours": parseOpenHoursFormatting(i[3])
+            })
+        elif i[0] == "Catering":
+            if len(i) > 3:
+                services["Catering"].append({
+                "Name": i[1],
+                "OpenState": i[2],
+                "Hours": parseOpenHoursFormatting(i[3])
+                })
+            else:
+                services["Catering"].append({
+                "Name": i[1],
+                "OpenState": i[2],
+                "Hours": None
+                })
+    with open('result.json', 'w') as fp:
+        json.dump(services, fp, indent=4)
+
+    return services
+'''
+# Commented out as on python doesn't like the match-case for somereason :(
         match i[0]:
             case "Shop":
                 services["Shop"].append({
@@ -140,11 +177,13 @@ def getService(html, tableID):
                 print("This was an exception")
                 print(i[0])
                 pass
-
+        '''
+'''
     with open('result.json', 'w') as fp:
         json.dump(services, fp, indent=4)
 
-    return services
+    return services     
+'''
 
 # Passes through services[category][name] and returns whether the open state is true or false
 def isOpen(services):
@@ -164,18 +203,6 @@ def getHours(services, name):
 
     return hoursString
 
-# Scrapes and parses html data from falmouth uni's websites
-# and prints wether or not a request service (name) is open
-async def getHtml():
-    url = falmouthServiceURL
-
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-
-            html = await response.text()   
-            
-            return html
-
 # procedure to print whether or not "name" is open or closed
 async def printIsOpenOrClosed(msg,name):
             html = await getHtml()
@@ -186,6 +213,29 @@ async def printIsOpenOrClosed(msg,name):
             else:
                 print("Name is: " + name)
                 await msg.send(name +  " is closed at the moment :(")
+
+# Scrapes and parses html data from falmouth uni's websites
+# and prints whether or not a request service (name) is open
+async def getHtml(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+
+            html = await response.text()
+            #with open("testfile.txt", "w") as f:  # TEST
+            #    f.write(html)
+            return html
+
+def isOpenTxt(html):
+    if "currently open" in html:
+        return True
+    return False
+
+async def returnOpen(url):
+    html = await getHtml(url)
+    return isOpenTxt(html)
+
+
+
 
 
 #########################################################################################
@@ -206,7 +256,20 @@ async def printIsOpenOrClosed(msg,name):
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
+@client.command()
+async def koofi(msg):
+    url = "https://fxplus.ac.uk/food-drink/stannary-bar/"
+    #url = data.newData["FoodAndDrink"]["Koofi"]
+    if await returnOpen(url):
+        await msg.send("Koofi" +  " is open at the moment :)")
+    else:
+        await msg.send("Koofi" + " is closed at the moment :(")
 
+@client.command()
+async def koofiOt(msg):
+    html = await getHtml()
+    message = message = getHours(getService(html,tableCol),"Koofi")
+    await msg.send(message)
 
 # Test on how to call commands from other functions
 @client.command()
@@ -243,15 +306,7 @@ async def ESIOt(msg):
     message = message = getHours(getService(html,tableCol),"ESI Cafe")
     await msg.send(message)
 
-@client.command()
-async def koofi(msg):
-    await printIsOpenOrClosed(msg,"Koofi")
 
-@client.command()
-async def koofiOt(msg):
-    html = await getHtml()
-    message = message = getHours(getService(html,tableCol),"Koofi")
-    await msg.send(message)
 
 
 @client.command()
