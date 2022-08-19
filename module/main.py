@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import aiohttp
 import data
+import logging
+import logging.handlers
 
 # command prefix which us used for every bot command
 client = commands.Bot(command_prefix = '?')
@@ -11,6 +13,20 @@ client = commands.Bot(command_prefix = '?')
 # https://stackoverflow.com/questions/64865728/how-to-keep-track-of-messages-sent-in-discord-py
 
 
+logger = logging.getLogger('discord')
+logger.setLevel(logging.DEBUG)
+logging.getLogger('discord.http').setLevel(logging.INFO)
+
+handler = logging.handlers.RotatingFileHandler(
+    filename='discord.log',
+    encoding='utf-8',
+    maxBytes=32 * 1024 * 1024,  # 32 MiB
+    backupCount=5,  # Rotate through 5 files
+)
+dt_fmt = '%Y-%m-%d %H:%M:%S'
+formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', dt_fmt, style='{')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
 class ServiceData:
     def __init__(self, name, url):
@@ -214,7 +230,7 @@ async def test(ctx):
 ##########                  ##########
 
 
-@client.command()
+@client.command(case_insensitive=False)
 async def koofi(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpenData()
