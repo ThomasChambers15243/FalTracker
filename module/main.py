@@ -20,16 +20,26 @@ class ServiceData:
         self.isServiceOpen = False
 
     '''
-    Sets up service data so that they can be quiclk called. Should be called after init.
+    Inits isServiceOpen
     Args:
         None
     Returns:
         None
     '''
-    async def SetData(self):
+    async def SetOpenData(self):
+        self.isServiceOpen = await self.IsOpen()
+    '''
+    Innits openingtimes and openingtimesformatted
+    Args:
+        None
+    Returns:
+        None
+    '''
+    async def SetOpeningTimeData(self):
         self.openingTimes = await self.FindOpeningTimes()
         self.openingTimesFormatted = await self.ShowOpeningTimes()
-        self.isServiceOpen = await self.IsOpen()
+
+
     '''
     Gets raw HTML data in string format from given html
     Args:
@@ -186,7 +196,7 @@ class ServiceData:
 #     elif message.content.startswith("?"):
 #         cmd = message.content.split()[0].replace("_","")
 #         if len(message.content.split()) > 1:
-#             parameters = message.content.split()[1:]        
+#             parameters = message.content.split()[1:]
 
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
@@ -194,13 +204,13 @@ class ServiceData:
 @client.command()
 async def koofi(msg):
     koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
-    await koofiData.SetData()
+    await koofiData.SetOpenData()
     await msg.send(koofiData.FormatOpenMsg())
 
 @client.command()
 async def koofiOt(msg):
     koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
-    await koofiData.SetData()
+    await koofiData.SetOpeningTimeData()
     await msg.send(koofiData.openingTimesFormatted)
 
 
@@ -388,4 +398,4 @@ async def on_ready():
 
 
 # Token
-client.run(data.data["keys"]["token"])
+client.run(data.botData["keys"]["token"])
