@@ -242,9 +242,9 @@ async def amataOt(msg):
 
 @client.command()
 async def esi(msg):
-    esi = ServiceData("ESI", data.data["FoodAndDrink"]["ESI"])
+    esi = ServiceData("ESI Cafe", data.data["FoodAndDrink"]["ESI"])
     await esi.SetOpenData()
-    await msg.send(esi.FormatOpenMsg)
+    await msg.send(esi.FormatOpenMsg())
 
 @client.command()
 async def esiOt(msg):
@@ -257,7 +257,7 @@ async def esiOt(msg):
 async def stannaryBar(msg):
     stanBar = ServiceData("Stannary Bar", data.data["FoodAndDrink"]["Stannary Bar"])
     await stanBar.SetOpenData()
-    await msg.send(stanBar.FormatOpenMsg)
+    await msg.send(stanBar.FormatOpenMsg())
 
 @client.command()
 async def stannaryBarOt(msg):
@@ -269,7 +269,7 @@ async def stannaryBarOt(msg):
 async def stannaryKitchen(msg):
     stannaryKitchen = ServiceData("Stannary Kitchen", data.data["FoodAndDrink"]["Stannary Kitchen"])
     await stannaryKitchen.SetOpenData()
-    await msg.send(stannaryKitchen.FormatOpenMsg)
+    await msg.send(stannaryKitchen.FormatOpenMsg())
 
 @client.command()
 async def stannaryKitchenOt(msg):
@@ -281,7 +281,7 @@ async def stannaryKitchenOt(msg):
 async def fox(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
     await fox.SetOpenData()
-    await msg.send(fox.FormatOpenMsg)
+    await msg.send(fox.FormatOpenMsg())
 @client.command()
 async def foxOt(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
@@ -293,7 +293,7 @@ async def foxOt(msg):
 async def susCafe(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
     await susGuy.SetOpenData()
-    await msg.send(susGuy.FormatOpenMsg)
+    await msg.send(susGuy.FormatOpenMsg())
 
 @client.command()
 async def susCafeOt(msg):
@@ -307,7 +307,7 @@ async def susCafeOt(msg):
 async def penrynShop(msg):
     penrynShop = ServiceData("Penryn Campus Shop", data.data["FoodAndDrink"]["Penryn Shop"])
     await penrynShop.SetOpenData()
-    await msg.send(penrynShop.FormatOpenMsg)
+    await msg.send(penrynShop.FormatOpenMsg())
 
 @client.command()
 async def penrynShopOt(msg):
@@ -321,137 +321,15 @@ async def penrynShopOt(msg):
 
 @client.command()
 async def falmouthShop(msg):
-    falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["FoodAndDrink"]["Falmouth Art Shop"])
+    falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpenData()
-    await msg.send(falmouthShop.FormatOpenMsg)
+    await msg.send(falmouthShop.FormatOpenMsg())
 
 @client.command()
-async def fshopOt(msg):
-    falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["FoodAndDrink"]["Falmouth Art Shop"])
+async def falmouthShopOt(msg):
+    falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpeningTimeData()
     await msg.send(falmouthShop.openingTimesFormatted)
-
-
-@client.command()
-async def gym(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def gymOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-
-@client.command()
-async def gamesArea(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def gamesAreaOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-
-@client.command()
-async def sportsCentre(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def sportsCentreOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-@client.command()
-async def av(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def avOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-@client.command()
-async def lilWonders(msg):
-
-@client.command()
-async def lilWondersOt(msg):
-    html = await getHtml()
-
-@client.command()
-async def compass(msg):
-
-@client.command()
-async def compassOt(msg):
-    html = await getHtml()
-
-##########                 ##########
-##########     LIBRARY     ##########
-##########                 ##########
-
-@client.command()
-async def fLibrary(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def fLibraryOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-@client.command()
-async def fHelpdesk(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def fHelpdeskOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-
-@client.command()
-async def pLibrary(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def plibraryOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-@client.command()
-async def pHelpdesk(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def pHelpdeskOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
-@client.command()
-async def vHelpdesk(msg):
-     = ServiceData("", data.data["FoodAndDrink"][""])
-    await .SetOpenData()
-    await msg.send(.FormatOpenMsg)
-@client.command()
-async def vHelpdeskOt(msg):
-     = ServiceData("", data.data["FoodAndDrink"]["])
-    await .SetOpeningTimeData()
-    await msg.send(.openingTimesFormatted)
-
 
 # Lets you know if the bot is up and running
 @client.event

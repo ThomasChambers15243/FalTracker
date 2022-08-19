@@ -239,7 +239,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KVL3RGR');</script>
 <!-- End Google Tag Manager -->
 
-	<title>Koofi &#8211; FX Plus</title>
+	<title>Falmouth Campus Art Shop &#8211; FX Plus</title>
 <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='//kit.fontawesome.com' />
 <link rel='dns-prefetch' href='//www.googletagmanager.com' />
@@ -299,13 +299,13 @@ gtag("config", "G-PHTYS9LRZX");
 </script>
 
 <!-- End Google Analytics snippet added by Site Kit -->
-<link rel="https://api.w.org/" href="https://fxplus.ac.uk/wp-json/" /><link rel="alternate" type="application/json" href="https://fxplus.ac.uk/wp-json/wp/v2/content/332" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fxplus.ac.uk/xmlrpc.php?rsd" />
+<link rel="https://api.w.org/" href="https://fxplus.ac.uk/wp-json/" /><link rel="alternate" type="application/json" href="https://fxplus.ac.uk/wp-json/wp/v2/content/394" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fxplus.ac.uk/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://fxplus.ac.uk/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 6.0.1" />
-<link rel="canonical" href="https://fxplus.ac.uk/food-drink/koofi/" />
-<link rel='shortlink' href='https://fxplus.ac.uk/?p=332' />
-<link rel="alternate" type="application/json+oembed" href="https://fxplus.ac.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffxplus.ac.uk%2Ffood-drink%2Fkoofi%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://fxplus.ac.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffxplus.ac.uk%2Ffood-drink%2Fkoofi%2F&#038;format=xml" />
+<link rel="canonical" href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/" />
+<link rel='shortlink' href='https://fxplus.ac.uk/?p=394' />
+<link rel="alternate" type="application/json+oembed" href="https://fxplus.ac.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffxplus.ac.uk%2Ffacilities-services%2Ffalmouth-campus-art-shop%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://fxplus.ac.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffxplus.ac.uk%2Ffacilities-services%2Ffalmouth-campus-art-shop%2F&#038;format=xml" />
 <meta name="generator" content="Site Kit by Google 1.81.0" /><!-- Stream WordPress user activity plugin v3.9.0 -->
 <style type="text/css">.blue-message {
 background: none repeat scroll 0 0 #3399ff;
@@ -379,7 +379,7 @@ background: none;
 <meta name="msapplication-TileImage" content="https://fxplus.ac.uk/wp-content/uploads/2022/08/cropped-fx_plus_logo-270x270.png" />
 </head>
 
-<body class="content-template-default single single-content postid-332">
+<body class="content-template-default single single-content postid-394">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVL3RGR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -451,23 +451,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 <li id="menu-item-383" class="menu-heading closed menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-383"><a href="#">Campus Services</a>
 <ul class="sub-menu">
-	<li id="menu-item-384" class="section-heading menu-item menu-item-type-post_type menu-item-object-content current-content-ancestor current-menu-ancestor current-menu-parent current-content-parent menu-item-has-children menu-item-384"><a href="https://fxplus.ac.uk/food-drink/">Food &#038; Drink</a>
+	<li id="menu-item-384" class="section-heading menu-item menu-item-type-post_type menu-item-object-content menu-item-has-children menu-item-384"><a href="https://fxplus.ac.uk/food-drink/">Food &#038; Drink</a>
 	<ul class="sub-menu">
 		<li id="menu-item-385" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-385"><a href="https://fxplus.ac.uk/food-drink/amata-cafe/"><i class="fa-duotone fa-cup-togo"></i> AMATA Cafe</a></li>
 		<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-386"><a href="https://fxplus.ac.uk/food-drink/esi-cafe/"><i class="fa-duotone fa-cup-togo"></i> ESI Cafe</a></li>
 		<li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-391"><a href="https://fxplus.ac.uk/food-drink/fox-cafe/"><i class="fa-duotone fa-cup-togo"></i> Fox Cafe</a></li>
-		<li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-content current-menu-item menu-item-387"><a href="https://fxplus.ac.uk/food-drink/koofi/" aria-current="page"><i class="fa-duotone fa-pizza-slice"></i> Koofi</a></li>
+		<li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-387"><a href="https://fxplus.ac.uk/food-drink/koofi/"><i class="fa-duotone fa-pizza-slice"></i> Koofi</a></li>
 		<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-397"><a href="https://fxplus.ac.uk/food-drink/penryn-campus-shop/"><i class="fa-duotone fa-shop"></i> Penryn Campus Shop</a></li>
 		<li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-908"><a href="https://fxplus.ac.uk/food-drink/stannary-bar/"><i class="fa-duotone fa-martini-glass"></i> Stannary Bar</a></li>
 		<li id="menu-item-909" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-909"><a href="https://fxplus.ac.uk/food-drink/stannary-kitchen/"><i class="fa-duotone fa-hat-chef"></i> Stannary Kitchen</a></li>
 		<li id="menu-item-389" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-389"><a href="https://fxplus.ac.uk/food-drink/the-sustainability-cafe/"><i class="fa-duotone fa-leaf"></i> The Sustainability Café</a></li>
 	</ul>
 </li>
-	<li id="menu-item-395" class="section-heading menu-item menu-item-type-post_type menu-item-object-content menu-item-has-children menu-item-395"><a href="https://fxplus.ac.uk/facilities-services/">Facilities &#038; Services</a>
+	<li id="menu-item-395" class="section-heading menu-item menu-item-type-post_type menu-item-object-content current-content-ancestor current-menu-ancestor current-menu-parent current-content-parent menu-item-has-children menu-item-395"><a href="https://fxplus.ac.uk/facilities-services/">Facilities &#038; Services</a>
 	<ul class="sub-menu">
 		<li id="menu-item-405" class="icon_link cplus_link menu-item menu-item-type-custom menu-item-object-custom menu-item-405"><a href="https://cornwall-plus.co.uk"><i class="fa-duotone fa-hotel"></i> Cornwall Plus</a></li>
 		<li id="menu-item-402" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-402"><a href="https://fxplus.ac.uk/events-on-campus/conferences-and-events/"><i class="fa-duotone fa-party-horn"></i> Conferences and Events</a></li>
-		<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-396"><a href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/"><i class="fa-duotone fa-pen-paintbrush"></i> Falmouth Campus Art Shop</a></li>
+		<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-content current-menu-item menu-item-396"><a href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/" aria-current="page"><i class="fa-duotone fa-pen-paintbrush"></i> Falmouth Campus Art Shop</a></li>
 		<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-399"><a href="https://fxplus.ac.uk/facilities-services/flexsi-sports-centre/"><i class="fa-duotone fa-dumbbell"></i> Flexsi Sports Centre</a></li>
 		<li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-404"><a href="https://fxplus.ac.uk/facilities-services/little-wonders-nursery/"><i class="fa-duotone fa-children"></i> Little Wonders Nursery</a></li>
 		<li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-401"><a href="https://fxplus.ac.uk/facilities-services/print-services/"><i class="fa-duotone fa-print"></i> Print Services</a></li>
@@ -597,23 +597,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 <li class="menu-heading closed menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-383"><a href="#">Campus Services</a>
 <ul class="sub-menu">
-	<li class="section-heading menu-item menu-item-type-post_type menu-item-object-content current-content-ancestor current-menu-ancestor current-menu-parent current-content-parent menu-item-has-children menu-item-384"><a href="https://fxplus.ac.uk/food-drink/">Food &#038; Drink</a>
+	<li class="section-heading menu-item menu-item-type-post_type menu-item-object-content menu-item-has-children menu-item-384"><a href="https://fxplus.ac.uk/food-drink/">Food &#038; Drink</a>
 	<ul class="sub-menu">
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-385"><a href="https://fxplus.ac.uk/food-drink/amata-cafe/"><i class="fa-duotone fa-cup-togo"></i> AMATA Cafe</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-386"><a href="https://fxplus.ac.uk/food-drink/esi-cafe/"><i class="fa-duotone fa-cup-togo"></i> ESI Cafe</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-391"><a href="https://fxplus.ac.uk/food-drink/fox-cafe/"><i class="fa-duotone fa-cup-togo"></i> Fox Cafe</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-content current-menu-item menu-item-387"><a href="https://fxplus.ac.uk/food-drink/koofi/" aria-current="page"><i class="fa-duotone fa-pizza-slice"></i> Koofi</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-387"><a href="https://fxplus.ac.uk/food-drink/koofi/"><i class="fa-duotone fa-pizza-slice"></i> Koofi</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-397"><a href="https://fxplus.ac.uk/food-drink/penryn-campus-shop/"><i class="fa-duotone fa-shop"></i> Penryn Campus Shop</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-908"><a href="https://fxplus.ac.uk/food-drink/stannary-bar/"><i class="fa-duotone fa-martini-glass"></i> Stannary Bar</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-909"><a href="https://fxplus.ac.uk/food-drink/stannary-kitchen/"><i class="fa-duotone fa-hat-chef"></i> Stannary Kitchen</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-389"><a href="https://fxplus.ac.uk/food-drink/the-sustainability-cafe/"><i class="fa-duotone fa-leaf"></i> The Sustainability Café</a></li>
 	</ul>
 </li>
-	<li class="section-heading menu-item menu-item-type-post_type menu-item-object-content menu-item-has-children menu-item-395"><a href="https://fxplus.ac.uk/facilities-services/">Facilities &#038; Services</a>
+	<li class="section-heading menu-item menu-item-type-post_type menu-item-object-content current-content-ancestor current-menu-ancestor current-menu-parent current-content-parent menu-item-has-children menu-item-395"><a href="https://fxplus.ac.uk/facilities-services/">Facilities &#038; Services</a>
 	<ul class="sub-menu">
 		<li class="icon_link cplus_link menu-item menu-item-type-custom menu-item-object-custom menu-item-405"><a href="https://cornwall-plus.co.uk"><i class="fa-duotone fa-hotel"></i> Cornwall Plus</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-402"><a href="https://fxplus.ac.uk/events-on-campus/conferences-and-events/"><i class="fa-duotone fa-party-horn"></i> Conferences and Events</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-396"><a href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/"><i class="fa-duotone fa-pen-paintbrush"></i> Falmouth Campus Art Shop</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-content current-menu-item menu-item-396"><a href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/" aria-current="page"><i class="fa-duotone fa-pen-paintbrush"></i> Falmouth Campus Art Shop</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-399"><a href="https://fxplus.ac.uk/facilities-services/flexsi-sports-centre/"><i class="fa-duotone fa-dumbbell"></i> Flexsi Sports Centre</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-404"><a href="https://fxplus.ac.uk/facilities-services/little-wonders-nursery/"><i class="fa-duotone fa-children"></i> Little Wonders Nursery</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-content menu-item-401"><a href="https://fxplus.ac.uk/facilities-services/print-services/"><i class="fa-duotone fa-print"></i> Print Services</a></li>
@@ -719,23 +719,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<main id="primary" class="site-main">
 
 		<style>.wp-block-navigation__container{justify-content: center!important;}</style>
-<div id="section_menu_wrap" class="menu-campus-services-container"><ul id="menu-campus-services" class="section_menu"><li id="menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-content current-content-ancestor current-menu-ancestor current-menu-parent current-content-parent menu-item-has-children menu-item-698"><a href="https://fxplus.ac.uk/food-drink/">Food &#038; Drink</a>
+<div id="section_menu_wrap" class="menu-campus-services-container"><ul id="menu-campus-services" class="section_menu"><li id="menu-item-698" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-has-children menu-item-698"><a href="https://fxplus.ac.uk/food-drink/">Food &#038; Drink</a>
 <ul class="sub-menu">
 	<li id="menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-699"><a href="https://fxplus.ac.uk/food-drink/amata-cafe/">AMATA Café</a></li>
 	<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-700"><a href="https://fxplus.ac.uk/food-drink/esi-cafe/">ESI Cafe</a></li>
 	<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-701"><a href="https://fxplus.ac.uk/food-drink/fox-cafe/">Fox Cafe</a></li>
-	<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-content current-menu-item menu-item-702"><a href="https://fxplus.ac.uk/food-drink/koofi/" aria-current="page">Koofi</a></li>
+	<li id="menu-item-702" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-702"><a href="https://fxplus.ac.uk/food-drink/koofi/">Koofi</a></li>
 	<li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-716"><a href="https://fxplus.ac.uk/food-drink/penryn-campus-shop/">Penryn Campus Shop</a></li>
 	<li id="menu-item-703" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-703"><a href="https://fxplus.ac.uk/food-drink/stannary-bar/">Stannary Bar</a></li>
 	<li id="menu-item-705" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-705"><a href="https://fxplus.ac.uk/food-drink/stannary-kitchen/">Stannary Kitchen</a></li>
 	<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-707"><a href="https://fxplus.ac.uk/food-drink/the-sustainability-cafe/">The Sustainability Café</a></li>
 </ul>
 </li>
-<li id="menu-item-708" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-has-children menu-item-708"><a href="https://fxplus.ac.uk/facilities-services/">Facilities &#038; Services</a>
+<li id="menu-item-708" class="menu-item menu-item-type-post_type menu-item-object-content current-content-ancestor current-menu-ancestor current-menu-parent current-content-parent menu-item-has-children menu-item-708"><a href="https://fxplus.ac.uk/facilities-services/">Facilities &#038; Services</a>
 <ul class="sub-menu">
 	<li id="menu-item-714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-714"><a href="http://cornwall-plus.co.uk">Cornwall Plus</a></li>
 	<li id="menu-item-712" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-712"><a href="https://fxplus.ac.uk/events-on-campus/conferences-and-events/">Conferences and Events</a></li>
-	<li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-709"><a href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/">Falmouth Campus Art Shop</a></li>
+	<li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-content current-menu-item menu-item-709"><a href="https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/" aria-current="page">Falmouth Campus Art Shop</a></li>
 	<li id="menu-item-710" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-710"><a href="https://fxplus.ac.uk/facilities-services/flexsi-sports-centre/">Flexsi Sports Centre</a></li>
 	<li id="menu-item-711" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-711"><a href="https://fxplus.ac.uk/facilities-services/little-wonders-nursery/">Little Wonders Nursery</a></li>
 	<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-content menu-item-713"><a href="https://fxplus.ac.uk/facilities-services/print-services/">Print Services</a></li>
@@ -775,7 +775,7 @@ jQuery(document).mouseup(function(e) {
 
 </script>
 
-<article id="post-332" class="post-332 content type-content status-publish has-post-thumbnail hentry tag-cafe tag-food-and-drink tag-koofi">
+<article id="post-394" class="post-394 content type-content status-publish has-post-thumbnail hentry tag-art tag-falmouth-campus tag-shop">
 
 
 	<div id='section_sidebar'></div>
@@ -783,49 +783,17 @@ jQuery(document).mouseup(function(e) {
 	<header class="entry-header">
 		
 			<div class="post-thumbnail">
-				<img width="2560" height="1440" src="https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-scaled.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Outside of cafe showing sign" srcset="https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-scaled.jpg 2560w, https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-300x169.jpg 300w, https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-1024x576.jpg 1024w, https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-768x432.jpg 768w, https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-1536x864.jpg 1536w, https://fxplus.ac.uk/wp-content/uploads/2022/03/FXPlus_Penryn_Campus_Food_Outlets-12-2048x1152.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" />			</div><!-- .post-thumbnail -->
+				<img width="1920" height="1216" src="https://fxplus.ac.uk/wp-content/uploads/2022/03/lumensoft-technologies-pSz3JFTDZMA-unsplash.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://fxplus.ac.uk/wp-content/uploads/2022/03/lumensoft-technologies-pSz3JFTDZMA-unsplash.jpg 1920w, https://fxplus.ac.uk/wp-content/uploads/2022/03/lumensoft-technologies-pSz3JFTDZMA-unsplash-300x190.jpg 300w, https://fxplus.ac.uk/wp-content/uploads/2022/03/lumensoft-technologies-pSz3JFTDZMA-unsplash-1024x649.jpg 1024w, https://fxplus.ac.uk/wp-content/uploads/2022/03/lumensoft-technologies-pSz3JFTDZMA-unsplash-768x486.jpg 768w, https://fxplus.ac.uk/wp-content/uploads/2022/03/lumensoft-technologies-pSz3JFTDZMA-unsplash-1536x973.jpg 1536w" sizes="(max-width: 1920px) 100vw, 1920px" />			</div><!-- .post-thumbnail -->
 
 		
-		<h1 class="entry-title">Koofi</h1>	</header><!-- .entry-header -->
+		<h1 class="entry-title">Falmouth Campus Art Shop</h1>	</header><!-- .entry-header -->
 	    
 	<div class="entry-content">
 
 
 
 		
-<p>Koofi is our Penryn Campus pizza café, located near Glasney Village, Glasney Lodge and Peter Lanyon. It serves Starbucks coffees, paninis, snacks and of course, fantastic pizzas. There is space to relax inside and a great sun terrace outside – a perfect place to sit with a chilled smoothie, iced coffee or milkshake.</p>
-
-
-
-<p>As well as Starbucks coffees, we serve hot chocolate and Teavana tea. Our chilled smoothies are vegan certified. Neo pizzas are available all day.</p>
-
-
-
-<p>Fairtrade is important to us. Starbucks coffees are Fairtrade and Teavana teas are part of the Ethical Tea Partnership.</p>
-
-
-
-<p>Where possible our disposables (cutlery, hot drinks cups and takeaway packaging) are environmentally friendly &#8211; either compostable, biodegradable or recyclable.</p>
-
-
-
-<p>We encourage you to drink in our cafes or use reusable cups for take away. We have a range of reusable lidded cups for sale and, if you buy one from us, your first hot drink is complimentary.</p>
-
-
-
-<p>The sustainability of our products is of great importance to us which is why we try to use local suppliers for our meat, fruit, and vegetables wherever possible in all our units.</p>
-
-
-
-<p><strong>Hot Drink Loyalty Card</strong></p>
-
-
-
-<p>Collect a hot drink loyalty card for use in any outlet on campus. A complete loyalty card (10 stamps) can be redeemed for any regular hot drink or iced coffee. Terms and conditions apply.</p>
-
-
-
-<div class="wp-container-1 wp-block-group wrap"><div class="wp-block-group__inner-container"><blockquote id="95" class="op ">
+<div class="wp-container-1 wp-block-group wrap"><div class="wp-block-group__inner-container"><blockquote id="1576" class="op ">
                <i class="fa-solid fa-clock-eight op_icon"></i>
 
     <div class='inner'>
@@ -836,91 +804,105 @@ jQuery(document).mouseup(function(e) {
         "http://schema.org"
     ],
     "@type": "Place",
-    "name": "Koofi",
+    "name": "Falmouth Campus Art Shop",
     "openingHoursSpecification": [
         {
             "@type": "OpeningHoursSpecification",
-            "opens": "08:30",
-            "closes": "18:00",
+            "opens": "10:00",
+            "closes": "11:30",
             "dayOfWeek": "http://schema.org/Monday"
         },
         {
             "@type": "OpeningHoursSpecification",
-            "opens": "08:30",
-            "closes": "18:00",
+            "opens": "14:00",
+            "closes": "15:30",
+            "dayOfWeek": "http://schema.org/Monday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "10:00",
+            "closes": "11:30",
             "dayOfWeek": "http://schema.org/Tuesday"
         },
         {
             "@type": "OpeningHoursSpecification",
-            "opens": "08:30",
-            "closes": "18:00",
+            "opens": "14:00",
+            "closes": "15:30",
+            "dayOfWeek": "http://schema.org/Tuesday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "10:00",
+            "closes": "11:30",
             "dayOfWeek": "http://schema.org/Wednesday"
         },
         {
             "@type": "OpeningHoursSpecification",
-            "opens": "08:30",
-            "closes": "18:00",
+            "opens": "14:00",
+            "closes": "15:30",
+            "dayOfWeek": "http://schema.org/Wednesday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "10:00",
+            "closes": "11:30",
             "dayOfWeek": "http://schema.org/Thursday"
         },
         {
             "@type": "OpeningHoursSpecification",
-            "opens": "08:30",
-            "closes": "18:00",
+            "opens": "14:00",
+            "closes": "15:30",
+            "dayOfWeek": "http://schema.org/Thursday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "10:00",
+            "closes": "11:30",
+            "dayOfWeek": "http://schema.org/Friday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "14:00",
+            "closes": "15:30",
             "dayOfWeek": "http://schema.org/Friday"
         },
         {
             "@type": "OpeningHoursSpecification",
             "opens": "10:00",
-            "closes": "18:00",
+            "closes": "11:30",
             "dayOfWeek": "http://schema.org/Saturday"
         },
         {
             "@type": "OpeningHoursSpecification",
-            "opens": "11:00",
-            "closes": "17:30",
+            "opens": "14:00",
+            "closes": "15:30",
+            "dayOfWeek": "http://schema.org/Saturday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "10:00",
+            "closes": "11:30",
+            "dayOfWeek": "http://schema.org/Sunday"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "14:00",
+            "closes": "15:30",
             "dayOfWeek": "http://schema.org/Sunday"
         }
     ]
 }</script>
-<ul><li><strong>Monday</strong> 08:30 &#8211; 18:00</li><li><strong>Tuesday</strong> 08:30 &#8211; 18:00</li><li><strong>Wednesday</strong> 08:30 &#8211; 18:00</li><li><strong>Thursday</strong> 08:30 &#8211; 18:00</li><li><strong>Friday</strong> 08:30 &#8211; 18:00</li><li><strong>Saturday</strong> 10:00 &#8211; 18:00</li><li><strong>Sunday</strong> 11:00 &#8211; 17:30</li><li><div class="op-is-open-shortcode"><span class="op-open">We&#8217;re currently open.</span></div></li></ul>    </div>
+<ul><li><strong>Monday</strong> 10:00 &#8211; 11:30</li><li><strong>Monday</strong> 14:00 &#8211; 15:30</li><li><strong>Tuesday</strong> 10:00 &#8211; 11:30</li><li><strong>Tuesday</strong> 14:00 &#8211; 15:30</li><li><strong>Wednesday</strong> 10:00 &#8211; 11:30</li><li><strong>Wednesday</strong> 14:00 &#8211; 15:30</li><li><strong>Thursday</strong> 10:00 &#8211; 11:30</li><li><strong>Thursday</strong> 14:00 &#8211; 15:30</li><li><strong>Friday</strong> 10:00 &#8211; 11:30</li><li><strong>Friday</strong> 14:00 &#8211; 15:30</li><li><strong>Saturday</strong> 10:00 &#8211; 11:30</li><li><strong>Saturday</strong> 14:00 &#8211; 15:30</li><li><strong>Sunday</strong> 10:00 &#8211; 11:30</li><li><strong>Sunday</strong> 14:00 &#8211; 15:30</li><li><div class="op-is-open-shortcode"><span class="op-closed">We&#8217;re currently closed.</span></div></li></ul>    </div>
 </blockquote>
 
 
 
 
-<h2>Pizza Menu</h2>
+<p>The Falmouth Campus Art Shop is located in the Fox building. The shop stocks a wide range of art materials including Moleskine notebooks and artist quality paints and mediums, all at reasonable prices.&nbsp;</p>
 
 
 
-<p><strong>Koofi is proud to serve authentic Neo Pizzas, crispy, crusty and delicious!</strong></p>
-
-
-
-<div class="wp-block-advgb-accordions advgb-accordion-wrapper" data-collapsed="true">
-<div class="wp-block-advgb-accordion-item advgb-accordion-item" style="margin-bottom:15px"><div class="advgb-accordion-header" style="background-color:var(--nv-secondary-accent);color:#eee;border-style:solid;border-width:1px;border-radius:2px"><span class="advgb-accordion-header-icon"><svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0,0h24v24H0V0z"></path><path d="M12,5.83L15.17,9l1.41-1.41L12,3L7.41,7.59L8.83,9L12,5.83z M12,18.17L8.83,15l-1.41,1.41L12,21l4.59-4.59L15.17,15 L12,18.17z"></path></svg></span><h3 class="advgb-accordion-header-title" style="color:inherit">Offers</h3></div><div class="advgb-accordion-body" style="border-style:solid !important;border-width:1px !important;border-color:undefined !important;border-top:none !important;border-radius:2px !important">
-<table class="wp-block-advgb-table advgb-table-frontend is-style-stripes"><thead><tr><th>Offer</th><th>Product</th><th>Price</th></tr></thead><tbody><tr><td>Buy any two 10&#8243;</td><td>Vegetarian<br>Vegen<br>Margarita</td><td><strong>£8</strong></td></tr><tr><td>Buy any two 10&#8243;</td><td>Pepperoni<br>Farmhouse<br>Hawaiian<br>Pollo<br>Meat Feast</td><td><strong>£10</strong></td></tr><tr><td>Buy any 10&#8243; Pizza and pay</td><td>Garlic Bread<br>Side of Wedges<br>Can of Drink</td><td><strong>£1.90<br>£1.50<br>60p</strong></td></tr></tbody></table>
-</div></div>
-
-
-
-<div class="wp-block-advgb-accordion-item advgb-accordion-item" style="margin-bottom:15px"><div class="advgb-accordion-header" style="background-color:var(--nv-secondary-accent);color:#eee;border-style:solid;border-width:1px;border-radius:2px"><span class="advgb-accordion-header-icon"><svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0,0h24v24H0V0z"></path><path d="M12,5.83L15.17,9l1.41-1.41L12,3L7.41,7.59L8.83,9L12,5.83z M12,18.17L8.83,15l-1.41,1.41L12,21l4.59-4.59L15.17,15 L12,18.17z"></path></svg></span><h3 class="advgb-accordion-header-title" style="color:inherit">Treat yourself to the best pizza and sides</h3></div><div class="advgb-accordion-body" style="border-style:solid !important;border-width:1px !important;border-color:undefined !important;border-top:none !important;border-radius:2px !important">
-<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><tbody><tr><td>10” Vegetarian Pizza</td><td>Tomato, chargrilled vegetables, mozzarella topped with rocket (V)</td><td><strong>£4.90</strong></td></tr><tr><td>10” Vegan Pizza</td><td>Tomato sauce, chargrilled vegetables, topped with satay sauce and rocket (VG)</td><td><strong>£4.90</strong></td></tr><tr><td>10” Margarita Pizza</td><td>Tomato sauce, mozzarella, oregano, fresh parmesan and fresh basil</td><td><strong>£4.90</strong></td></tr><tr><td>10” Pepperoni Pizza</td><td>Tomato sauce, mozzarella, pepperoni, oregano, parmesan topped with rocket</td><td><strong>£5.50</strong></td></tr><tr><td>10” Farmhouse Pizza</td><td>Tomato sauce, mozzarella, ham, mushroom, fresh parmesan and fresh basil</td><td><strong>£6.30</strong></td></tr><tr><td>10” Hawaiian Pizza</td><td>Tomato sauce, mozzarella, ham, pineapple topped with basil</td><td><strong>£6.30</strong></td></tr><tr><td>10” Pollo Pizza</td><td>Tomato sauce, mozzarella, chargrilled chicken, fresh parmesan topped with BBQ Sauce</td><td><strong>£6.50</strong></td></tr><tr><td>10” Meat Feast</td><td>Tomato sauce, mozzarella, pepperoni, ground beef, chargrilled chicken topped with rocket&nbsp;</td><td><strong>£7.70</strong></td></tr></tbody></table></figure>
-</div></div>
-
-
-
-<div class="wp-block-advgb-accordion-item advgb-accordion-item" style="margin-bottom:15px"><div class="advgb-accordion-header" style="background-color:var(--nv-secondary-accent);color:#eee;border-style:solid;border-width:1px;border-radius:2px"><span class="advgb-accordion-header-icon"><svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0,0h24v24H0V0z"></path><path d="M12,5.83L15.17,9l1.41-1.41L12,3L7.41,7.59L8.83,9L12,5.83z M12,18.17L8.83,15l-1.41,1.41L12,21l4.59-4.59L15.17,15 L12,18.17z"></path></svg></span><h3 class="advgb-accordion-header-title" style="color:inherit">Side Dishes</h3></div><div class="advgb-accordion-body" style="border-style:solid !important;border-width:1px !important;border-color:undefined !important;border-top:none !important;border-radius:2px !important">
-<table class="wp-block-advgb-table advgb-table-frontend is-style-stripes"><tbody><tr><td>10” Garlic Pizza Bread</td><td><strong>£2.90</strong></td></tr><tr><td>10” Cheesy Garlic Pizza Bread</td><td><strong>£3.50</strong></td></tr><tr><td>Potato Wedges and 2 x Dips</td><td><strong>£2</strong></td></tr></tbody></table>
-</div></div>
-</div>
-
-
-
-<p>Need a gluten-free alternative? No problem! We have special gluten-free bases available. Some toppings may contain gluten, so please just ask when ordering.</p>
-
-
-
-<p>For further service offers and updates, follow Food &amp; Drink on&nbsp;<a rel="noreferrer noopener" class="external" href="http://www.instagram.com/foodanddrinkoncampus" target="_blank">Instagram</a>,&nbsp;<a rel="noreferrer noopener" class="external" href="http://www.facebook.com/stannary%20" target="_blank">Facebook </a>and&nbsp;<a rel="noreferrer noopener" class="external" href="http://twitter.com/FalUoECatering" target="_blank">Twitter.</a></p>
+<p>Please email&nbsp;<a href="mailto:artshop@falmouth.ac.uk">artshop@falmouth.ac.uk</a></p>
 </div></div>
 <style class="advgb-styles-renderer">
 blockquote.op {
@@ -1536,10 +1518,6 @@ $(window).scroll(function() {
 <link rel='stylesheet' id='advgb_blocks_styles_pro-css'  href='https://fxplus.ac.uk/wp-content/plugins/advanced-gutenberg-pro/assets/css/blocks-pro.css?ver=2.14.1' media='all' />
 <link rel='stylesheet' id='cookie-law-info-table-css'  href='https://fxplus.ac.uk/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-table.css?ver=2.1.2' media='all' />
 <script src='https://fxplus.ac.uk/wp-content/themes/fxplus/js/navigation.js?ver=1.0.0' id='fxplus-navigation-js'></script>
-<script src='https://fxplus.ac.uk/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
-<script src='https://fxplus.ac.uk/wp-includes/js/jquery/ui/accordion.min.js?ver=1.13.1' id='jquery-ui-accordion-js'></script>
-<script src='https://fxplus.ac.uk/wp-content/plugins/advanced-gutenberg-pro/assets/blocks/advaccordion/frontend.js?ver=6.0.1' id='adv_accordion_js-js'></script>
-<script src='https://fxplus.ac.uk/wp-content/plugins/advanced-gutenberg-pro/assets/blocks/advaccordion/script.min.js?ver=2.14.1' id='adv_accordion_extra_js-js'></script>
         <script type="text/javascript">
             /* <![CDATA[ */
            document.querySelectorAll("ul.nav-menu").forEach(
