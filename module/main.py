@@ -201,18 +201,6 @@ class ServiceData:
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
-@client.command()
-async def koofi(msg):
-    koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
-    await koofiData.SetOpenData()
-    await msg.send(koofiData.FormatOpenMsg())
-
-@client.command()
-async def koofiOt(msg):
-    koofiData = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
-    await koofiData.SetOpeningTimeData()
-    await msg.send(koofiData.openingTimesFormatted)
-
 
 
 # Test on how to call commands from other functions
@@ -221,27 +209,48 @@ async def test(ctx):
     command = client.get_command("koofi")
     await ctx.invoke(command)
 
-##########                 ##########
-##########     CATERING    ##########
-##########                 ##########
-'''
+##########                  ##########
+##########   FoodAndDrink   ##########
+##########                  ##########
+
+
+@client.command()
+async def koofi(msg):
+    koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
+    await koofi.SetOpenData()
+    await msg.send(koofi.FormatOpenMsg())
+
+@client.command()
+async def koofiOt(msg):
+    koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
+    await koofi.SetOpeningTimeData()
+    await msg.send(koofi.openingTimesFormatted)
+
 # Sends channel msg when procedure the name is called as a command
 @client.command()
 async def amata(msg):
-
+    amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
+    await amata.SetOpenData()
+    await msg.send(amata.FormatOpenMsg())
 
 @client.command()
 async def amataOt(msg):
-    html = await getHtml()
+    amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
+    await amata.SetopeningTimeData()
+    await msg.send(amata.openingTimesFormatted)
 
 
 @client.command()
 async def esi(msg):
+    esi = ServiceData("ESI", data.data["FoodAndDrink"]["ESI"])
+    await esi.SetOpenData()
+    await msg.send(esi.FormatOpenMsg)
 
 @client.command()
-async def ESIOt(msg):
-    html = await getHtml()
-
+async def esiOt(msg):
+    esi = ServiceData("ESI", data.data["FoodAndDrink"]["ESI"])
+    await esi.SetOpeningTimeData()
+    await msg.send(esi.openingTimesFormatted)
 
 
 
@@ -250,14 +259,12 @@ async def stannaryB(msg):
 
 @client.command()
 async def stannaryBOt(msg):
-    html = await getHtml()
 
 @client.command()
 async def fox(msg):
 
 @client.command()
 async def foxOt(msg):
-    html = await getHtml()
 
 
 @client.command()
@@ -388,8 +395,6 @@ async def vHelpdeskOt(msg):
     html = await getHtml()
 
 
-
-'''
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
