@@ -36,14 +36,15 @@ data = {
         "TargetClosed" : "currently closed"
     },
     "FoodAndDrink" : {
+        "Koofi": "https://fxplus.ac.uk/food-drink/koofi/",
         "Amata" : "https://fxplus.ac.uk/food-drink/amata-cafe/",
         "ESI" : "https://fxplus.ac.uk/food-drink/esi-cafe/",
-        "Fox" : "https://fxplus.ac.uk/food-drink/fox-cafe/",
-        "Koofi" : "https://fxplus.ac.uk/food-drink/koofi/",
+        "Stannary Bar": "https://fxplus.ac.uk/food-drink/stannary-bar/",
+        "Stannary Kitchen": "https://fxplus.ac.uk/food-drink/stannary-kitchen/",
+        "Fox": "https://fxplus.ac.uk/food-drink/fox-cafe/",
+        "Sus cafe": "https://fxplus.ac.uk/food-drink/the-sustainability-cafe/",
         "Penryn Shop" : "https://fxplus.ac.uk/food-drink/penryn-campus-shop/",
-        "Stannary Bar" : "https://fxplus.ac.uk/food-drink/stannary-bar/",
-        "Stannary Kitchen" : "https://fxplus.ac.uk/food-drink/stannary-kitchen/",
-        "The sus cafe" : "https://fxplus.ac.uk/food-drink/the-sustainability-cafe/"
+
     },
     "Facilities and Services" : {
         "Falmouth Art Shop" : "https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/",
