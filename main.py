@@ -147,13 +147,11 @@ class ServiceData:
         Formatted string message containing opening days and times 
     '''
     async def ShowOpeningTimes(self):
-        msg = self.name + " Opening Times are:\n"
+        embed = discord.Embed(title=self.name + " Opening Times Are", colour=GREEN)        
         for i in range(0, len(self.openingTimes)):
-            if ':' in self.openingTimes[i]:
-                msg = msg + "    "
-            msg = msg + self.openingTimes[i]
-            msg = msg + "\n"
-        return msg
+            if not (':' in self.openingTimes[i]):
+                embed.add_field(name=self.openingTimes[i],value=(self.openingTimes[i+1] + "\n" + self.openingTimes[i+2]),inline=False)
+        return embed
 
     '''
     Takes a list with expected data and formats the elemeants
@@ -257,14 +255,7 @@ async def koofi(msg):
 async def koofiOt(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpeningTimeData()
-    embed = discord.Embed(title="Koofi", description=koofi.openingTimesFormatted)
-    embed2 = discord.Embed(title="Koofi", description="oooo")
-    embed2.add_field(name="test1", value= "sdff", inline=False)
-    embed2.add_field(name="test1", value= "sdff", inline=False)
-    embed2.add_field(name="test1", value= "sdff", inline=False)
-    embed2.add_field(name="test1", value= "sdff", inline=False)
-    embed2.add_field(name="test1", value= "sdff", inline=False)
-    await msg.channel.send(content=None, embed=embed2)
+    await msg.channel.send(content=None, embed=koofi.openingTimesFormatted)
     #await msg.channel.send(koofi.openingTimesFormatted)
 
 # Sends channel msg when procedure the name is called as a command
@@ -272,12 +263,12 @@ async def koofiOt(msg):
 async def amata(msg):
     amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
     await amata.SetOpenData()
-    await msg.channel.send(amata.FormatOpenMsg())
+    await msg.channel.send(embed=amata.FormatOpenMsg())
 
 @client.command()
 async def amataOt(msg):
     amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
-    await amata.SetopeningTimeData()
+    await amata.SetOpeningTimeData()
     await msg.channel.send(amata.openingTimesFormatted)
 
 
@@ -285,7 +276,7 @@ async def amataOt(msg):
 async def esi(msg):
     esi = ServiceData("ESI Cafe", data.data["FoodAndDrink"]["ESI"])
     await esi.SetOpenData()
-    await msg.channel.send(esi.FormatOpenMsg())
+    await msg.channel.send(embed=esi.FormatOpenMsg())
 
 @client.command()
 async def esiOt(msg):
@@ -298,7 +289,7 @@ async def esiOt(msg):
 async def stannaryBar(msg):
     stanBar = ServiceData("Stannary Bar", data.data["FoodAndDrink"]["Stannary Bar"])
     await stanBar.SetOpenData()
-    await msg.channel.send(stanBar.FormatOpenMsg())
+    await msg.channel.send(embed=stanBar.FormatOpenMsg())
 
 @client.command()
 async def stannaryBarOt(msg):
@@ -310,7 +301,7 @@ async def stannaryBarOt(msg):
 async def stannaryKitchen(msg):
     stannaryKitchen = ServiceData("Stannary Kitchen", data.data["FoodAndDrink"]["Stannary Kitchen"])
     await stannaryKitchen.SetOpenData()
-    await msg.channel.send(stannaryKitchen.FormatOpenMsg())
+    await msg.channel.send(embed=stannaryKitchen.FormatOpenMsg())
 
 @client.command()
 async def stannaryKitchenOt(msg):
@@ -322,7 +313,8 @@ async def stannaryKitchenOt(msg):
 async def fox(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
     await fox.SetOpenData()
-    await msg.channel.send(fox.FormatOpenMsg())
+    await msg.channel.send(embed=fox.FormatOpenMsg())
+    
 @client.command()
 async def foxOt(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
@@ -334,7 +326,7 @@ async def foxOt(msg):
 async def susCafe(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
     await susGuy.SetOpenData()
-    await msg.channel.send(susGuy.FormatOpenMsg())
+    await msg.channel.send(embed=susGuy.FormatOpenMsg())
 
 @client.command()
 async def susCafeOt(msg):
@@ -342,13 +334,11 @@ async def susCafeOt(msg):
     await susGuy.SetOpeningTimeData()
     await msg.channel.send(susGuy.openingTimesFormatted)
 
-
-
 @client.command()
 async def penrynShop(msg):
     penrynShop = ServiceData("Penryn Campus Shop", data.data["FoodAndDrink"]["Penryn Shop"])
     await penrynShop.SetOpenData()
-    await msg.channel.send(penrynShop.FormatOpenMsg())
+    await msg.channel.send(embed=penrynShop.FormatOpenMsg())
 
 @client.command()
 async def penrynShopOt(msg):
@@ -364,7 +354,7 @@ async def penrynShopOt(msg):
 async def falmouthShop(msg):
     falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpenData()
-    await msg.channel.send(falmouthShop.FormatOpenMsg())
+    await msg.channel.send(embed=falmouthShop.FormatOpenMsg())
 
 @client.command()
 async def falmouthShopOt(msg):

@@ -799,3 +799,277 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Nam
 [2022-08-20 13:57:49] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
 [2022-08-20 13:57:49] [INFO    ] discord.client: logging in using static token
 [2022-08-20 13:57:50] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 05eaac326e76ff4a9380f9cd62f80cfa).
+[2022-08-20 14:00:53] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:00:53] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:00:53] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:00:53] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:00:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e11802b8499cb27f1a0c93ebd03e950d).
+[2022-08-20 14:01:34] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:01:34] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:01:34] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:01:34] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:01:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a42b00323dffd424c898ebdea136a2a4).
+[2022-08-20 14:02:07] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 280, in amataOt
+    await amata.SetopeningTimeData()
+AttributeError: 'ServiceData' object has no attribute 'SetopeningTimeData'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'ServiceData' object has no attribute 'SetopeningTimeData'
+[2022-08-20 14:02:56] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:02:56] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:02:56] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:02:56] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:02:57] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b3c8ead96e1a79ed7cbb1580c5e7aee6).
+[2022-08-20 14:05:00] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:05:00] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:05:00] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:05:00] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:05:01] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e54fa39f02e0a1b971fc4bb1b19ae24e).
+[2022-08-20 14:07:14] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:07:14] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:07:14] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:07:14] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:07:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 86eb0f38307f7a65599a5bcb4873f0f2).
+[2022-08-20 14:14:15] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:14:15] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:14:15] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:14:15] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:14:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3790aae09c8bcc7b0133d0252bbd0802).
+[2022-08-20 14:14:23] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 267, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name=self.name + " Opening Times are:\n")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 245, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:15:35] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:15:35] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:15:35] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:15:35] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:15:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 39166d979b332bbfba09df68da40ed77).
+[2022-08-20 14:15:44] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 268, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name=self.name + " Opening Times are:\n")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 246, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:17:13] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:17:13] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:17:13] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:17:13] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:17:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1b32b348e0d19cf5827fa6ff7e808bcd).
+[2022-08-20 14:17:21] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 263, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name=self.name + " Opening Times are:\n")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 241, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:18:04] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:18:04] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:18:04] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:18:04] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:18:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 2c38b1393a778c66b8d44212e0e3e029).
+[2022-08-20 14:18:14] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 263, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name="koofi" + " Opening Times are:\n")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 241, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:18:46] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:18:46] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:18:46] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:18:46] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:18:47] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c0081f295e0defd65431772dc15d8b5a).
+[2022-08-20 14:18:52] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 265, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name=self.name + " Opening Times are:\n")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 243, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:20:40] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:20:40] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:20:40] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:20:40] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:20:41] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6e3fb66b37f5e81232e8d6ef65e4cad6).
+[2022-08-20 14:20:51] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 268, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name=self.name + " Opening Times are:\n")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 246, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:21:36] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:21:36] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:21:36] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:21:36] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:21:37] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 53188eade116ab6336a17e2cbedb4db5).
+[2022-08-20 14:21:42] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 268, in koofiOt
+    await koofi.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 150, in ShowOpeningTimes
+    embed = discord.Embed(name=self.name, description="Opening Times Are")
+TypeError: __init__() got an unexpected keyword argument 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 246, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'name'
+[2022-08-20 14:22:31] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:22:31] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:22:31] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:22:31] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:22:32] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dcab1c612d711164afec42488fbf964a).
+[2022-08-20 14:23:54] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:23:54] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:23:54] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:23:54] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:23:55] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4e13cc8aae747540e96fedc74fd1958e).
