@@ -1,23 +1,21 @@
 import os
 import discord
-from discord.ext import commands
 import aiohttp
 import data
 import logging.handlers
+from discord.ext import commands
 from keepAlive import keep_alive
 
+# Sets intents so that messages can be sent
 intents = discord.Intents.all()
+
+# Gets token from replit secrets
 my_secret = os.environ['token']
 
-# Test comment
-
+# Sets up bot client
 client = commands.Bot(intents=intents,command_prefix = '?')
 
-# TODO
-# Implement a spam logger
-# https://stackoverflow.com/questions/64865728/how-to-keep-track-of-messages-sent-in-discord-py
-
-
+# Sets up logger
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 logging.getLogger('discord.http').setLevel(logging.INFO)
@@ -33,6 +31,9 @@ formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', 
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
+'''
+    Holds all data and methods for services. Obj should be instantiated everytime a command is called.
+'''
 class ServiceData:
     def __init__(self, name, url):
         self.url = url
