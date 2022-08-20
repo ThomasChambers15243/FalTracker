@@ -234,88 +234,88 @@ async def test(ctx):
 async def koofi(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpenData()
-    await msg.send(koofi.FormatOpenMsg())
+    await msg.channel.send(koofi.FormatOpenMsg())
 
 @client.command()
 async def koofiOt(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpeningTimeData()
-    await msg.send(koofi.openingTimesFormatted)
+    await msg.channel.send(koofi.openingTimesFormatted)
 
 # Sends channel msg when procedure the name is called as a command
 @client.command()
 async def amata(msg):
     amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
     await amata.SetOpenData()
-    await msg.send(amata.FormatOpenMsg())
+    await msg.channel.send(amata.FormatOpenMsg())
 
 @client.command()
 async def amataOt(msg):
     amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
     await amata.SetopeningTimeData()
-    await msg.send(amata.openingTimesFormatted)
+    await msg.channel.send(amata.openingTimesFormatted)
 
 
 @client.command()
 async def esi(msg):
     esi = ServiceData("ESI Cafe", data.data["FoodAndDrink"]["ESI"])
     await esi.SetOpenData()
-    await msg.send(esi.FormatOpenMsg())
+    await msg.channel.send(esi.FormatOpenMsg())
 
 @client.command()
 async def esiOt(msg):
     esi = ServiceData("ESI", data.data["FoodAndDrink"]["ESI"])
     await esi.SetOpeningTimeData()
-    await msg.send(esi.openingTimesFormatted)
+    await msg.channel.send(esi.openingTimesFormatted)
 
 
 @client.command()
 async def stannaryBar(msg):
     stanBar = ServiceData("Stannary Bar", data.data["FoodAndDrink"]["Stannary Bar"])
     await stanBar.SetOpenData()
-    await msg.send(stanBar.FormatOpenMsg())
+    await msg.channel.send(stanBar.FormatOpenMsg())
 
 @client.command()
 async def stannaryBarOt(msg):
     stanBar = ServiceData("Stannary Bar", data.data["FoodAndDrink"]["Stannary Bar"])
     await stanBar.SetOpeningTimeData()
-    await msg.send(stanBar.openingTimesFormatted)
+    await msg.channel.send(stanBar.openingTimesFormatted)
 
 @client.command()
 async def stannaryKitchen(msg):
     stannaryKitchen = ServiceData("Stannary Kitchen", data.data["FoodAndDrink"]["Stannary Kitchen"])
     await stannaryKitchen.SetOpenData()
-    await msg.send(stannaryKitchen.FormatOpenMsg())
+    await msg.channel.send(stannaryKitchen.FormatOpenMsg())
 
 @client.command()
 async def stannaryKitchenOt(msg):
     stannaryKitchen = ServiceData("Stannary Kitchen", data.data["FoodAndDrink"]["Stannary Kitchen"])
     await stannaryKitchen.SetOpeningTimeData()
-    await msg.send(stannaryKitchen.openingTimesFormatted)
+    await msg.channel.send(stannaryKitchen.openingTimesFormatted)
 
 @client.command()
 async def fox(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
     await fox.SetOpenData()
-    await msg.send(fox.FormatOpenMsg())
+    await msg.channel.send(fox.FormatOpenMsg())
 @client.command()
 async def foxOt(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
     await fox.SetOpeningTimeData()
-    await msg.send(fox.openingTimesFormatted)
+    await msg.channel.send(fox.openingTimesFormatted)
 
 
 @client.command()
 async def susCafe(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
     await susGuy.SetOpenData()
-    await msg.send(susGuy.FormatOpenMsg())
+    await msg.channel.send(susGuy.FormatOpenMsg())
 
 @client.command()
 async def susCafeOt(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
     await susGuy.SetOpeningTimeData()
-    await msg.send(susGuy.openingTimesFormatted)
+    await msg.channel.send(susGuy.openingTimesFormatted)
 
 
 
@@ -323,13 +323,13 @@ async def susCafeOt(msg):
 async def penrynShop(msg):
     penrynShop = ServiceData("Penryn Campus Shop", data.data["FoodAndDrink"]["Penryn Shop"])
     await penrynShop.SetOpenData()
-    await msg.send(penrynShop.FormatOpenMsg())
+    await msg.channel.send(penrynShop.FormatOpenMsg())
 
 @client.command()
 async def penrynShopOt(msg):
     penrynShop = ServiceData("Penryn Campus Shop", data.data["FoodAndDrink"]["Penryn Shop"])
     await penrynShop.SetOpeningTimeData()
-    await msg.send(penrynShop.openingTimesFormatted)
+    await msg.channel.send(penrynShop.openingTimesFormatted)
 
 ##########                                 ##########
 ##########     Facilities and Services     ##########
@@ -339,13 +339,13 @@ async def penrynShopOt(msg):
 async def falmouthShop(msg):
     falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpenData()
-    await msg.send(falmouthShop.FormatOpenMsg())
+    await msg.channel.send(falmouthShop.FormatOpenMsg())
 
 @client.command()
 async def falmouthShopOt(msg):
     falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpeningTimeData()
-    await msg.send(falmouthShop.openingTimesFormatted)
+    await msg.channel.send(falmouthShop.openingTimesFormatted)
 
 # Lets you know if the bot is up and running
 @client.event
