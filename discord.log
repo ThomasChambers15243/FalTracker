@@ -1,0 +1,3 @@
+[2022-08-20 11:24:42] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 11:24:42] [INFO    ] discord.client: logging in using static token
+[2022-08-20 11:24:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: df2fbaaf2964e2bad2ff2eb167bd4fb5).
