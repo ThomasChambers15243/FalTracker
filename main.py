@@ -3,8 +3,13 @@ import discord
 import aiohttp
 import data
 import logging.handlers
+#from datetime import date
 from discord.ext import commands
 from keepAlive import keep_alive
+from discord.ext.commands import CommandNotFound
+
+GREEN = 0x2ecc71
+RED = 0xe74c3c
 
 # Sets intents so that messages can be sent
 intents = discord.Intents.all()
@@ -192,17 +197,17 @@ class ServiceData:
         return list
 
     '''
-    Formats a sendable message saying whether the service is open or not
+    Formats a sendable embed saying whether the service is open or not
     Args:
         None
     Returns:
-        Formatted string message indicating the service is open or closed
+        Formatted embed message indicating the service is open or closed
     '''
     def FormatOpenMsg(self):
-        if self.isServiceOpen:
-            return self.name + " is open at the moment :)"
+        if self.isServiceOpen:            
+            return discord.Embed(title=self.name, description=self.name + " is open :)",colour=GREEN)
         else:
-            return self.name + " is closed at the moment :("
+            return discord.Embed(title=self.name, description=self.name + " is closed :(",colour=RED)
 
 
 #########################################################################################
@@ -211,25 +216,31 @@ class ServiceData:
 
 # roof of concept for listening to commands as another way for working with user msg's
 
-# @client.event
-# async def onMessage(msg):
-#     if message.author == client.user:
-#         return
-#     elif message.content.startswith("?"):
-#         cmd = message.content.split()[0].replace("_","")
-#         if len(message.content.split()) > 1:
-#             parameters = message.content.split()[1:]
+@client.event
+async def onMessage(msg):
+    print("sdf")
+    if msg.author == client.user:
+        return
+    elif msg.content.startswith("?"):
+        await msg.channel.send("Hi")
+        # cmd = msg.content.split()[0].replace("_","")
+        # if len(msg.content.split()) > 1:
+        #     parameters = msg.content.split()[1:]
 
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
 #########################################################################################
-
-
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, CommandNotFound):
+        return
+    raise error
+    
 # Test on how to call commands from other functions
 @client.command()
 async def test(ctx):
-    command = client.get_command("koofi")
-    await ctx.invoke(command)
+    #command = client.get_command("koofi")
+    await ctx.invoke(client.get_command("koofi"))
 
 ##########                  ##########
 ##########   FoodAndDrink   ##########
@@ -240,13 +251,21 @@ async def test(ctx):
 async def koofi(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpenData()
-    await msg.channel.send(koofi.FormatOpenMsg())
+    await msg.channel.send(embed=koofi.FormatOpenMsg())
 
 @client.command()
 async def koofiOt(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpeningTimeData()
-    await msg.channel.send(koofi.openingTimesFormatted)
+    embed = discord.Embed(title="Koofi", description=koofi.openingTimesFormatted)
+    embed2 = discord.Embed(title="Koofi", description="oooo")
+    embed2.add_field(name="test1", value= "sdff", inline=False)
+    embed2.add_field(name="test1", value= "sdff", inline=False)
+    embed2.add_field(name="test1", value= "sdff", inline=False)
+    embed2.add_field(name="test1", value= "sdff", inline=False)
+    embed2.add_field(name="test1", value= "sdff", inline=False)
+    await msg.channel.send(content=None, embed=embed2)
+    #await msg.channel.send(koofi.openingTimesFormatted)
 
 # Sends channel msg when procedure the name is called as a command
 @client.command()

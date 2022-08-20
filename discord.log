@@ -13,3 +13,789 @@
 [2022-08-20 12:04:52] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
 [2022-08-20 12:04:52] [INFO    ] discord.client: logging in using static token
 [2022-08-20 12:04:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: fe75b0d0be036b6db868c7c71aa4998d).
+[2022-08-20 12:25:29] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:25:29] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:25:30] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3675640df3a083a9004adc1622e4c615).
+[2022-08-20 12:25:52] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "koofOt" is not found
+[2022-08-20 12:26:26] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "koofiOt?koofiOt" is not found
+[2022-08-20 12:28:06] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:28:06] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:28:06] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7d4eba216b6c0b30c6a62590cd5c73f9).
+[2022-08-20 12:33:32] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:33:32] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:33:32] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:33:32] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 941b0acfb6ea7b43e93489821ea7fd3d).
+[2022-08-20 12:34:13] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:34:13] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:34:13] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:34:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ab669dbd8b99848dd19b76f20950c8e1).
+[2022-08-20 12:34:20] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "asd" is not found
+[2022-08-20 12:34:47] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:34:47] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:34:47] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:34:47] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3f3c0db34e287dadc731dce23fdd969a).
+[2022-08-20 12:34:52] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "asd" is not found
+[2022-08-20 12:36:20] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:36:20] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:36:20] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:36:21] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0c6177ee827389c87977a0afbfbe070f).
+[2022-08-20 12:36:25] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "Ad" is not found
+[2022-08-20 12:36:49] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:36:49] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:36:49] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:36:49] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:36:50] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3dc5f2108b5814fc68f01c883a9aaf3e).
+[2022-08-20 12:37:03] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:37:03] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:37:03] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:37:03] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:37:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1bd42e22abaf7b12b57161b40420f2b2).
+[2022-08-20 12:37:37] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:37:37] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:37:37] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:37:37] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:37:37] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 10f53287636211da0f40b13c5887e51a).
+[2022-08-20 12:37:38] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 231, in on_command_error
+    print(ctx.content)
+AttributeError: 'Context' object has no attribute 'content'
+[2022-08-20 12:37:54] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:37:54] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:37:54] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:37:54] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:37:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cedaabf8a79d7357f73546eb1378ba76).
+[2022-08-20 12:37:57] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 231, in on_command_error
+    print(ctx.content.message)
+AttributeError: 'Context' object has no attribute 'content'
+[2022-08-20 12:38:06] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:38:06] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:38:06] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:38:06] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:38:06] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f210080e4f88ae85b588de118a05273d).
+[2022-08-20 12:40:19] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:40:19] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:40:19] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:40:19] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:40:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d5dd8a523f4c70c9efc7d2e0e38f6bb1).
+[2022-08-20 12:40:23] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 231, in on_command_error
+    await ctx.message.send(ctx.message)
+AttributeError: 'Message' object has no attribute 'send'
+[2022-08-20 12:40:34] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:40:34] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:40:34] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:40:34] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:40:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9877a05919076c8771dda0fbaa02c17a).
+[2022-08-20 12:42:04] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:42:04] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:42:04] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:42:04] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:42:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b2fdf076ab3ee16b2d3b67f2aea18b7b).
+[2022-08-20 12:42:07] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 231, in on_command_error
+    await ctx.channel.send(ctx.command)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/abc.py", line 1539, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/http.py", line 744, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50006): Cannot send an empty message
+[2022-08-20 12:42:39] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:42:39] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:42:39] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:42:39] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:42:41] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:42:41] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:42:41] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:42:41] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:42:44] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2022-08-20 12:42:50] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bd66ab2c00027472fb2175012e226421).
+[2022-08-20 12:43:22] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 12:43:22] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 12:43:22] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 12:43:22] [INFO    ] discord.client: logging in using static token
+[2022-08-20 12:43:22] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 56a5ad4f32041f4a87b4b1e1d4cd4bfe).
+[2022-08-20 12:43:26] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+TypeError: on_command_error() missing 1 required positional argument: 'error'
+[2022-08-20 13:16:09] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:16:09] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:16:09] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:16:09] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:16:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e3aad625254a63ff0a0a27045cc04f9a).
+[2022-08-20 13:17:21] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:17:21] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:17:21] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:17:21] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:17:22] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 40ddab3d57d6d7d99a8509e1f382df46).
+[2022-08-20 13:19:08] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:19:08] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:19:08] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:19:08] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:19:09] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bf3f71559d2ce8cedf29aa1b2cab5886).
+[2022-08-20 13:19:15] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 257, in koofiOt
+    embed2.add_field("test1", "sdff")
+TypeError: add_field() takes 1 positional argument but 3 were given
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 232, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: add_field() takes 1 positional argument but 3 were given
+[2022-08-20 13:19:48] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:19:48] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:19:48] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:19:48] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:19:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6ec38de2ead210126fcd6143f8c1b01b).
+[2022-08-20 13:21:40] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:21:40] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:21:40] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:21:40] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:21:41] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 919c4716bb689d253c4c74bf2f92735c).
+[2022-08-20 13:22:13] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:22:13] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:22:13] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:22:13] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:22:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c6d518eae16c5038646debfcf9b15a75).
+[2022-08-20 13:27:45] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:27:45] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:27:45] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:27:45] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:27:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 98224d59bd942b0049e3c4cb18997f14).
+[2022-08-20 13:27:55] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 249, in koofi
+    embed = discord.Embed(title="Koofi", colour="Green")
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/embeds.py", line 179, in __init__
+    self.colour = colour if colour is not None else color
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/embeds.py", line 323, in colour
+    raise TypeError(f'Expected discord.Colour, int, or None but received {value.__class__.__name__} instead.')
+TypeError: Expected discord.Colour, int, or None but received str instead.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 232, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: Expected discord.Colour, int, or None but received str instead.
+[2022-08-20 13:29:00] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:29:00] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:29:00] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:29:00] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:29:01] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b532b275e635bf100249cfef63625871).
+[2022-08-20 13:29:06] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 249, in koofi
+    embed = discord.Embed(title="Koofi", colour=Colour.Green)
+NameError: name 'Colour' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 232, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'Colour' is not defined
+[2022-08-20 13:30:03] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:30:03] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:30:03] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:30:03] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:30:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 59ad1da7f28b2558deb3ee95cf2d4c8e).
+[2022-08-20 13:30:52] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:30:52] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:30:52] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:30:52] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:30:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 57cf7abc02a2058a5058810e1666e1f5).
+[2022-08-20 13:36:25] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:36:25] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:36:25] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:36:25] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:36:25] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 567d53da7873f12ec5ef976044afcd10).
+[2022-08-20 13:39:10] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:39:10] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:39:10] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:39:10] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:39:16] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 38f90e9a8d0c0232dbfd410612acd29b).
+[2022-08-20 13:39:22] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed.set_thumbnail(koofi.jpg)
+AttributeError: 'ServiceData' object has no attribute 'jpg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 236, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'ServiceData' object has no attribute 'jpg'
+[2022-08-20 13:39:38] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:39:38] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:39:38] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:39:38] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:39:39] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 25cb9b940becf85fc374fc16d6681d07).
+[2022-08-20 13:39:43] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed.set_thumbnail("koofi.jpg")
+TypeError: set_thumbnail() takes 1 positional argument but 2 were given
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 236, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: set_thumbnail() takes 1 positional argument but 2 were given
+[2022-08-20 13:40:39] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:40:39] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:40:39] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:40:39] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:40:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 742fba2ea6516c33ffcb10c302f9670d).
+[2022-08-20 13:40:46] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed.set_thumbnail("https://cornwall-plus.co.uk/blog/attractions/koofi/")
+TypeError: set_thumbnail() takes 1 positional argument but 2 were given
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 236, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: set_thumbnail() takes 1 positional argument but 2 were given
+[2022-08-20 13:41:40] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:41:40] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:41:40] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:41:40] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:41:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 89c3d914268db80356edd57dc270be6d).
+[2022-08-20 13:41:44] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed.set_image("https://cornwall-plus.co.uk/blog/attractions/koofi/")
+TypeError: set_image() takes 1 positional argument but 2 were given
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 236, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: set_image() takes 1 positional argument but 2 were given
+[2022-08-20 13:42:51] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:42:51] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:42:51] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:42:51] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:42:52] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6ec8ec8132912d72db85f9806b18cbb5).
+[2022-08-20 13:42:57] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 253, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, datetime = True)
+TypeError: __init__() got an unexpected keyword argument 'datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 236, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'datetime'
+[2022-08-20 13:43:56] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:43:56] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:43:56] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:43:56] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:43:57] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cb20346304b57731d94307c6ff149dd7).
+[2022-08-20 13:44:14] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, datetime = True)
+TypeError: __init__() got an unexpected keyword argument 'datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: __init__() got an unexpected keyword argument 'datetime'
+[2022-08-20 13:45:02] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:45:02] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:45:02] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:45:02] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:45:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 42df7c72ecd6da08473077a721dd91fe).
+[2022-08-20 13:45:07] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp= True)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/embeds.py", line 195, in __init__
+    self.timestamp = timestamp
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/embeds.py", line 340, in timestamp
+    raise TypeError(f"Expected datetime.datetime or None received {value.__class__.__name__} instead")
+TypeError: Expected datetime.datetime or None received bool instead
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: Expected datetime.datetime or None received bool instead
+[2022-08-20 13:45:45] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:45:45] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:45:45] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:45:45] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:45:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0a7e8ef9221d358ea88f59343586bcc9).
+[2022-08-20 13:45:52] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp= datetime.datetime)
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:46:02] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:46:02] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:46:02] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:46:02] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:46:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 34664a4be7668bc67be70fbe271dc25e).
+[2022-08-20 13:46:08] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp= datetime.datetime())
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:46:28] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:46:28] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:46:28] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:46:28] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:46:29] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 53183b810cff2779706b7b6fb4fb118d).
+[2022-08-20 13:46:34] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp= date.now())
+AttributeError: type object 'datetime.date' has no attribute 'now'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: type object 'datetime.date' has no attribute 'now'
+[2022-08-20 13:47:59] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:47:59] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:47:59] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:47:59] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:47:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8180379d1ad38f974c223b81081cf98c).
+[2022-08-20 13:48:58] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:48:58] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:48:58] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:48:58] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:48:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6812080650ad0337412065463be982bd).
+[2022-08-20 13:49:03] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=datetime.datetime)
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:49:11] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:49:11] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:49:11] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:49:11] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:49:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f497fe84b0e9e08163d930cc503b6d82).
+[2022-08-20 13:49:16] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=datetime.datetime)
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:49:45] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:49:45] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:49:45] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:49:45] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:49:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4149e97df92c006e057c62eeb646fc0a).
+[2022-08-20 13:49:54] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=data.datetime.now())
+AttributeError: module 'data' has no attribute 'datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: module 'data' has no attribute 'datetime'
+[2022-08-20 13:50:26] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:50:26] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:50:26] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:50:26] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:50:26] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 667528828c380b26f04a71df2de485ce).
+[2022-08-20 13:50:32] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=data.datetime)
+AttributeError: module 'data' has no attribute 'datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: module 'data' has no attribute 'datetime'
+[2022-08-20 13:50:52] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:50:52] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:50:52] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:50:52] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:50:52] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 18913df20b18ef4d4b93e13a944e942c).
+[2022-08-20 13:50:57] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=data.datetime.datetime)
+AttributeError: module 'data' has no attribute 'datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: module 'data' has no attribute 'datetime'
+[2022-08-20 13:51:01] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:51:01] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:51:01] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:51:01] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:51:01] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0c0541ac78bc4969d800124f95de849f).
+[2022-08-20 13:51:06] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=data.datetime.datetime())
+AttributeError: module 'data' has no attribute 'datetime'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: module 'data' has no attribute 'datetime'
+[2022-08-20 13:52:17] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:52:17] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:52:17] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:52:17] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:52:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: fd81c13f564ead48fcd4eb59673b2518).
+[2022-08-20 13:52:22] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=datetime.datetime.utcnow())
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:53:00] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:53:00] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:53:00] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:53:00] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:53:01] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7d7ea1f337d55d8e919196185aec4d4f).
+[2022-08-20 13:53:17] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=datetime.datetime.utcnow())
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:53:35] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:53:35] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:53:35] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:53:35] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:53:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5668c8a9b5cbe584efccf5964faa94aa).
+[2022-08-20 13:53:40] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 254, in koofi
+    embed = discord.Embed(title="Koofi", description=koofi.FormatOpenMsg(), colour=GREEN, timestamp=datetime.utcnow())
+NameError: name 'datetime' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 237, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'datetime' is not defined
+[2022-08-20 13:54:15] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:54:15] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:54:15] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:54:15] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:54:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dfa30b8769fe7fd2f0a9ef9d235e7839).
+[2022-08-20 13:56:56] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:56:56] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:56:56] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:56:56] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:56:56] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 60405b5df05574190550e50a2562e23c).
+[2022-08-20 13:57:49] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 13:57:49] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 13:57:49] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 13:57:49] [INFO    ] discord.client: logging in using static token
+[2022-08-20 13:57:50] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 05eaac326e76ff4a9380f9cd62f80cfa).
