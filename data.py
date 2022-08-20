@@ -9,10 +9,10 @@ botData = {
         "Python Version" : "Python 3.10.0"
     },
     "keys" : {
-        "token" : "O",
-        "Applicatoin ID" : "897198087414620172",
-        "Public Key" : "930a7810e8a7c75155438cf0d54276b9de7d8cc8bf32263c11ee2363dba65fe1",
-        "Client ID" : "897198087414620172"
+        "token" : "",
+        "Applicatoin ID" : "",
+        "Public Key" : "",
+        "Client ID" : ""
     },
 }
 data = {
