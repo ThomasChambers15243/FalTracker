@@ -1583,3 +1583,90 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Typ
 [2022-08-20 15:35:02] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
 [2022-08-20 15:35:02] [INFO    ] discord.client: logging in using static token
 [2022-08-20 15:35:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e7f7c0d0d75800aa9b35df3779d628cc).
+[2022-08-20 15:43:20] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:43:20] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:43:20] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:43:20] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:43:21] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 98986d139f2548b52e992b1ce501e9c7).
+[2022-08-20 15:43:30] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 271, in ot
+    await ctx.invoke(client.get_command("falmouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 547, in __call__
+    return await self.callback(context, *args, **kwargs)  # type: ignore
+  File "main.py", line 397, in falmouthShopOt
+    await falmouthShop.SetOpeningTimeData()
+  File "main.py", line 67, in SetOpeningTimeData
+    self.openingTimesFormatted = await self.ShowOpeningTimes()
+  File "main.py", line 155, in ShowOpeningTimes
+    if self.openingTimes[i+3] not in foundWeekDays:
+IndexError: list index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 239, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: list index out of range
+[2022-08-20 15:44:17] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:44:17] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:44:17] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:44:17] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:44:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 954f2f946d678a90165e155740da7646).
+[2022-08-20 15:47:25] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:47:25] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:47:25] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:47:25] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:47:26] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: de7b107f73b9b077ed1fc08968d07c6e).
+[2022-08-20 15:50:20] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:50:20] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:50:26] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:50:26] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:50:59] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:50:59] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:51:21] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:51:21] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:51:21] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:51:21] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:51:22] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b6aa7be7b04d68a013aaba699b0ca293).
+[2022-08-20 16:01:21] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:01:21] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:01:40] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:01:40] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:01:40] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 16:01:40] [INFO    ] discord.client: logging in using static token
+[2022-08-20 16:01:41] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c3d15b6e2590111895125995bc4c9440).
+[2022-08-20 16:03:03] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:03:03] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:03:03] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 16:03:03] [INFO    ] discord.client: logging in using static token
+[2022-08-20 16:03:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 667cef42147a592fbd75077417e57711).
+[2022-08-20 16:05:20] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:05:20] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:05:44] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:05:44] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:05:44] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 16:05:44] [INFO    ] discord.client: logging in using static token
+[2022-08-20 16:05:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 86bdef5fd563568ca663ec373a8fc3a4).
+[2022-08-20 16:06:16] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:06:16] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:06:16] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 16:06:16] [INFO    ] discord.client: logging in using static token
+[2022-08-20 16:06:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 77c53b37e7ae57f3a1294bef17cf0fe0).
+[2022-08-20 16:06:42] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 16:06:42] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 16:06:42] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 16:06:42] [INFO    ] discord.client: logging in using static token
+[2022-08-20 16:06:43] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6b08653a933346a3a98cff5c90618a53).

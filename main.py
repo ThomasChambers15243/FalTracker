@@ -147,10 +147,10 @@ class ServiceData:
         Formatted embed message containing opening days and times 
     '''
     async def ShowOpeningTimes(self):
-        embed = discord.Embed(title=self.name + " Opening Times Are:", colour=GREEN)        
+        embed = discord.Embed(title=self.name + " Opening Times Are:", colour=GREEN)     
         for i in range(0, len(self.openingTimes)):
             if not (':' in self.openingTimes[i]):
-                embed.add_field(name=self.openingTimes[i],value=(self.openingTimes[i+1] + "\n" + self.openingTimes[i+2]),inline=False)
+                embed.add_field(name=self.openingTimes[i],value=(self.openingTimes[i+1] + "\n" + self.openingTimes[i+2]),inline=False)                
         return embed
 
     '''
@@ -203,9 +203,9 @@ class ServiceData:
     '''
     def FormatOpenMsg(self):
         if self.isServiceOpen:            
-            return discord.Embed(title=self.name, description=self.name + " is open :)",colour=GREEN)
+            return discord.Embed(title=self.name, description=self.name + " is open\n:)",colour=GREEN)
         else:
-            return discord.Embed(title=self.name, description=self.name + " is closed :(",colour=RED)
+            return discord.Embed(title=self.name, description=self.name + " is closed\n:(",colour=RED)
 
 
 #########################################################################################
@@ -283,94 +283,94 @@ async def koofi(msg):
     await koofi.SetOpenData()
     await msg.channel.send(embed=koofi.FormatOpenMsg())
 
-@client.command()
+@client.command(name="koofiOt", aliases=["koofiot", "koofOT", "KOOFOT"])
 async def koofiOt(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=koofi.openingTimesFormatted)
 
-@client.command()
+@client.command(name="amata", aliases=["Amata", "AMATA", "academyofmusicandtheatrearts", "AcademyOfMusicAndTheatreArts"])
 async def amata(msg):
     amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
     await amata.SetOpenData()
     await msg.channel.send(embed=amata.FormatOpenMsg())
 
-@client.command()
+@client.command(name="amataOt", aliases=["amataot","amataOT","AMATAOT"])
 async def amataOt(msg):
     amata = ServiceData("Amata", data.data["FoodAndDrink"]["Amata"])
     await amata.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=amata.openingTimesFormatted)
 
 
-@client.command()
+@client.command(name="esi", aliases=["ESI","esicafe","esiCafe","ESICAFE", "environment and sustainability institute"])
 async def esi(msg):
     esi = ServiceData("ESI Cafe", data.data["FoodAndDrink"]["ESI"])
     await esi.SetOpenData()
     await msg.channel.send(embed=esi.FormatOpenMsg())
 
-@client.command()
+@client.command(name="esiOt", aliases=["esiot","esiOT","ESIOT"])
 async def esiOt(msg):
     esi = ServiceData("ESI", data.data["FoodAndDrink"]["ESI"])
     await esi.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=esi.openingTimesFormatted)
 
 
-@client.command()
+@client.command(name="stannaryBar", aliases=["stannarybar","stannaryBAR","STANNARYBAR","stanBar"])
 async def stannaryBar(msg):
     stanBar = ServiceData("Stannary Bar", data.data["FoodAndDrink"]["Stannary Bar"])
     await stanBar.SetOpenData()
     await msg.channel.send(embed=stanBar.FormatOpenMsg())
 
-@client.command()
+@client.command(name="stannaryBarOt", aliases=["stannarybarot","stannaryBarOT","stannaryBAROT","STANNARYBAROT","barOt","BAROT","barOT"])
 async def stannaryBarOt(msg):
     stanBar = ServiceData("Stannary Bar", data.data["FoodAndDrink"]["Stannary Bar"])
     await stanBar.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=stanBar.openingTimesFormatted)
 
-@client.command()
+@client.command(name="stannaryKitchen", aliases=["stannarykitchen","stannaryKITCHEN","STANNARYKITCHEN","stankitchen"])
 async def stannaryKitchen(msg):
     stannaryKitchen = ServiceData("Stannary Kitchen", data.data["FoodAndDrink"]["Stannary Kitchen"])
     await stannaryKitchen.SetOpenData()
     await msg.channel.send(embed=stannaryKitchen.FormatOpenMsg())
 
-@client.command()
+@client.command(name="stannaryKitchenOt", aliases=["stannarykitchenot","stannaryKitchenOT","stannaryKITCHENOT","STANNARYKITCHENOT","kitchenOt","kitchenOT"])
 async def stannaryKitchenOt(msg):
     stannaryKitchen = ServiceData("Stannary Kitchen", data.data["FoodAndDrink"]["Stannary Kitchen"])
     await stannaryKitchen.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=stannaryKitchen.openingTimesFormatted)
 
-@client.command()
+@client.command(name="fox", aliases=["foxCafe","foxCAFE","FOXCAFE"])
 async def fox(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
     await fox.SetOpenData()
     await msg.channel.send(embed=fox.FormatOpenMsg())
     
-@client.command()
+@client.command(name="foxOt", aliases=["foxot","foxOT","FOXOT"])
 async def foxOt(msg):
     fox = ServiceData("Fox Cafe", data.data["FoodAndDrink"]["Fox"])
     await fox.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=fox.openingTimesFormatted)
 
 
-@client.command()
+@client.command(name="susCafe", aliases=["suscafe","susCAFE","SUSCAFE","sus","susGuy","jerma985"])
 async def susCafe(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
     await susGuy.SetOpenData()
     await msg.channel.send(embed=susGuy.FormatOpenMsg())
 
-@client.command()
+@client.command(name="susCafeOt", aliases=["suscafeot","susCafeOT","susCAFEOT","SUSCAFEOT","susOt","susOT","SUSOT"])
 async def susCafeOt(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
     await susGuy.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=susGuy.openingTimesFormatted)
 
-@client.command()
+@client.command(name="penrynShop", aliases=["penrynshop","penrynSHOP","PENRYNSHOP"])
 async def penrynShop(msg):
     penrynShop = ServiceData("Penryn Campus Shop", data.data["FoodAndDrink"]["Penryn Shop"])
     await penrynShop.SetOpenData()
     await msg.channel.send(embed=penrynShop.FormatOpenMsg())
 
-@client.command()
+@client.command(name="penrynShopOt", aliases=["penrynshopOT","penrynSHOPOT","PENRYNSHOPOT"])
 async def penrynShopOt(msg):
     penrynShop = ServiceData("Penryn Campus Shop", data.data["FoodAndDrink"]["Penryn Shop"])
     await penrynShop.SetOpeningTimeData()
@@ -380,13 +380,13 @@ async def penrynShopOt(msg):
 ##########     Facilities and Services     ##########
 ##########                                 ##########
 
-@client.command()
+@client.command(name="falmouthShop", aliases=["falmouthshop","falmouthSHOP","FALMOUTHSHOP","fal","FAL"])
 async def falmouthShop(msg):
     falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpenData()
     await msg.channel.send(embed=falmouthShop.FormatOpenMsg())
 
-@client.command()
+@client.command(name="falmouthShopOt", aliases=["falmouthshopot","falmouthshopOt","falmouthshopOT","falmouthSHOPOT","FALMOUTHSHOPOT","falot","falOt","FALOT"])
 async def falmouthShopOt(msg):
     falmouthShop = ServiceData("Falmouth Campus Art Shop", data.data["Facilities and Services"]["Falmouth Art Shop"])
     await falmouthShop.SetOpeningTimeData()
