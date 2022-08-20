@@ -407,7 +407,7 @@ async def foxOt(msg):
 @client.command(
     name="susCafe",
     aliases=["suscafe","susCAFE","SUSCAFE","sus","susGuy","jerma985"],
-    description="Shows whether or not the Sustainability Cafe is open",
+    description="Shows whd(her or not the Sustainability Cafe is open",
     brief="Shows whether or not the Sustainability Cafe is open")    
 async def susCafe(msg):
     susGuy = ServiceData("The Sustainability Cafe", data.data["FoodAndDrink"]["Sus cafe"])
@@ -426,7 +426,7 @@ async def susCafeOt(msg):
 
 @client.command(
     name="penrynShop",
-    aliases=["penrynshop","penrynSHOP","PENRYNSHOP"],
+    aliases=["penrynshop","penrynSHOP","PENRYNSHOP","shop","SHOP"],
     description="Shows whether or not Penryn Campus Shop is open",
     brief="Shows whether or not Penryn Campus Shop is open")    
 async def penrynShop(msg):
@@ -436,7 +436,7 @@ async def penrynShop(msg):
 
 @client.command(
     name="penrynShopOt",
-    aliases=["penrynshopOT","penrynSHOPOT","PENRYNSHOPOT"],
+    aliases=["penrynshopOT","penrynSHOPOT","PENRYNSHOPOT","shopOt","shopot","shopOT","SHOPOT"],
     description="Shows the opening times for Penryn Campus Shop",
     brief="Shows the opening times for Penryn Campus Shop")    
 async def penrynShopOt(msg):
