@@ -1078,3 +1078,508 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Typ
 [2022-08-20 14:29:53] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
 [2022-08-20 14:29:53] [INFO    ] discord.client: logging in using static token
 [2022-08-20 14:29:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 743ba6b59ad8660f2cdb6b38fa50df49).
+[2022-08-20 14:33:04] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:33:04] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:33:04] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:33:04] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:33:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9f83b2255ded29ad94df12a08e04f66f).
+[2022-08-20 14:36:33] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:36:33] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:36:33] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:36:33] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:36:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 37cb5a87b5596f541274ba6b857db040).
+[2022-08-20 14:37:03] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:37:03] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:37:03] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:37:03] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:37:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a1893b236eadb984c12a248f61f328f2).
+[2022-08-20 14:43:44] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:43:44] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:43:44] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:43:44] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:43:46] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:43:46] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:43:46] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:43:46] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:43:47] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 18031debad6881f63dbf6d4714e99bde).
+[2022-08-20 14:45:03] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:45:03] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:45:03] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:45:03] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:45:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d8173bd5b3cf3a99d7ce474bd94d0043).
+[2022-08-20 14:47:07] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:47:07] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:47:07] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:47:07] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:47:08] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bb06d3eda39e7ba69ccf69408909853b).
+[2022-08-20 14:47:47] [DEBUG   ] discord.client: on_message has successfully been registered as an event
+[2022-08-20 14:47:47] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:47:47] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:47:47] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:47:48] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ab8ce060d4d1a841dfb6170ef75c31e3).
+[2022-08-20 14:48:30] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:48:30] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:48:30] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:48:30] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:48:31] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0cb83d1a3921145ea41f51c546e382b5).
+[2022-08-20 14:49:26] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:49:26] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:49:26] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:49:26] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:49:27] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d8e6859de9e1536f0060e689705e01d5).
+[2022-08-20 14:56:06] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:56:06] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:56:06] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:56:06] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:56:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3fa7cc95195bc28680b2f04a5bbc891f).
+[2022-08-20 14:57:13] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:57:13] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:57:13] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:57:13] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:57:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e3608033fe70589dfa7070124ce25a8b).
+[2022-08-20 14:59:46] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 14:59:46] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 14:59:46] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 14:59:46] [INFO    ] discord.client: logging in using static token
+[2022-08-20 14:59:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 2c318d8b07bf3e39de0be30aadbf7e7a).
+[2022-08-20 15:00:31] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:00:31] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:00:31] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:00:31] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:00:32] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e5026862bedcb05a0b9df6ca3a5bb6f6).
+[2022-08-20 15:00:59] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:00:59] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:00:59] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:00:59] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:00:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ba4f3da894c0a365cb0843d5542bd86c).
+[2022-08-20 15:02:35] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:02:35] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:02:35] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:02:35] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:02:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cffa286ff2208c828ef6fdd79cc2b136).
+[2022-08-20 15:10:09] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:10:09] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:10:09] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:10:09] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:10:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c274173388340ebf16a749df59301e09).
+[2022-08-20 15:12:50] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:12:50] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:12:50] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:12:50] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:12:51] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 12eee4af3d064bb1b0d4651cbc279a2e).
+[2022-08-20 15:12:54] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 235, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 978, in invoke
+    await self.prepare(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 895, in prepare
+    await self._parse_arguments(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 802, in _parse_arguments
+    transformed = await self.transform(ctx, param, attachments)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 654, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: arg is a required argument that is missing.
+[2022-08-20 15:13:06] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 235, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 978, in invoke
+    await self.prepare(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 895, in prepare
+    await self._parse_arguments(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 802, in _parse_arguments
+    transformed = await self.transform(ctx, param, attachments)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 654, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: arg is a required argument that is missing.
+[2022-08-20 15:14:07] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:14:07] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:14:07] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:14:07] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:14:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9ed0960cbc396bd9163a445ba16a6774).
+[2022-08-20 15:14:11] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 249, in ot
+    arg = arg.lower()
+AttributeError: 'tuple' object has no attribute 'lower'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 235, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'tuple' object has no attribute 'lower'
+[2022-08-20 15:14:40] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:14:40] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:14:40] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:14:40] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:14:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 934ef9ace9ce6da636d18886320668a7).
+[2022-08-20 15:14:44] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 249, in ot
+    arg[0] = arg[0].lower()
+IndexError: tuple index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 235, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: tuple index out of range
+[2022-08-20 15:23:44] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:23:44] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:23:44] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:23:44] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:23:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cd12dc477715330a83e48d9ce3456490).
+[2022-08-20 15:23:47] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 978, in invoke
+    await self.prepare(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 895, in prepare
+    await self._parse_arguments(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 802, in _parse_arguments
+    transformed = await self.transform(ctx, param, attachments)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 654, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: arg is a required argument that is missing.
+[2022-08-20 15:23:50] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 266, in ot
+    await ctx.invoke(client.get_command("falmnouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'NoneType' object is not callable
+[2022-08-20 15:23:56] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 266, in ot
+    await ctx.invoke(client.get_command("falmnouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'NoneType' object is not callable
+[2022-08-20 15:24:04] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 266, in ot
+    await ctx.invoke(client.get_command("falmnouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'NoneType' object is not callable
+[2022-08-20 15:29:04] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:29:04] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:29:04] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:29:04] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:29:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a57df250c4c1705094b7a96a54b2f866).
+[2022-08-20 15:29:09] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 266, in ot
+    await ctx.invoke(client.get_command("falmnouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'NoneType' object is not callable
+[2022-08-20 15:29:24] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 266, in ot
+    await ctx.invoke(client.get_command("falmnouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'NoneType' object is not callable
+[2022-08-20 15:29:58] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:29:58] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:29:58] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:29:58] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:29:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 631ad7533dee8be08abe044fc207db30).
+[2022-08-20 15:31:03] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:31:03] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:31:03] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:31:03] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:31:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 73d0107aecf82efd5b64f86e19a14127).
+[2022-08-20 15:31:08] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 269, in ot
+    embed.add_field(title="", value="Such as: stannarybar or \n FalmouthArtShop")
+TypeError: add_field() got an unexpected keyword argument 'title'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: add_field() got an unexpected keyword argument 'title'
+[2022-08-20 15:31:22] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:31:22] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:31:22] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:31:22] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:31:23] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 678044545d09f4de0b95ae54619f2ea2).
+[2022-08-20 15:31:26] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 269, in ot
+    embed.add_field(value="Such as: stannarybar or \n FalmouthArtShop")
+TypeError: add_field() missing 1 required keyword-only argument: 'name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: add_field() missing 1 required keyword-only argument: 'name'
+[2022-08-20 15:31:37] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:31:37] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:31:37] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:31:37] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:31:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 503f132301134341491d447c9c84252b).
+[2022-08-20 15:31:40] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 270, in ot
+    await ctx.channel.send(embed=embed)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/abc.py", line 1539, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/http.py", line 744, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.name: This field is required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.name: This field is required
+[2022-08-20 15:31:56] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:31:56] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:31:56] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:31:56] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:31:57] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 148728f25891b973f067428f886b9b92).
+[2022-08-20 15:32:00] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 270, in ot
+    await ctx.channel.send(content=None, embed=embed)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/abc.py", line 1539, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/http.py", line 744, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.name: This field is required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.name: This field is required
+[2022-08-20 15:32:23] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:32:23] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:32:23] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:32:23] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:32:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 167651fe654143e4bd70b1a9a824a5a6).
+[2022-08-20 15:33:24] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:33:24] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:33:24] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:33:24] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:33:25] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7603482442a878e552cc5ff76f852ca5).
+[2022-08-20 15:33:34] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 978, in invoke
+    await self.prepare(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 895, in prepare
+    await self._parse_arguments(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 802, in _parse_arguments
+    transformed = await self.transform(ctx, param, attachments)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 654, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: arg is a required argument that is missing.
+[2022-08-20 15:34:02] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 266, in ot
+    await ctx.invoke(client.get_command("falmnouthShopOt"))
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/context.py", line 335, in invoke
+    return await command(self, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 234, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: 'NoneType' object is not callable
+[2022-08-20 15:35:02] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-20 15:35:02] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-20 15:35:02] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-20 15:35:02] [INFO    ] discord.client: logging in using static token
+[2022-08-20 15:35:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e7f7c0d0d75800aa9b35df3779d628cc).

@@ -3,11 +3,11 @@ import discord
 import aiohttp
 import data
 import logging.handlers
-#from datetime import date
 from discord.ext import commands
 from keepAlive import keep_alive
 from discord.ext.commands import CommandNotFound
 
+# Global Colour constants
 GREEN = 0x2ecc71
 RED = 0xe74c3c
 
@@ -216,10 +216,9 @@ class ServiceData:
 
 @client.event
 async def onMessage(msg):
-    print("sdf")
     if msg.author == client.user:
         return
-    elif msg.content.startswith("?"):
+    elif msg.content == "?99":
         await msg.channel.send("Hi")
         # cmd = msg.content.split()[0].replace("_","")
         # if len(msg.content.split()) > 1:
@@ -240,12 +239,45 @@ async def test(ctx):
     #command = client.get_command("koofi")
     await ctx.invoke(client.get_command("koofi"))
 
+@client.command()
+async def ot(ctx, arg):
+    
+    arg = arg.lower()
+    # Checks the whether the arg value is equal to a service name and then invokes the correct command
+    # I can't seem to upgrade replit's python version to 3.10...
+    # so im stuck with this, no match-case :(
+    if arg == "koofi":
+        await ctx.invoke(client.get_command("koofiOt"))
+    elif arg == "amata":
+        await ctx.invoke(client.get_command("amataOt"))
+    elif arg == "esi":
+        await ctx.invoke(client.get_command("esiOt"))
+    elif arg == "stannarybar":
+        await ctx.invoke(client.get_command("stannaryBarOt"))        
+    elif arg == "stannarykitchen":
+        await ctx.invoke(client.get_command("stannarykitchenOt"))           
+    elif arg == "fox":
+        await ctx.invoke(client.get_command("foxOt"))       
+    elif arg == "suscafe" or arg == "sustainabilitycafe":
+        await ctx.invoke(client.get_command("susCafeOt"))     
+    elif arg == "penryn" or arg == "penrynshop" or arg == "penryncampusshop":
+        await ctx.invoke(client.get_command("penrynShopOt"))       
+    elif arg == "falmouth" or arg == "falmouthshop" or arg == "falmouthcampusshop" or arg == "falmouthartshop" or arg == "falmouthcampusartshop":
+        await ctx.invoke(client.get_command("falmouthShopOt"))
+    else:
+        embed = discord.Embed(title="Unknown argument", description="Only send one place as one word\nSuch as: \nstannarybar\nFalmouthArtShop", colour=RED)        
+        await ctx.channel.send(embed=embed)
+
+    
+
+    
+    
 ##########                  ##########
 ##########   FoodAndDrink   ##########
 ##########                  ##########
 
 
-@client.command(case_insensitive=False)
+@client.command(name="koofi", aliases=["Koofi", "KOOFI"])
 async def koofi(msg):
     koofi = ServiceData("Koofi", data.data["FoodAndDrink"]["Koofi"])
     await koofi.SetOpenData()
