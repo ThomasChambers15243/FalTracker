@@ -9,6 +9,7 @@ from keepAlive import keep_alive
 intents = discord.Intents.all()
 my_secret = os.environ['token']
 
+# Test comment
 
 client = commands.Bot(intents=intents,command_prefix = '?')
 
@@ -354,7 +355,7 @@ async def falmouthShopOt(msg):
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
-    print("bot is ready!")
+    print("bot is ready!")  
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Dreamy Night"))
 
 
