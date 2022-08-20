@@ -4,7 +4,8 @@ botData = {
         "Version" : "v1.00.00",
         "Name" : "FalTracker",
         "Description" : "Bot to help Falmouth Uni Students find out quick information about uni services",
-        "Author" : "Tom Chambers, @OffDutySquirrel#3467",
+        "Author" : "Tom Chambers",
+        "AuthorsDiscord" : "@OffDutySquirrel#3467",
         "Python Version" : "Python 3.10.0"
     },
     "keys" : {
