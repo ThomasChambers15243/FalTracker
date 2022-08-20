@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import aiohttp
 import data
-import logging
 import logging.handlers
 
 # command prefix which us used for every bot command

@@ -375,3 +375,8 @@
 [2022-08-20 11:19:42] [DEBUG   ] discord.client: Dispatching event socket_response
 [2022-08-20 11:19:42] [DEBUG   ] discord.client: Dispatching event message
 [2022-08-20 11:19:42] [DEBUG   ] discord.client: Dispatching event command_completion
+[2022-08-20 11:20:02] [INFO    ] discord.client: Received signal to terminate bot and event loop.
+[2022-08-20 11:20:02] [INFO    ] discord.client: Cleaning up tasks.
+[2022-08-20 11:20:02] [INFO    ] discord.client: Cleaning up after 1 tasks.
+[2022-08-20 11:20:02] [INFO    ] discord.client: All tasks finished cancelling.
+[2022-08-20 11:20:02] [INFO    ] discord.client: Closing the event loop.
