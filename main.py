@@ -1,11 +1,16 @@
+import os
 import discord
 from discord.ext import commands
 import aiohttp
 import data
 import logging.handlers
+from keepAlive import keep_alive
 
-# command prefix which us used for every bot command
-client = commands.Bot(command_prefix = '?')
+intents = discord.Intents.all()
+my_secret = os.environ['token']
+
+
+client = commands.Bot(intents=intents,command_prefix = '?')
 
 # TODO
 # Implement a spam logger
@@ -349,9 +354,10 @@ async def falmouthShopOt(msg):
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
-    print("bot is ready!")  
+    print("bot is ready!")
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Dreamy Night"))
 
 
+keep_alive()
 # Token
-client.run(data.botData["keys"]["token"])
+client.run(my_secret)
