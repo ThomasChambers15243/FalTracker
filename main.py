@@ -3,6 +3,7 @@ import discord
 import aiohttp
 import data
 import logging.handlers
+from os import system
 from pretty_help import PrettyHelp
 from discord.ext import commands
 from keepAlive import keep_alive
@@ -480,4 +481,16 @@ async def on_ready():
 
 keep_alive()
 # Token
-client.run(my_secret)
+#client.run(my_secret)
+try:
+    client.run(my_secret)
+# if the error is too many requests, kill the bot and run it form another ip
+except discord.errors.HTTPException as e:
+    print()
+    system("kill 1")
+    client.run(my_secret)
+# except discord.errors.HTTPException(429, "blocked by rate limits"):
+#     print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
+#     #system("python restarter.py")
+#     system('kill 1')
+#     client.run(my_secret)
