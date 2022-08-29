@@ -460,6 +460,31 @@ async def falmouthShopOt(msg):
     await falmouthShop.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=falmouthShop.openingTimesFormatted)
 
+@client.command(
+    name="gym",
+    aliases=["GYM","Gym"],
+    description="Shows whether or not Penryn Campus Gym is open or not",
+    brief="Shows whether or not Penryn Campus Gym is open or not")
+async def flexsiSportsCentre(msg):
+    gym = ServiceData("Flexsi Gym", data.data["Facilities and Services"]["Flexsi Sports Centre"])
+    await gym.SetOpenData()
+    await msg.channel.send(embed=gym.FormatOpenMsg())
+
+@client.command(
+    name="gymOt",
+    aliases=["gymot","GYMOT","GymOt","gymOT","GYMot"],
+    description="Shows the opening times for Penryn Campus Gym",
+    brief="Shows the opening times for Penryn Campus Gym")
+async def flexsiSportsCentreOt(msg):
+    gym = ServiceData("Flexsi Gym", data.data["Facilities and Services"]["Flexsi Sports Centre"])
+    await gym.SetOpeningTimeData()
+    await msg.channel.send(content=None, embed=gym.openingTimesFormatted)
+
+
+
+
+
+    
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
