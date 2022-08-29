@@ -1,7 +1,8 @@
 import os
 import discord
-import aiohttp
+import util
 import data
+import events
 import logging.handlers
 from os import system
 from pretty_help import PrettyHelp
@@ -71,23 +72,6 @@ class ServiceData:
         self.openingTimes = await self.FindOpeningTimes()
         self.openingTimesFormatted = await self.ShowOpeningTimes()
 
-
-    '''
-    Gets raw HTML data in string format from given html
-    Args:
-        String url for website to scrape
-    Returns:
-        String html 
-        None if error occoured 
-    '''
-    async def GetHtml(self):
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(self.url) as response:
-                    html = await response.text()
-                    return html
-        except Exception:
-            return None
     '''
     Checks if service is open or closed
     Args:
@@ -98,7 +82,7 @@ class ServiceData:
         None if error occoured 
     '''
     async def IsOpen(self):
-        html = await self.GetHtml()
+        html = await util.GetHtml(self.url)
         if html == None:
             return None
         # If the target string is found, then the service must be open, else closed
@@ -114,7 +98,7 @@ class ServiceData:
         List containing string data of opening days and times for the service 
     '''
     async def FindOpeningTimes(self):
-        html = await self.GetHtml()
+        html = await util.GetHtml(self.url)
 
         # Stores times and days
         openingTimesList = []
@@ -480,14 +464,30 @@ async def flexsiSportsCentreOt(msg):
     await gym.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=gym.openingTimesFormatted)
 
+##########                  ##########
+##########     Societies    ##########
+##########                  ##########
 
-
-
-
+@client.command()
+async def eventsNum(msg, args):
+    eve = events.Events()        
+    try:
+        eveEmbed = await eve.GetNumberOfEvents(int(args))
+        await msg.channel.send(content=None, embed=eveEmbed)
+    except:
+        await msg.channel.send("Something went wrong\nMake sure command is formatted like\n?eventsNum {num}")
+    
+# @client.command()
+# async def nextEvent(msg):
+#     eve = event.Events()
+#     try:
+        
     
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
+    #eve = events.Events()
+    
     print("bot is ready!")  
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Dreamy Night"))
 

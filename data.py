@@ -39,4 +39,7 @@ data = {
         "Falmouth Art Shop" : "https://fxplus.ac.uk/facilities-services/falmouth-campus-art-shop/",
         "Flexsi Sports Centre" : "https://fxplus.ac.uk/facilities-services/flexsi-sports-centre/"
     },
+    "SU" : {
+        "Events" : "https://www.thesu.org.uk/events/"
+    }
 }
