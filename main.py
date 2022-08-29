@@ -489,8 +489,3 @@ except discord.errors.HTTPException as e:
     print()
     system("kill 1")
     client.run(my_secret)
-# except discord.errors.HTTPException(429, "blocked by rate limits"):
-#     print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
-#     #system("python restarter.py")
-#     system('kill 1')
-#     client.run(my_secret)
