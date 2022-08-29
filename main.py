@@ -225,9 +225,6 @@ async def onMessage(msg):
         return
     elif msg.content == "?99":
         await msg.channel.send("Hi")
-        # cmd = msg.content.split()[0].replace("_","")
-        # if len(msg.content.split()) > 1:
-        #     parameters = msg.content.split()[1:]
 
 #########################################################################################
 ##################################### COMMAND CALLS #####################################
@@ -237,12 +234,6 @@ async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
         return
     raise error
-    
-# # Test on how to call commands from other functions
-# @client.command()
-# async def test(ctx):
-#     #command = client.get_command("koofi")
-#     await ctx.invoke(client.get_command("koofi"))
 
 @client.command(
     description = "Shows the service's opening times. For example, \nEnter\"ot koofi\" to get koofi's opening times",

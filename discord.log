@@ -2126,3 +2126,8 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Ind
 [2022-08-29 08:38:23] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 48bcef198d0d5ead00696ab1bf189c8b.
 [2022-08-29 08:56:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 48bcef198d0d5ead00696ab1bf189c8b.
 [2022-08-29 10:29:25] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 48bcef198d0d5ead00696ab1bf189c8b.
+[2022-08-29 11:50:17] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-08-29 11:50:17] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-08-29 11:50:17] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-08-29 11:50:17] [INFO    ] discord.client: logging in using static token
+[2022-08-29 11:50:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cbad1ba100f97fab183d30e0cb9f779e).
