@@ -578,6 +578,26 @@ async def contacts(msg):
     embed = discord.Embed(title="Useful Contacts", colour=GREEN)
     embed.add_field(name=data.data["Useful Contacts"]["Penryn Surgery"][0],
                     value=data.data["Useful Contacts"]["Penryn Surgery"][1])
+    embed.add_field(name=data.data["Useful Contacts"]["Falmouth Hospital"][0],
+                    value=data.data["Useful Contacts"]["Falmouth Hospital"][1])
+    embed.add_field(name="_",value="_", inline=False)
+    embed.add_field(name=data.data["Useful Contacts"]["Accommodation"][0],
+                    value=data.data["Useful Contacts"]["Accommodation"][1])
+    embed.add_field(name=data.data["Useful Contacts"]["Glasney Lodge"][0],
+                    value=data.data["Useful Contacts"]["Glasney Lodge"][1])
+    embed.add_field(name="_",value="_", inline=False)
+    embed.add_field(
+        name=data.data["Useful Contacts"]["Penryn Campus Reception"][0],
+        value=data.data["Useful Contacts"]["Penryn Campus Reception"][1])
+    embed.add_field(
+        name=data.data["Useful Contacts"]["COVID Rapid Responce Team"][0],
+        value=data.data["Useful Contacts"]["COVID Rapid Responce Team"][1])
+    embed.add_field(name="_",value="_", inline=False)
+    embed.add_field(name=data.data["Useful Contacts"]["Wellbeing: Phone"][0],
+                    value=data.data["Useful Contacts"]["Wellbeing: Phone"][1])
+    embed.add_field(name=data.data["Useful Contacts"]["Accessibility"][0],
+                    value=data.data["Useful Contacts"]["Accessibility"][1])
+
     await msg.channel.send(content=None, embed=embed)
 
 

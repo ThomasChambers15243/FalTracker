@@ -2899,3 +2899,97 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Typ
 [2022-09-03 15:18:14] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
 [2022-09-03 15:18:14] [INFO    ] discord.client: logging in using static token
 [2022-09-03 15:18:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ba71ab6fcb93da30ed7ee6c7ca1012f6).
+[2022-09-03 15:20:33] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-09-03 15:20:33] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-09-03 15:20:33] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-09-03 15:20:33] [INFO    ] discord.client: logging in using static token
+[2022-09-03 15:20:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: df15e9acd8b241d59936b02f1e1a806a).
+[2022-09-03 15:21:18] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-09-03 15:21:18] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-09-03 15:21:18] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-09-03 15:21:18] [INFO    ] discord.client: logging in using static token
+[2022-09-03 15:21:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 88fab8d30c4e9e94ec4486fa9124d895).
+[2022-09-03 15:22:15] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-09-03 15:22:15] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-09-03 15:22:15] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-09-03 15:22:15] [INFO    ] discord.client: logging in using static token
+[2022-09-03 15:22:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b5c53c1a8276d2f09dbe8a117240bc52).
+[2022-09-03 15:22:18] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 600, in contacts
+    await msg.channel.send(content=None, embed=embed)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/abc.py", line 1539, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/http.py", line 744, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.2.name: This field is required
+In embeds.0.fields.2.value: This field is required
+In embeds.0.fields.7.name: This field is required
+In embeds.0.fields.7.value: This field is required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 252, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.2.name: This field is required
+In embeds.0.fields.2.value: This field is required
+In embeds.0.fields.7.name: This field is required
+In embeds.0.fields.7.value: This field is required
+[2022-09-03 15:22:31] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-09-03 15:22:31] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-09-03 15:22:31] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-09-03 15:22:31] [INFO    ] discord.client: logging in using static token
+[2022-09-03 15:22:31] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7b564582001c69adffb46935ce954526).
+[2022-09-03 15:22:35] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 190, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "main.py", line 600, in contacts
+    await msg.channel.send(content=None, embed=embed)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/abc.py", line 1539, in send
+    data = await state.http.send_message(channel.id, params=params)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/http.py", line 744, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.2.name: This field is required
+In embeds.0.fields.7.name: This field is required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "main.py", line 252, in on_command_error
+    raise error
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/bot.py", line 1347, in invoke
+    await ctx.command.invoke(ctx)
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 986, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "/home/runner/FalTracker/venv/lib/python3.8/site-packages/discord/ext/commands/core.py", line 199, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.2.name: This field is required
+In embeds.0.fields.7.name: This field is required
+[2022-09-03 15:22:44] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-09-03 15:22:44] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-09-03 15:22:44] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-09-03 15:22:44] [INFO    ] discord.client: logging in using static token
+[2022-09-03 15:22:44] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3029d7d6fddf579ed418d8a8434df72e).
+[2022-09-03 15:23:25] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2022-09-03 15:23:25] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2022-09-03 15:23:25] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2022-09-03 15:23:25] [INFO    ] discord.client: logging in using static token
+[2022-09-03 15:23:26] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b6aa8c93cd3fc5a8deb7e9a2469ffc9d).
