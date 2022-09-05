@@ -556,7 +556,14 @@ async def flexsiSportsCentreOt(msg):
 ##########                  ##########
 
 
-@client.command()
+# Formats and returns an embed of the next upcomming planned events
+@client.command(
+    name="eventsNum",
+    aliases=[
+        "eventsnum", "EVENTSNUM", "eventsNUM", "events num", "EVENTS NUM"
+    ],
+    description="Returns an embed of n number of upcomming planned events",
+    brief="Returns an embed of n number of upcomming planned events")
 async def eventsNum(msg, args):
     eve = events.Events()
     try:
@@ -568,11 +575,26 @@ async def eventsNum(msg, args):
         )
 
 
+# Formats and returns an embed holding the next 1 event infomation
+@client.command(name="event",
+                aliases=["EVENT", "event1", "eventone", "eventONE"],
+                description="Returns an embed of the next 1 planned event",
+                brief="Returns an embed of the next 1 planned event")
+async def event(msg):
+    eve = events.Events()
+    try:
+        eveEmbed = await eve.GetNumberOfEvents(1)
+        await msg.channel.send(content=None, embed=eveEmbed)
+    except:
+        await msg.channel.send("Something went wrong getting the next event")
+
+
 ##########                        ##########
 ##########     Useful Contacts    ##########
 ##########                        ##########
 
 
+# Formats and returns an embed that hold the names and numbers of useful contacts
 @client.command()
 async def contacts(msg):
     embed = discord.Embed(title="Useful Contacts", colour=GREEN)
@@ -580,19 +602,19 @@ async def contacts(msg):
                     value=data.data["Useful Contacts"]["Penryn Surgery"][1])
     embed.add_field(name=data.data["Useful Contacts"]["Falmouth Hospital"][0],
                     value=data.data["Useful Contacts"]["Falmouth Hospital"][1])
-    embed.add_field(name="_",value="_", inline=False)
+    embed.add_field(name="_", value="_", inline=False)
     embed.add_field(name=data.data["Useful Contacts"]["Accommodation"][0],
                     value=data.data["Useful Contacts"]["Accommodation"][1])
     embed.add_field(name=data.data["Useful Contacts"]["Glasney Lodge"][0],
                     value=data.data["Useful Contacts"]["Glasney Lodge"][1])
-    embed.add_field(name="_",value="_", inline=False)
+    embed.add_field(name="_", value="_", inline=False)
     embed.add_field(
         name=data.data["Useful Contacts"]["Penryn Campus Reception"][0],
         value=data.data["Useful Contacts"]["Penryn Campus Reception"][1])
     embed.add_field(
         name=data.data["Useful Contacts"]["COVID Rapid Responce Team"][0],
         value=data.data["Useful Contacts"]["COVID Rapid Responce Team"][1])
-    embed.add_field(name="_",value="_", inline=False)
+    embed.add_field(name="_", value="_", inline=False)
     embed.add_field(name=data.data["Useful Contacts"]["Wellbeing: Phone"][0],
                     value=data.data["Useful Contacts"]["Wellbeing: Phone"][1])
     embed.add_field(name=data.data["Useful Contacts"]["Accessibility"][0],
@@ -604,8 +626,6 @@ async def contacts(msg):
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
-    #eve = events.Events()
-
     print("bot is ready!")
     await client.change_presence(activity=discord.Activity(
         type=discord.ActivityType.listening, name="Dreamy Night"))
