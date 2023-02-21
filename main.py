@@ -4,7 +4,7 @@ import aiohttp
 import data
 import logging.handlers
 from os import system
-from pretty_help import PrettyHelp
+# from pretty_help import PrettyHelp
 from discord.ext import commands
 from keepAlive import keep_alive
 from discord.ext.commands import CommandNotFound
@@ -17,13 +17,15 @@ RED = 0xe74c3c
 intents = discord.Intents.all()
 
 # Gets token from replit secrets
-my_secret = os.environ['token']
+my_secret = ""#os.environ['token']
 
 # Note at the bottom of the help menu
 endingNote = "Type ? then the name of a service to find out if its open or not\n Add Ot at the end for opening times.\nYou can also type ?help command for more info on that command\nContact "+ data.botData["botInfo"]["AuthorsDiscord"] +" for bugs and suggestions\nHelp is a bit messy right now but I'll make one my self soon"
 
 # Sets up bot client
-client = commands.Bot(intents=intents,command_prefix = '?', help_command=PrettyHelp(index_title="Commands",active_time=120, delete_after_timeout=True,ending_note=endingNote,sort_commands=True))
+client = commands.Bot(intents=intents,command_prefix = '?')
+# PrettyHelp(index_title="Commands",active_time=120, delete_after_timeout=True,ending_note=endingNote,sort_commands=True)
+
 
 # Sets up logger
 logger = logging.getLogger('discord')
@@ -31,7 +33,7 @@ logger.setLevel(logging.DEBUG)
 logging.getLogger('discord.http').setLevel(logging.INFO)
 
 handler = logging.handlers.RotatingFileHandler(
-    filename='discord.log',
+    filename='logs/discord.log',
     encoding='utf-8',
     maxBytes=32 * 1024 * 1024,  # 32 MiB
     backupCount=5,  # Rotate through 5 files
@@ -119,12 +121,12 @@ class ServiceData:
         # Stores times and days
         openingTimesList = []
         # Write html data to a .txt file so its easier to read
-        with open("htmlDetail.txt","w") as f:
+        with open("rawWebData/htmlDetail.txt","w") as f:
             for line in html:
                 f.writelines(line)
 
         # Goes through .txt file as loads opening data into a list
-        with open("htmlDetail.txt", "r") as f:
+        with open("rawWebData/htmlDetail.txt", "r") as f:
             # Get line up to the start of opening times
             for line in f:
                 if "openingHoursSpecification" in line:
@@ -480,19 +482,11 @@ async def flexsiSportsCentreOt(msg):
     await gym.SetOpeningTimeData()
     await msg.channel.send(content=None, embed=gym.openingTimesFormatted)
 
-
-
-
-
-    
 # Lets you know if the bot is up and running
 @client.event
 async def on_ready():
     print("bot is ready!")  
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Dreamy Night"))
-
-
-
 
 
 keep_alive()
