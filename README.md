@@ -3,13 +3,13 @@
 
 Fal tracker is a bot that provides **up-to-date infomation on service times** around Penryn and Falmouth campus.
 
-Faltracker scrapes Falmouth Uni's [Service Status & Opening Times](https://fxplus.ac.uk/uncategorised/service-status-opening-times/) page. its uses this data to give the most, reliable data possible. On that site, opening times for each service is stored and displayed. However, it can be cumberson to use this page.
+Faltracker scrapes Falmouth Uni's [Service Status & Opening Times](https://fxplus.ac.uk/uncategorised/service-status-opening-times/) page. Its uses this site to give the most, reliable data possible. On that site, opening times for each service is stored and displayed. However, it can be cumberson to use this page.
 
 OpenBrowser --> Go to page --> Find Drop down --> Open List --> Find Service --> Find Day--> Check Time
 
 Faltracker streamlines this process
 
-Open Discord --> Types Command
+Open Discord --> Type Command
 
 By typing in a commands, such as ```?koofi``` to see if koofi is open or ```?shopOt``` to see what times of the week campus shop is open, Faltracker will respond with a formatted message containing the answer. Such as,
 
@@ -30,7 +30,7 @@ By typing in a commands, such as ```?koofi``` to see if koofi is open or ```?sho
 Faltracker currently contains 22 command calls for services, involving 10 establishments between both campuses.
 
 ```
-​No Category:
+Commands:
   amata             Shows whether or not Amata Cafe is open
   amataOt           Shows the opening times for Amata Cafe
   esi               Shows whether or not esiCafe is open
@@ -53,7 +53,4 @@ Faltracker currently contains 22 command calls for services, involving 10 establ
   stannaryKitchenOt Shows the opening times for the Stannary Kitchen
   susCafe           Shows whether or not the Sustainability Cafe is open
   susCafeOt         Shows the opening times for the Sustainability Cafe
-
-Type ?help command for more info on a command.
-You can also type ?help category for more info on a category.
 ```
