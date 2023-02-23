@@ -1,12 +1,9 @@
-import os
 import discord
 import aiohttp
 import data
 import logging.handlers
 from os import system
-# from pretty_help import PrettyHelp
 from discord.ext import commands
-from keepAlive import keep_alive
 from discord.ext.commands import CommandNotFound
 import chatBot
 import consts
@@ -511,8 +508,6 @@ async def on_ready():
     print("bot is ready!")  
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Dreamy Night"))
 
-
-keep_alive()
 # Token
 #client.run(my_secret)
 try:

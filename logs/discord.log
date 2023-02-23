@@ -81,3 +81,16 @@ discord.ext.commands.errors.CommandInvokeError: Command raised an exception: Key
 [2023-02-23 17:13:44] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
 [2023-02-23 17:13:44] [INFO    ] discord.client: logging in using static token
 [2023-02-23 17:13:45] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0424641362bc17336715a4a595d88889).
+[2023-02-23 17:20:35] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2023-02-23 17:20:35] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2023-02-23 17:20:35] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2023-02-23 17:20:35] [INFO    ] discord.client: logging in using static token
+[2023-02-23 17:20:36] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4c1e7cf3e642f10d6526543c77bf1a05).
+[2023-02-23 17:36:06] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2023-02-23 17:36:06] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2023-02-23 17:36:06] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2023-02-23 17:36:16] [DEBUG   ] discord.client: onMessage has successfully been registered as an event
+[2023-02-23 17:36:16] [DEBUG   ] discord.client: on_command_error has successfully been registered as an event
+[2023-02-23 17:36:16] [DEBUG   ] discord.client: on_ready has successfully been registered as an event
+[2023-02-23 17:36:16] [INFO    ] discord.client: logging in using static token
+[2023-02-23 17:36:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: efcc359d633a8f82f558c92e3d220762).
