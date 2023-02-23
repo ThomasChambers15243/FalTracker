@@ -8,6 +8,7 @@ from os import system
 from discord.ext import commands
 from keepAlive import keep_alive
 from discord.ext.commands import CommandNotFound
+import chatBot
 
 # Global Colour constants
 GREEN = 0x2ecc71
@@ -269,7 +270,17 @@ async def ot(ctx, arg):
         embed = discord.Embed(title="Unknown argument", description="Only send one place as one word\nSuch as: \nstannarybar\nFalmouthArtShop", colour=RED)        
         await ctx.channel.send(embed=embed)
 
-    
+
+@client.command(
+    description="Responds to Questions about Falmouth Uni",
+    brief="Responds to Questions about Falmouth Uni"
+)
+async def qtion(ctx, *, arg):
+    response = chatBot.GetResponse(arg)
+    print("Response is: \n" + response)
+    await ctx.channel.send(response)
+
+
 ##########                  ##########
 ##########   FoodAndDrink   ##########
 ##########                  ##########
