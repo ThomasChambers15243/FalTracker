@@ -17,7 +17,7 @@ RED = 0xe74c3c
 intents = discord.Intents.all()
 
 # Gets token from replit secrets
-my_secret = ""#os.environ['token']
+my_secret = os.environ['token']
 
 # Note at the bottom of the help menu
 endingNote = "Type ? then the name of a service to find out if its open or not\n Add Ot at the end for opening times.\nYou can also type ?help command for more info on that command\nContact "+ data.botData["botInfo"]["AuthorsDiscord"] +" for bugs and suggestions\nHelp is a bit messy right now but I'll make one my self soon"
