@@ -62,7 +62,7 @@ The commands ```qtion``` and ```qtionAny``` both use openAI to generate answers.
 
 ```"You prompt has flagged the Bot's moderation filter. If this seems wrong, please try rephrasing the question. If it isn't wrong...come on, be nicer"```
 
-then your prompt has been flagged as violating openAI's content policy. Sometimes this is a genuine error, but if not, please only use the bot for wholesome means.
+then your prompt has been flagged for violating openAI's content policy. Sometimes this is a genuine error, but if not, please only use the bot for wholesome means.
 
 
 The command```qtion``` by default adds the following context to the beginning of your prompt.
