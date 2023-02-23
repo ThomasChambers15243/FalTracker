@@ -271,15 +271,27 @@ async def ot(ctx, arg):
         await ctx.channel.send(embed=embed)
 
 
+##########                  ##########
+##########     Chat Bot     ##########
+##########                  ##########
+
 @client.command(
     description="Responds to Questions about Falmouth Uni",
     brief="Responds to Questions about Falmouth Uni"
 )
 async def qtion(ctx, *, arg):
-    response = chatBot.GetResponse(arg)
+    response = chatBot.GetResponse(arg, "The following prompt will be about Falmouth university and surrounding culture. Falmouth university is found in Cornwall, the UK.  ")
     print("Response is: \n" + response)
     await ctx.channel.send(response)
 
+@client.command(
+    description="Responds to any Questions",
+    brief="Responds to any Questions"
+)
+async def qtionAny(ctx, *, arg):
+    response = chatBot.GetResponse(arg)
+    print("Response is: \n" + response)
+    await ctx.channel.send(response)
 
 ##########                  ##########
 ##########   FoodAndDrink   ##########
