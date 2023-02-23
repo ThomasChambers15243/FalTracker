@@ -1,9 +1,7 @@
 import openai
-
+import consts
 def GetResponse(prompt, addedContext = "", AddAtTheStart = True):
-    openAIKey = ""
-
-    openai.api_key = openAIKey
+    openai.api_key = consts.openAIKey
 
     model_engine = "text-davinci-003"
     print("in function")
