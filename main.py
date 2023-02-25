@@ -7,9 +7,11 @@ from discord.ext import commands
 from discord.ext.commands import CommandNotFound
 import chatBot
 import consts
+
 # Global Colour constants
 GREEN = 0x2ecc71
 RED = 0xe74c3c
+
 
 # Sets intents so that messages can be sent
 intents = discord.Intents.all()
@@ -276,8 +278,8 @@ async def ot(ctx, arg):
     description="Responds to Questions about Falmouth Uni",
     brief="Responds to Questions about Falmouth Uni"
 )
-async def qtion(ctx, *, arg):
-    response = chatBot.GetResponse(arg, "The following prompt will be about Falmouth university and surrounding culture. Falmouth university is found in Cornwall, the UK.  ")
+async def qtionFal(ctx, *, arg):
+    response = chatBot.GetResponse(arg, "The following prompt will be about Falmouth university and surrounding culture. ")
     print("Response is: \n" + response)
     await ctx.channel.send(response)
 
@@ -285,10 +287,11 @@ async def qtion(ctx, *, arg):
     description="Responds to any Questions",
     brief="Responds to any Questions"
 )
-async def qtionAny(ctx, *, arg):
+async def qtion(ctx, *, arg):
     response = chatBot.GetResponse(arg)
     print("Response is: \n" + response)
     await ctx.channel.send(response)
+
 
 ##########                  ##########
 ##########   FoodAndDrink   ##########

@@ -67,7 +67,7 @@ then your prompt has been flagged for violating openAI's content policy. Sometim
 
 The command```qtion``` by default adds the following context to the beginning of your prompt.
 
-```"The following prompt will be about Falmouth university and surrounding culture. Falmouth university is found in Cornwall, the UK.  "```
+```"The following prompt will be about Falmouth university and surrounding culture.  "```
 
 The context is designed to speed up your use of the bot, so that you don't need to tell it everytime about Falmouth.
 If you wish to have no context added, use the command ```qtionAny```.
